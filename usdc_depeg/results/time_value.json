@@ -1,0 +1,31 @@
+{
+  "source_file": "data/n1/treasury2023/daily_treasury_yield_curve_2023.csv",
+  "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2023/all?type=daily_treasury_yield_curve&field_tdr_date_value=2023&page&_format=csv",
+  "source_date": "03/10/2023",
+  "par_yields": {
+    "1mo": 0.0481,
+    "3mo": 0.0501
+  },
+  "floor": 0.92,
+  "trough": 0.876675,
+  "par_to_trough_gap_bps": 1233.25,
+  "discount_bps_by_tenor_and_days": {
+    "1mo_2d": 2.6356,
+    "1mo_3d": 3.9534,
+    "3mo_2d": 2.7452,
+    "3mo_3d": 4.1178
+  },
+  "discount_bps_range_2to3d": [
+    2.6356,
+    4.1178
+  ],
+  "delay_days_to_trough_by_tenor": {
+    "1mo": 357.35,
+    "3mo": 343.09
+  },
+  "delay_days_to_trough_range": [
+    343.09,
+    357.35
+  ],
+  "annualised_rate_for_full_gap_over_3d": 15.0045
+}

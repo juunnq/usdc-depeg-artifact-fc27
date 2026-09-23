@@ -1,0 +1,41 @@
+\section{Screening}
+\label{sec:spec}
+
+The estimator requires three preconditions. First~(i), $\phi$ must be publicly
+quantified while the exposure is unresolved. Second~(ii), the price must fall more
+than $1\%$ below par while that disclosure is live. Third~(iii), the fundamental
+channel must be reserve-only, so that $1-\phi$ is the floor. Beyond the application
+itself and Tether~(2019), we screened six candidate episodes: BUSD, Tether~(2022),
+USDR, USDP, GUSD, and TUSD. None satisfies all three, and each fails in one of two
+ways: no disclosed impairment, or a loss measured under a different valuation model.
+Issuers with a material impairment did not disclose its size in any of the six, so one
+qualifying episode is a property of the disclosure record.
+
+Three episodes bound the estimator's behavior: the qualifying application in
+USDC~(2023), and two that return no verdict, Tether~(2019) and Tether~(2022), which is
+USDT over the Terra episode of May 2022~\cite{liumakarovschoar2023}. USDC fires on Circle's 03{:}11~UTC disclosure of
+11~March~\cite{circle2023tweet}: $\phi=0.08$, floor \$0.92, composite headline trough
+\$0.877 at 07{:}57~UTC, and $q^{\star}=1.54$. Tether's episode is assessed under
+precondition~(i). The New York Attorney General's 25~April 2019
+statement~\cite{nyag2019tether} quantified Tether's exposure and Tether contested the
+characterization. The statement implies
+$\phi\in[0.2585,\allowbreak 0.3324]$ and a floor in $[0.6676,\allowbreak 0.7415]$. The deepest post-disclosure Kraken USDT/USD print, \$0.9551
+on 26~April 2019, is 21.4 to 28.8 cents above every worst-case floor, and
+$q^{\star}\in[0.135,0.174]$, so the verdict is no verdict, above floor.
+We read both
+episodes at zero recovery on the impaired reserves, so the same one-sided bound
+governs both. Tether~(2022) has no disclosure, so $\phi=0$ and
+precondition~(i) fails. The floor would be par, which any sub-par print breaches as an
+identity and not as evidence, so the verdict is no verdict, undisclosed.
+
+Read strictly, precondition~(i) demands the issuer's own public quantification while
+the exposure is unresolved, and under that reading the panel contains no validated
+true negative. One episode on which the bound returns no verdict does not measure a
+false-positive rate. The specificity of the bound is unmeasured, and unmeasurable on the
+current record, because a validated true negative needs an issuer-disclosed $\phi$ whose
+trough stays above $1-\phi$, and no screened episode supplies one.
+
+TrueUSD's unremediated impairment during our window was not publicly quantified until a
+September 2024 SEC complaint~\cite{sectruecoin2024}, so precondition~(i) fails and the
+verdict is again no verdict, undisclosed. The residual is defined relative to
+what the market could know, because a concealed impairment produces no signal.

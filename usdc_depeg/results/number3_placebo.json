@@ -1,0 +1,39 @@
+{
+  "USDC": {
+    "exposure": "direct (~8% of reserves at SVB)",
+    "trough": 0.876675,
+    "peak": 1.007,
+    "max_depeg_bps": 1233.3,
+    "max_premium_bps": 70.0,
+    "broke": true
+  },
+  "DAI": {
+    "exposure": "contagion (heavily USDC-collateralized)",
+    "trough": 0.885938,
+    "peak": 1.005,
+    "max_depeg_bps": 1140.6,
+    "max_premium_bps": 50.0,
+    "broke": true
+  },
+  "USDT": {
+    "exposure": "none (no SVB exposure)",
+    "trough": 0.992437,
+    "peak": 1.027,
+    "max_depeg_bps": 75.6,
+    "max_premium_bps": 270.0,
+    "broke": false
+  },
+  "placebo_pass": true,
+  "break_threshold": 0.99,
+  "fragility_ordering_by_trough": [
+    "USDC",
+    "DAI",
+    "USDT"
+  ],
+  "ex_ante_exposure_ranking": [
+    "USDC",
+    "DAI",
+    "USDT"
+  ],
+  "ordering_matches_exposure": true
+}

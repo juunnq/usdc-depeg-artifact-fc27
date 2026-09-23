@@ -1,0 +1,772 @@
+{
+  "frozen_utc": "2026-07-13T10:18:15Z",
+  "window_utc": [
+    "2023-03-08T00:00:00Z",
+    "2023-03-17T00:00:00Z"
+  ],
+  "sources": [
+    {
+      "file": "price_hourly.csv",
+      "symbol": "USDC",
+      "url": "https://coins.llama.fi/chart/coingecko:usd-coin?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:16Z",
+      "n_points": 212
+    },
+    {
+      "file": "price_hourly.csv",
+      "symbol": "USDT",
+      "url": "https://coins.llama.fi/chart/coingecko:tether?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:17Z",
+      "n_points": 213
+    },
+    {
+      "file": "price_hourly.csv",
+      "symbol": "DAI",
+      "url": "https://coins.llama.fi/chart/coingecko:dai?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:19Z",
+      "n_points": 214
+    },
+    {
+      "file": "binance_usdcusdt_1h.csv",
+      "url": "https://api.binance.com/api/v3/klines?symbol=USDCUSDT&interval=1h&startTime=1678233600000&endTime=1679011200000&limit=1000",
+      "retrieved_utc": "2026-07-13T10:18:20Z",
+      "n_points": 131
+    },
+    {
+      "file": "usdc_supply_daily.csv",
+      "url": "https://stablecoins.llama.fi/stablecoincharts/all?stablecoin=2",
+      "retrieved_utc": "2026-07-13T10:18:21Z",
+      "n_points": 12
+    },
+    {
+      "file": "excluded_coins_hourly.csv",
+      "symbol": "USDP",
+      "window": "calm",
+      "url": "https://coins.llama.fi/chart/coingecko:paxos-standard?start=1676505600&span=480&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:22Z",
+      "n_points": 480
+    },
+    {
+      "file": "excluded_coins_hourly.csv",
+      "symbol": "USDP",
+      "window": "crisis",
+      "url": "https://coins.llama.fi/chart/coingecko:paxos-standard?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:23Z",
+      "n_points": 215
+    },
+    {
+      "file": "excluded_coins_hourly.csv",
+      "symbol": "GUSD",
+      "window": "calm",
+      "url": "https://coins.llama.fi/chart/coingecko:gemini-dollar?start=1676505600&span=480&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:24Z",
+      "n_points": 480
+    },
+    {
+      "file": "excluded_coins_hourly.csv",
+      "symbol": "GUSD",
+      "window": "crisis",
+      "url": "https://coins.llama.fi/chart/coingecko:gemini-dollar?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:25Z",
+      "n_points": 215
+    },
+    {
+      "file": "excluded_coins_hourly.csv",
+      "symbol": "BUSD",
+      "window": "calm",
+      "url": "https://coins.llama.fi/chart/coingecko:binance-usd?start=1676505600&span=480&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:26Z",
+      "n_points": 480
+    },
+    {
+      "file": "excluded_coins_hourly.csv",
+      "symbol": "BUSD",
+      "window": "crisis",
+      "url": "https://coins.llama.fi/chart/coingecko:binance-usd?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-07-13T10:18:27Z",
+      "n_points": 216
+    },
+    {
+      "file": "excluded_coins_volume.csv",
+      "venue": "Binance",
+      "symbol": "USDPUSDT",
+      "url": "https://api.binance.com/api/v3/klines?symbol=USDPUSDT&interval=1h&startTime=1678233600000&endTime=1679011200000&limit=1000",
+      "retrieved_utc": "2026-07-13T10:18:28Z",
+      "n_points": 131
+    },
+    {
+      "file": "excluded_coins_volume.csv",
+      "venue": "Binance",
+      "symbol": "BUSDUSDT",
+      "url": "https://api.binance.com/api/v3/klines?symbol=BUSDUSDT&interval=1h&startTime=1678233600000&endTime=1679011200000&limit=1000",
+      "retrieved_utc": "2026-07-13T10:18:29Z",
+      "n_points": 217
+    },
+    {
+      "file": "excluded_coins_volume.csv",
+      "venue": "Gemini",
+      "symbol": "GUSDUSD",
+      "url": "https://api.gemini.com/v2/candles/gusdusd/1hr",
+      "retrieved_utc": "2026-07-13T10:18:31Z",
+      "error": "400 Client Error: Bad Request for url: https://api.gemini.com/v2/candles/gusdusd/1hr"
+    },
+    {
+      "file": "terra_price_hourly.csv",
+      "symbol": "USDT",
+      "url": "https://coins.llama.fi/chart/coingecko:tether?start=1651968000&span=192&period=1h",
+      "retrieved_utc": "2026-06-14T09:01:36Z",
+      "n_points": 192,
+      "window_utc": "2022-05-08 .. 2022-05-16"
+    },
+    {
+      "file": "terra_price_hourly.csv",
+      "symbol": "USDC",
+      "url": "https://coins.llama.fi/chart/coingecko:usd-coin?start=1651968000&span=192&period=1h",
+      "retrieved_utc": "2026-06-14T09:01:36Z",
+      "n_points": 192,
+      "window_utc": "2022-05-08 .. 2022-05-16"
+    },
+    {
+      "file": "usdt_usd_hourly.csv",
+      "source": "Coinbase Exchange USDT-USD 1h candles (keyless)",
+      "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?start=2023-03-08T00:00:00Z&end=2023-03-17T00:00:00Z&granularity=3600",
+      "retrieved_utc": "2026-06-14T10:46:07Z",
+      "n_points": 217
+    },
+    {
+      "file": "n1/kraken_usdtusd_2019/hourly.csv",
+      "series": "kraken_usdtusd_2019_hourly",
+      "source_url": "https://api.kraken.com/0/public/Trades?pair=USDTZUSD",
+      "retrieval_utc": "2026-09-08T21:17:10Z",
+      "sha256": "f01f0e8c9c15a0b1a395783c241705c6fe11141187445bdb9236397bb98755b4",
+      "rows": 624,
+      "coverage_start_utc": "2019-04-20T00:00:00Z",
+      "coverage_end_utc": "2019-05-15T23:00:00Z",
+      "notes": "Kraken public Trades, pair_key=USDTZUSD (altname=USDTUSD), resolved via AssetPairs. Raw trades (115949, deduped by trade_id) at data/n1/kraken_usdtusd_2019/trades_raw.jsonl. Full coverage, no gaps. RECONCILED 2026-09-09: coverage_start_utc/coverage_end_utc corrected from raw-trade first/last timestamps (00:00:12Z / 23:59:40Z) to the actual hour_utc bounds of the referenced hourly.csv file (00:00:00Z / 23:00:00Z), matching the hour-aligned convention every sibling price-series entry uses. Raw-trade coverage is unchanged and still fully described by n_raw_trades and the trades_raw.jsonl file this entry also documents."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_2008_0916.pdf",
+      "source_url": "http://web.archive.org/web/20080920194130if_/http://www.reservefunds.com:80/pdfs/Press%20Release%202008_0916.pdf",
+      "retrieval_utc": "2026-09-08T21:09:54Z",
+      "sha256": "712ea26a3bfc1cca6035b9e8ab255d389066f3247ca17463cd2ecc976ae3c270",
+      "notes": "The Reserve Fund's own 16 Sept 2008 announcement (\u201cA Statement Regarding The Primary Fund\u201d), retrieved via Wayback Machine (live reservefunds.com is defunct). Discloses $785M face value of Lehman debt written to zero and resulting Primary Fund NAV of $0.97/share effective 4:00PM ET, plus the $1.00 redemption cutoff at 3:00PM that day. Source for figures.json entries (c) and (e)."
+    },
+    {
+      "file": "n1/reserve2008/raw/nav_release_091708.pdf",
+      "source_url": "http://web.archive.org/web/20081010141158if_/http://www.reservefunds.com:80/pdfs/NAV%20Release_091708.pdf",
+      "retrieval_utc": "2026-09-08T21:09:56Z",
+      "sha256": "11adb876882f9b11f1f8d0be454bd7e00d0d9083f7f6abcea038d931182031f6",
+      "notes": "Fund press release dated 17 Sept 2008 restating Primary Fund NAV = $0.97 'as of 5:00pm ET on September 16, 2008' (note: differs from the 16 Sept release's own 4:00PM framing -- reported as an internal inconsistency, not resolved). Also gives Reserve Yield Plus Fund ($0.97) and Reserve International Liquidity Fund Ltd. ($0.91) NAVs."
+    },
+    {
+      "file": "n1/reserve2008/raw/navs_regfunds_091908.pdf",
+      "source_url": "http://web.archive.org/web/20081010141203if_/http://www.reservefunds.com:80/pdfs/NAVs_RegFunds_091908.pdf",
+      "retrieval_utc": "2026-09-08T21:09:58Z",
+      "sha256": "be976da17372602f3c1e3a98a2500f461b1393b75fe42804ae4021e47c2d5d6a",
+      "notes": "Fund press release dated 22 Sept 2008 listing $1.00 NAVs for the fund's other (non-Primary) money-market series as of 19 Sept 2008; Primary Fund and Yield Plus funds marked 'Not available'. Background/context only, not a source for any of the five requested figures."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_insdep_cashsweep_2008_0917.pdf",
+      "source_url": "http://web.archive.org/web/20081001060924if_/http://www.reservefunds.com:80/pdfs/Press%20Release_InsDep_CashSweep%202008_0917.pdf",
+      "retrieval_utc": "2026-09-08T21:09:59Z",
+      "sha256": "a919ee20ddf65dd39d4de50fc21ce53d8ce00cf65fc6fac0b09ecff244c0b4e5",
+      "notes": "Fund press release dated 17 Sept 2008 stating the Reserve Insured Deposits and Cash Sweep bank-deposit programs (separate from the Primary Fund) were unaffected by the NAV break. Background/context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_sec_2008_0922.pdf",
+      "source_url": "http://web.archive.org/web/20081010135511if_/http://www.reservefunds.com:80/pdfs/Press%20Release%20SEC%202008_0922.pdf",
+      "retrieval_utc": "2026-09-08T21:10:01Z",
+      "sha256": "81aee6016e44549e8baf2585be9a4397ae458c8fd1dde3f23d9ef61ba2fb499c",
+      "notes": "Fund press release dated 22 Sept 2008 announcing the SEC's order suspending redemptions from the Primary and U.S. Government Funds. Background/context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/sec_statement_2008_0922.pdf",
+      "source_url": "http://web.archive.org/web/20081001060930if_/http://www.reservefunds.com:80/pdfs/SEC%20Statement%202008_0922.pdf",
+      "retrieval_utc": "2026-09-08T21:10:02Z",
+      "sha256": "3dfa1cb73bcfa611433d775c8ba8d7f3509027a21e50db5b892ee66e0c79b590",
+      "notes": "SEC Investment Company Act Release No. 28386 (22 Sept 2008): the SEC order temporarily suspending redemptions from the Primary Fund and U.S. Government Fund under Section 22(e)(3), as re-hosted on the fund's own site (sec.gov itself was not directly fetchable for this document -- see gap notes). Background/context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_statement_of_order_purpose_2008_0923.pdf",
+      "source_url": "http://web.archive.org/web/20081010100139if_/http://www.reservefunds.com:80/pdfs/Press%20Release%20Statement%20of%20Order%20Purpose%202008_0923.pdf",
+      "retrieval_utc": "2026-09-08T21:10:03Z",
+      "sha256": "783b38a7611b9074021d9f44264ef9e5d84fa338ae998fa107a10ec95d005d27",
+      "notes": "Fund press release dated 23 Sept 2008 clarifying the purpose of the SEC's 22 Sept redemption-suspension order. Background/context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/reservenews_20080919.html",
+      "source_url": "http://web.archive.org/web/20080919020022if_/http://www.reservefunds.com:80/reservenews.shtml",
+      "retrieval_utc": "2026-09-08T21:11:03Z",
+      "sha256": "3ec913d23d6839a25d0ab6658ddb576b01cbe19c59f4a6edfc235d9030a583f5",
+      "notes": "Wayback snapshot (crawled 19 Sept 2008) of the fund's press/news-coverage listing page. Confirms www.reservefunds.com as the fund's genuine historical domain and links contemporaneous NYT/press coverage. No net-asset or NAV figures found on this page; used for domain confirmation and context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/reservenewslist_20080927.html",
+      "source_url": "http://web.archive.org/web/20080927163836if_/http://www.reservefunds.com:80/reservenewslist.shtml",
+      "retrieval_utc": "2026-09-08T21:11:04Z",
+      "sha256": "9b1420cb24fe0422b6d0cd6903b383f20520e07c64c56488bc4c499eac7fdb94",
+      "notes": "Wayback snapshot (crawled 27 Sept 2008) of the fund's press-release index by date, 16-26 Sept 2008. Used to enumerate and date the crisis-period PDF releases fetched alongside it (titles + dates only, no dollar figures on the page itself)."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_nav_2008_0919.pdf",
+      "source_url": "http://web.archive.org/web/20081010141214if_/http://www.reservefunds.com:80/pdfs/Press%20Release%20NAV%202008_0919.pdf",
+      "retrieval_utc": "2026-09-08T21:11:57Z",
+      "sha256": "b0c5d3c965f81a3576cc41d48fd0d8911db49d1937a1a3cee430b74aa77b5b52",
+      "notes": "Fund press release dated 19 Sept 2008 listing $1.00 NAVs for other (non-Primary) Reserve money-market series as of 17-18 Sept 2008. Background/context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_primgovt_2008_0919.pdf",
+      "source_url": "http://web.archive.org/web/20081010141238if_/http://www.reservefunds.com:80/pdfs/Press%20Release%20PrimGovt%202008_0919.pdf",
+      "retrieval_utc": "2026-09-08T21:11:59Z",
+      "sha256": "e4715b671aecdfcfd294fff89b66fa58aecf043a847d66d4611197a728c8138d",
+      "notes": "Fund press release dated 19 Sept 2008 announcing the SEC redemption-suspension application. Discloses Primary Fund AUM 'approximately $62 billion ... at the opening of business on September 15, 2008' and 'redemption requests this week of approximately $60 billion'; also gives the same pair of figures for the U.S. Government Fund ($10B AUM / $6B redemptions, not one of the requested figures). Corroborating source for figures.json entry (b)."
+    },
+    {
+      "file": "n1/reserve2008/raw/press_release_subscription_2008_0918.pdf",
+      "source_url": "http://web.archive.org/web/20081010100207if_/http://www.reservefunds.com:80/pdfs/Press%20Release%20Subscription%202008_0918.pdf",
+      "retrieval_utc": "2026-09-08T21:12:00Z",
+      "sha256": "816db318fafcd66a39ea04ee3eaf73efac60b839cecc213f412f697c17955a8b",
+      "notes": "Fund press release dated 18 Sept 2008: suspends new share purchases fund-wide and sets once-daily pricing times/cutoffs (Primary Fund 5:00pm ET) plus the 7-day redemption-proceeds delay policy. Background/context only."
+    },
+    {
+      "file": "n1/reserve2008/raw/sec_litreleases_index_20090707.html",
+      "source_url": "http://web.archive.org/web/20090715024310if_/http://sec.gov/litigation/litreleases.shtml",
+      "retrieval_utc": "2026-09-08T21:17:34Z",
+      "sha256": "770e7b5b81dfd5d578dfb447da94dd5be6706907310750e7838436dc55f23b58",
+      "notes": "Wayback snapshot of the SEC's own litigation-release index page. Live www.sec.gov blocked all direct fetch attempts (403 'Request Rate Threshold Exceeded' / 'Undeclared Automated Tool' -- see gap notes); this Wayback copy was used instead to discover that SEC v. Reserve Management Company is Litigation Release No. 21025 (5 May 2009) and to obtain the exact complaint PDF URL."
+    },
+    {
+      "file": "n1/reserve2008/raw/sec_lr21025.htm",
+      "source_url": "http://web.archive.org/web/20090507191235if_/http://www.sec.gov/litigation/litreleases/2009/lr21025.htm",
+      "retrieval_utc": "2026-09-08T21:19:22Z",
+      "sha256": "ec9d5acc9049a1f2fad27151d2abd74f653030cdffad39a1220b2ba21c2783c7",
+      "notes": "SEC Litigation Release No. 21025 (5 May 2009): announces the enforcement action SEC v. Reserve Management Company, Inc., Resrv Partners, Inc., Bruce Bent Sr. and Bruce Bent II, Civil Action No. 09-CV-4346 (S.D.N.Y.). Corroborates the $785M Lehman face-value figure (c) and gives the case caption / civil action number cited throughout figures.json."
+    },
+    {
+      "file": "n1/reserve2008/raw/sec_complaint_comp21025.pdf",
+      "source_url": "http://web.archive.org/web/20090507191238if_/http://www.sec.gov/litigation/complaints/2009/comp21025.pdf",
+      "retrieval_utc": "2026-09-08T21:20:34Z",
+      "sha256": "344c5c1d25add6aec7b18be140e0fa4e3e95aaffb3a9a59456212c23b11c8486",
+      "notes": "SEC v. Reserve Management Company, Inc., et al. -- the actual 45-page civil complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.), filed 5 May 2009. Primary source for figures.json entries (a-related) [RMCI-wide $120B AUM, Sept 12 2008, p.8], (b) [Primary Fund $62.4B total assets, morning of Sept 15 2008, p.17], and (d) [$10.7B of $24.6B redemption requests paid by 9am Sept 16 2008, p.33]; corroborates (c) [$785M Lehman face value, pp.2/17/22] and (e) [4:00pm ET NAV-break time, p.3]. Retrieved via Wayback Machine; live sec.gov blocked direct fetch of this same document (403 'Undeclared Automated Tool')."
+    },
+    {
+      "file": "n1/tether2019/raw/2019.04.24_signed_order.pdf",
+      "series": "tether2019_nyag_signed_order",
+      "source_url": "https://ag.ny.gov/sites/default/files/2019.04.24_signed_order.pdf",
+      "retrieval_utc": "2026-09-08T21:40:07Z",
+      "sha256": "574eb217d3313e4e5635a00a013f6b869a2ec19da0a9fc2cb2fe86512fcf02ba",
+      "bytes": 1160314,
+      "notes": "Signed Ex Parte Order, GBL S354, Supreme Court of NY County, dated/stamped 2019-04-24, In re Inquiry by Letitia James, AG of NY, v. iFinex Inc./BFXNA/BFXWW/Tether Holdings/Tether Operations/Tether Limited/Tether International. Linked from NYAG press release https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company (2019-04-25). References but does not include the underlying Whitehurst affirmation + Exhibits A-M + memorandum of law (all dated 2019-04-24). Does NOT contain the cash/cash-equivalent backing percentage disclosure -- that is reported to be in a SEPARATE Tether-counsel affidavit ~2019-04-30 which could NOT be located after exhausting 3 sanctioned headless methods (direct ag.ny.gov guesses; Wayback CDX over ag.ny.gov; Wayback CDX over courthousenews.com) -- see data/n1/tether2019/disclosure_passage.json for the full gap record. Feeds fix-manifest item A2 (specificity panel, Tether Apr-May 2019 row) alongside n1/kraken_usdtusd_2019/hourly.csv for price data; the phi/backing-percentage input for that row remains an open instrument gap pending the affidavit."
+    },
+    {
+      "file": "n1/kraken_usdcusd/hourly.csv",
+      "series": "kraken_usdcusd",
+      "source_url": "https://api.kraken.com/0/public/Trades?pair=USDCUSD&since=<ns_cursor> (paginated)",
+      "retrieval_utc": "2026-09-08T21:13:22Z",
+      "sha256": "20608fcc326354e9c3c4fccbd562f38f1f35e3b4d20186cf9365b8ca945fca3e",
+      "rows": 240,
+      "coverage_start_utc": "2023-03-08T00:00:00Z",
+      "coverage_end_utc": "2023-03-17T23:00:00Z",
+      "notes": "rows=240; n_pages=373; canonical_altname=USDCUSD; n_raw_trades=372840; no gaps; full requested window covered; min hourly low = 0.874 at 2023-03-11T07:00:00Z"
+    },
+    {
+      "file": "n1/bitstamp_usdcusd/hourly.csv",
+      "series": "bitstamp_usdcusd",
+      "source_url": "https://www.bitstamp.net/api/v2/ohlc/usdcusd/?step=3600&start=<unix>&end=<unix>&limit=1000 (paginated)",
+      "retrieval_utc": "2026-09-08T21:38:29Z",
+      "sha256": "fed4cb24ae03766e0f0ae588db0d76f1279ee17693832065d236160921c66872",
+      "rows": 0,
+      "coverage_start_utc": null,
+      "coverage_end_utc": null,
+      "notes": "rows=0; n_pages=1; pair=usdcusd (Bitstamp path segment; no AssetPairs-style resolution needed); GAPS booked: [{\"endpoint\": \"https://www.bitstamp.net/api/v2/ohlc/usdcusd/\", \"params\": {\"step\": 3600, \"start\": 1678233600, \"end\": 1679097599, \"limit\": 1000}, \"error\": \"ConnectTimeout: HTTPSConnectionPool(host='www.bitstamp.net', port=443): Max retries exceeded with url: /api/v2/ohlc/usdcusd/?step=3600&start=1678233600&end=1679097599&limit=1000 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000029F44FCF750>, 'Connection to www.bitstamp.net timed out. (connect timeout=30)'))\", \"attempts\": 5, \"failed_utc\": \"2026-09-08T21:41:15Z\"}]; min hourly low = None at None"
+    },
+    {
+      "file": "n1/kraken_usdtusd/hourly.csv",
+      "series": "kraken_usdtusd_complete",
+      "source_url": "https://api.kraken.com/0/public/Trades?pair=USDTUSD&since=<ns_cursor> (paginated, resumed)",
+      "retrieval_utc": "2026-09-08T21:52:17Z",
+      "sha256": "2d5ffa9a7bdec73131a7796a2cdc2e3f74e679481add5bdcf0ec3ecd67c2e245",
+      "rows": 240,
+      "coverage_start_utc": "2023-03-08T00:00:00Z",
+      "coverage_end_utc": "2023-03-17T23:00:00Z",
+      "notes": "SUPERSEDES the coverage of the earlier 'kraken_usdtusd' entry in this same file (that entry is left untouched per the append-only constraint; it documents the real, now-fixed cause: this module's own MAX_KRAKEN_PAGES=500 safety cap bound at 2023-03-14T12:21:36Z, NOT a Kraken-side error or rate limit -- Kraken returned 200s with data throughout). This entry is the resumed+completed pull: continuation resumed from the last saved trade_id (781 total pages across both passes: 500 initial + 281 continuation), 780078 deduped raw trades, zero gaps, full window covered. canonical_altname=USDTUSD (AssetPairs dict_key=USDTZUSD, altname=USDTUSD -- the altname is the value actually used as the pair= query parameter). min hourly low = 0.9993 at 2023-03-09T11:00:00Z (unchanged vs. the partial pull -- the panic trough was already inside the first 500 pages)."
+    },
+    {
+      "file": "n1/tether2019/raw/2020.07.09_appellate_division_opinion_matter_of_james_v_ifinex.html",
+      "series": "tether2019_nyag_appellate_opinion",
+      "source_url": "http://www.courts.state.ny.us/reporter/3dseries/2020/2020_03880.htm",
+      "retrieval_utc": "2026-09-09T06:08:59Z",
+      "sha256": "ba3c5a7367a03ef21352082c865d437e0e5d8f5e8bbd25e3608785ea25bdea50",
+      "bytes": 27429,
+      "notes": "Matter of James v. iFinex Inc., 185 A.D.3d 22, 127 N.Y.S.3d 456, 2020 NY Slip Op 03880 (App. Div., 1st Dept, decided 2020-07-09; Gesmer, J.), same docket 450545/19 as the already-frozen 2019.04.24_signed_order.pdf. Located via CourtListener REST v4 search API (https://www.courtlistener.com/api/rest/v4/search/?q=iFinex+Letitia+James+450545+2019), which resolved to CourtListener opinion cluster 4766776 / docket 17334853; full text fetched directly from the official NY courts.state.ny.us slip-opinion mirror (courtlistener opinion-text endpoint returned 401 without an API key). NOT the Hoegner affirmation itself (that remains an open INSTRUMENT GAP -- see disclosure_passage_n1cretry.json) but IS a court document from the same matter that verbatim restates Tether's post-2019-03-04 change of representation: reserves include 'unspecified currency, \"cash equivalents,\" and \"other assets and receivables from loans made by Tether [Holdings] to third parties' -- no percentage figure. Confirms procedural fact: 'On or about April 30, 2019, respondents moved to modify or vacate the ex parte order.'"
+    },
+    {
+      "file": "n1/tether2019/raw/2019.04.25_ag_press_release.html",
+      "series": "tether2019_nyag_press_release_dollars",
+      "source_url": "https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "fa195c62d858daf3e08ec51173e23811a3d32889325355fdab56315199061f49",
+      "bytes": 51116,
+      "notes": "NYAG press release full body text (dated on-page April 25, 2019), fetched live 200 OK -- distinct from the already-frozen 2019.04.24_signed_order.pdf, which this page links to but does not itself contain. Contains 3 distinct dollar figures attributed to \"the filings\": $850 million (alleged Crypto Capital impairment/loss, quoted twice), $900 million (ceiling of Bitfinex's self-granted access to Tether's cash reserves), $700 million (amount Bitfinex had already drawn). See data/n1/tether2019/disclosure_passages_nyag.json for all 4 verbatim passages with exact wording. Does NOT contain the underlying Brian M. Whitehurst affirmation, petition, or memorandum of law that the signed order cites as its basis -- an exhaustive domain-wide Wayback CDX sweep of ag.ny.gov (2019-04-24..2019-05-31, 5375 rows) plus 3 filename-plausible sites/default/files/*.pdf candidates (checked via pdfplumber text extraction: complaint_as-filed.pdf = unrelated 2018 DOL case; petition_-_filed.pdf = image-only PDF with CreationDate 2018-01-16, predates this case; court_stamped_petition.pdf = 0 keyword hits in 81,063 extracted chars) found no such standalone document -- booked as an INSTRUMENT GAP in disclosure_passages_nyag.json. Feeds candidate phi-input (a) numerator: dollar impairment (three candidate figures, not resolved to one here)."
+    },
+    {
+      "file": "n1/tether2019/raw/2019.04.26_tether_respond_to_nyag_wayback.html",
+      "series": "tether2019_response_to_nyag",
+      "source_url": "http://web.archive.org/web/20190426025729/https://tether.to/tether-respond-to-new-york-attorney-generals-actions/",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "5266bf6d14c2de6468e74fbec0f67c33f924632150ad5f9fee086c04045e0656",
+      "bytes": 71987,
+      "notes": "Tether's own public blog post \"Tether Respond to New York Attorney General's Actions,\" posted same-day per its own text (\"Earlier today...\"), i.e. 2019-04-25; Wayback-captured 2019-04-26T02:57:29Z. Disputes the NYAG's $850 million \"loss\" framing, asserting the Crypto Capital funds were instead \"seized and safeguarded,\" not lost -- see data/n1/tether2019/usdt_liabilities_wayback.json 'response_statements' for the verbatim passage. Found via a second, unfiltered Wayback CDX sweep of tether.to for 2019-04-25..2019-05-05 (1687 rows); not located by the transparency-only CDX filter used for the daily balance-page series below."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190415031750.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190415031750/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "ac9dc661ab6741b8fdf437fd034ad61336d203eeea1a399aafc8873eac145aa2",
+      "bytes": 38185,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-15) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190416015036.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190416015036/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "cd2ebf35201395b613300dde108674630b992778ae9e39bad7822135004bf7c2",
+      "bytes": 38186,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-16) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190417165700.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190417165700/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "54c01fb1fc1b2a72d8e7c436f1eb7f264dee81c3fd3af85101a57bdd3b394ab7",
+      "bytes": 37790,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-17) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190418204708.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190418204708/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "f272fe312100a67dd4327b314ff7f8db982e437e5905e29a637de0bf514b5e79",
+      "bytes": 39010,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-18) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190420011600.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190420011600/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "05501c7a5a91809551736f8f7e4726466acc332ae494da9a4a097bca6e3bf2b0",
+      "bytes": 39013,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-20) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190421205953.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190421205953/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "9668f837bc6019d0d5030fbf7affe9bb3f34966fe7599a614ff6be56606f73af",
+      "bytes": 39013,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-21) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190422150632.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190422150632/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "c68d80277decbdb8b1b620c0bca5d5e9515a9b10453f2ad7a2e75a329c38e7b1",
+      "bytes": 39008,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-22) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190423201832.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190423201832/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "e74ca4e0da1ce105eda5d3eb09787ba7329a12f118923aab41d31d6bf503afd3",
+      "bytes": 39008,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-23) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190424185208.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190424185208/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "d617ec579998c29f5e679961e416c478409c7f1b8e78b570f00e289a9805d743",
+      "bytes": 39008,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-24) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190426060000.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190426060000/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "2f152eb76c087d263dc061fbc870ecd86e468f63ecd963ea99a39c6d6a46ea27",
+      "bytes": 39012,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-26) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190427072549.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190427072549/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "237ca5df738bfc65877fcfd1df218690f0898893dfcff1d326c8e45a4c1855c8",
+      "bytes": 39023,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-27) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190428125921.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190428125921/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "fecdcf771b40ec6cbf44045e292490e63c931e1a2a63822bcae1eb60ccc93b5e",
+      "bytes": 39016,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-28) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190430003216.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190430003216/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "ea2db18faa98a6882ca32a663a89b8231f5a87e6ec3a0607a43b7bde9fb1c749",
+      "bytes": 39021,
+      "notes": "One-per-UTC-day Wayback capture (2019-04-30) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190501162007.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190501162007/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "db8d7e3a3fa5ade9eb75b68a02451a8a4d715ed917c9c553c009f402b919683b",
+      "bytes": 39020,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-01) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190504011631.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190504011631/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "1824bb643982aad9804871994fb78954864347e10b11f33be00daeebff36de64",
+      "bytes": 39023,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-04) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190508135924.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190508135924/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "497756edfed113ba198701eb9a00060cf61ed7db5c04103d7e150696fcfb1abf",
+      "bytes": 39023,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-08) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190509082322.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190509082322/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "8b28b2af96852c275e0163bfe2cb4326e27c349165fd8cd83c8e208f7382e8fb",
+      "bytes": 39023,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-09) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190510005012.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190510005012/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "e93e593252c1e710ecf2daa53bab9be72945c0cc2200b6c4908f57af6f621fdf",
+      "bytes": 39020,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-10) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190511004815.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190511004815/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "749ee4a80c27e6137f172852e3ebf6bd487493cb535982574f0edd1f639ce615",
+      "bytes": 39020,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-11) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190512012315.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190512012315/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "c2f513080c364b8cd966b7a0246460ef413f4b9e6170019b366d89fe1367f261",
+      "bytes": 39019,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-12) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190514011334.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190514011334/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "088e7bbc728b9e6017e81d34ef7735aa0c6cd799f146bc7fc9739ef67359e84b",
+      "bytes": 39017,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-14) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/tether2019/raw/wayback_transparency/wallet_transparency_20190515234256.html",
+      "series": "tether2019_wallet_transparency_daily",
+      "source_url": "http://web.archive.org/web/20190515234256/https://wallet.tether.to/transparency",
+      "retrieval_utc": "2026-09-09T07:02:45Z",
+      "sha256": "3760e66e7fb522bc3c31dab8f1adbf480a8f83155f2eca6c07da4deae052269c",
+      "bytes": 39014,
+      "notes": "One-per-UTC-day Wayback capture (2019-05-15) of Tether's live auto-generated wallet.tether.to/transparency balance page (USD\u20ae 'Current Balances' block). One of 22 daily captures spanning 2019-04-15..2019-05-15, sampled from a 234-row/55-html-page CDX result (url=tether.to&matchType=domain&from=20190415&to=20190515&filter=urlkey:.*transparency.*) that otherwise had ~52 near-duplicate intraday captures per day. See data/n1/tether2019/usdt_liabilities_wayback.json for the verbatim 'Total Liabilities' figure extracted from this specific capture. Feeds candidate phi-input (a) denominator: contemporaneous total tethers-outstanding liabilities."
+    },
+    {
+      "file": "n1/onchain/hourly_block_anchors.csv",
+      "series": "n1bkeyless_hourly_block_anchors",
+      "source_url": "eth_getBlockByNumber binary/galloping search (no keyless getblocknobytime), served via https://ethereum-rpc.publicnode.com (the only one of the 4 listed endpoints that answered historical eth_getBlockByNumber; https://eth.llamarpc.com TLS-failed, https://cloudflare-eth.com and https://rpc.ankr.com/eth were not needed as publicnode answered every call)",
+      "retrieval_utc": "2026-09-09T08:57:14Z",
+      "sha256": "fec1fb1cee9606b69ddc98b3ccad4493f3a932743e26f74c680c58d0301cd502",
+      "rows": 240,
+      "block_coverage": [
+        16779843,
+        16850649
+      ],
+      "utc_coverage": [
+        "2023-03-08T00:00:00Z",
+        "2023-03-17T23:00:00Z"
+      ],
+      "notes": "Highest block with timestamp <= each UTC hour boundary, 2023-03-08T00:00Z..2023-03-17T23:00Z (240 boundaries, all present). Companion outputs from the same keyless on-chain probe: d10_probe.json (an archival-state probe, USDC.totalSupply() @ block 16804701 -- verdict NOT_SUPPORTED, all 4 endpoints refused); pool_verification.json (Curve 3pool + 3 Uniswap v3 pool identities, all PASS against the hardcoded addresses, no factory substitution needed); logs_instrument_gap.json (Curve TokenExchange + Uniswap v3 Swap logs over blocks 16779844-16843829 -- INSTRUMENT GAP, eth_getLogs refused by all 4 endpoints for any numeric historical block range, root-caused via diagnostic calls to publicnode's archive paywall + persistent failures on the other 3 endpoints); hourly_pool_state_gap.json (gapped per the NOT_SUPPORTED verdict above, carries one single latest-block (25938760) Curve 3pool balance anchor instead)."
+    },
+    {
+      "file": "n1/paxos2023/raw/usdp_transparency_20230315083355.html",
+      "series": "paxos2023_usdp_transparency",
+      "source_url": "http://paxos.com/usdp-transparency/",
+      "retrieval_utc": "2026-09-09T11:29:18Z",
+      "sha256": "e409c8679ed1f833d0dc641a192c1b5a7b3b2b10f795486ab36f42e723347189",
+      "bytes": 164710,
+      "notes": "Wayback capture 20230315083355 of http://paxos.com/usdp-transparency/ (candidate from the blog/newsroom/press/status/transparency/attestation keyword-filtered paxos.com domain CDX sweep). No Silvergate/Signature/SVB dollar-specific breakdown found in body text (only generic 'held 100% in cash and US treasuries' language)."
+    },
+    {
+      "file": "n1/paxos2023/raw/attestation_20230314212456.html",
+      "series": "paxos2023_attestation",
+      "source_url": "https://www.paxos.com/attestation/",
+      "retrieval_utc": "2026-09-09T11:29:22Z",
+      "sha256": "8823a38827605fa6df2ae05a6b4052db3f075610d9b98d9c87f215b89c499972",
+      "bytes": 129940,
+      "notes": "Wayback capture 20230314212456 of https://www.paxos.com/attestation/ (candidate from the blog/newsroom/press/status/transparency/attestation keyword-filtered paxos.com domain CDX sweep). No Silvergate/Signature/SVB dollar-specific breakdown found in body text (only generic 'held 100% in cash and US treasuries' language)."
+    },
+    {
+      "file": "n1/paxos2023/raw/busd_transparency_20230311202607.html",
+      "series": "paxos2023_busd_transparency",
+      "source_url": "https://paxos.com/busd-transparency/",
+      "retrieval_utc": "2026-09-09T11:29:24Z",
+      "sha256": "d8e610518521481dcc73853c2d685f60890e3c9742899df2fffff8075b8dc43a",
+      "bytes": 165572,
+      "notes": "Wayback capture 20230311202607 of https://paxos.com/busd-transparency/ (candidate from the blog/newsroom/press/status/transparency/attestation keyword-filtered paxos.com domain CDX sweep). No Silvergate/Signature/SVB dollar-specific breakdown found in body text (only generic 'held 100% in cash and US treasuries' language)."
+    },
+    {
+      "file": "n1/paxos2023/raw/usdp_monthly_report_february_2023_20230311204229.pdf",
+      "series": "paxos2023_usdp_feb2023_reserve_report",
+      "source_url": "https://paxos.com/wp-content/uploads/2023/03/USDP-Monthly-Stablecoin-Reporting-February-2023.pdf",
+      "retrieval_utc": "2026-09-09T11:29:44Z",
+      "sha256": "716b4a1305acd067c0b76357f084492e2c361158c1c8f8229226885b2750dbcd",
+      "bytes": 79834,
+      "notes": "Wayback capture 20230311204229 (2023-03-11, within window, BEFORE the 2023-03-12 joint statement) of Paxos's own USDP reserve report as of 2023-02-28. Note 1 names Signature Bank (FDIC Cert #57053) and Silvergate Bank (FDIC Cert #27330) among 5 possible depository institutions but gives only pooled totals, not a per-bank breakdown -- on-topic, NOT quantified per-bank."
+    },
+    {
+      "file": "n1/paxos2023/raw/twitter_paxosglobal_profile_20230314092146.html",
+      "series": "paxos2023_twitter_profile",
+      "source_url": "https://twitter.com/PaxosGlobal",
+      "retrieval_utc": "2026-09-09T11:30:09Z",
+      "sha256": "a08d0afa6d6f59d712ed4cd66255b5f4871707683d9a8086e2376d98234e68e0",
+      "bytes": 739313,
+      "notes": "Wayback capture of Paxos's official Twitter profile timeline. Contains a 6-tweet thread posted 2023-03-12T23:34:26Z-23:37:06Z (per Snowflake-id decode) including the $250M-at-Signature-Bank quantified disclosure -- see disclosure_passages_paxos.json."
+    },
+    {
+      "file": "n1/paxos2023/usdp_supply_daily.csv",
+      "series": "paxos2023_usdp_supply_daily",
+      "url": "https://stablecoins.llama.fi/stablecoincharts/all?stablecoin=11",
+      "retrieved_utc": "2026-09-09T11:30:23Z",
+      "n_points": 12,
+      "notes": "USDP (Pax Dollar) daily circulating supply, DeFiLlama stablecoincharts endpoint, stablecoin id=11 resolved from the live stablecoins.llama.fi/stablecoins list (candidates seen: [('11', 'Pax Dollar', 'paxos-standard'), ('33', 'USDP Stablecoin', None)]). RECONCILED 2026-09-09 (N7 gate): this entry was written in the pre-N1 schema (url/retrieved_utc/n_points) and carried no sha256, so it was unverifiable and broke the N1 manifest pin test. sha256, rows and bytes added to match the convention every sibling n1/ entry uses; the underlying file is unchanged.",
+      "sha256": "4283c1dfcf87ca9b37af848378977ea6663a19dde128860811507a7e7bf7f74b",
+      "rows": 12,
+      "bytes": 286
+    },
+    {
+      "file": "n1/paxos2023/raw/joint_statement_treasury_wayback_20230312222324.html",
+      "series": "paxos2023_joint_statement_treasury",
+      "source_url": "https://home.treasury.gov/news/press-releases/jy1337",
+      "retrieval_utc": "2026-09-09T11:32:15Z",
+      "sha256": "18797a229062d5ff412a698c30cafe428aaa9929c79ee408493bd530daeebfcd",
+      "bytes": 147787,
+      "notes": "Wayback capture 20230312222324 (8 min after the Fed's stated '6:15 p.m. EDT' release time) of the Treasury/Fed/FDIC joint statement on the SVB and Signature Bank resolutions. Corroborated by the Fed's own mirror of the same statement (earliest Wayback capture 20230312222000, 5 min after the stated release time), which additionally carries the explicit 'For release at 6:15 p.m. EDT' release-time header this row's timestamp is derived from."
+    },
+    {
+      "file": "n1/paxos2023/cdx_search_log.json",
+      "series": "paxos2023_cdx_search_log",
+      "retrieval_utc": "2026-09-10T10:13:59Z",
+      "sha256": "0aaf90bd17e2db93babdd6e00f5c5555df1c0cfe0fd5b0bda9eaf2da57399916",
+      "bytes": 8217,
+      "notes": "log sanitised: absolute path removed and internal process identifiers ('lane' field) stripped; content otherwise unchanged"
+    },
+    {
+      "file": "n1/paxos2023/joint_statement_treasury_fed_fdic.json",
+      "series": "paxos2023_joint_statement_treasury_fed_fdic_log",
+      "retrieval_utc": "2026-09-10T10:13:59Z",
+      "sha256": "824251d303aca77784c203f4c32d502150800751786a5610b4b24231f279fa97",
+      "bytes": 3943,
+      "notes": "log sanitised: absolute path removed; content otherwise unchanged"
+    },
+    {
+      "file": "n1/circle2023/raw/circle_update_usdc_svb_20230311202753.html",
+      "series": "circle2023_update_usdc_svb",
+      "source_url": "https://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank",
+      "retrieval_utc": "2026-09-09T18:33:15Z",
+      "sha256": "c59d383e99d811db5f83c0374812d84eaa04ff9f944cf390ade25ec1b2a9c1f1",
+      "bytes": 140190,
+      "notes": "Wayback capture 20230311202753 (2023-03-11T20:27:53Z) -- the FIRST capture of this URL in the Wayback Machine's history (verified: full CDX history for this exact URL returns 111 rows sorted ascending by timestamp, min timestamp 20230311202753; confirmed identical first capture across http/https and www/non-www URL variants -- see data/n1/circle2023/cdx_search_log.json for the full query log). The bib key for this source is circle2023update ('An Update on USDC and Silicon Valley Bank'); no article:published_time/datePublished meta tag exists in the page HTML, so this Wayback first-capture timestamp is the earliest documentable UTC bound on publication (capture time is necessarily >= true publish time, so it is an upper bound on the trough-to-pledge gap -- see makewhole_timing.py circle_makewhole_timing()). Page body confirmed on-topic: contains the make-whole pledge sentence \"Circle, as required by law under stored-value money transmission regulation, will stand behind USDC and cover any shortfall using corporate resources, involving external capital if necessary\" (line 2002 of the saved HTML), resolving the prior open question (see makewhole_timing.py's pre-fix content_caveat) of whether this specific post carries the make-whole pledge language the manuscript cites it for -- it does."
+    },
+    {
+      "file": "n1/dai_psm_2023/raw/theblock_218993_20230311105427.html",
+      "series": "dai_psm_2023_theblock_usdc090",
+      "source_url": "https://www.theblock.co/post/218993/usdc-and-dai-remain-at-about-0-90-following-circles-disclosure-of-funds-at-svb",
+      "retrieval_utc": "2026-09-10T08:15:00Z",
+      "sha256": "c570db25a6551ff40a1959b99361279ca3515bb4eb5da3e2c34f2484fa23f9c0",
+      "bytes": 1781816,
+      "notes": "Contemporaneous replacement source for PSMSOURCE (paper/fc27/fc27.tex Appendix B), freezing a dated public figure for the MakerDAO PSM's USDC balance on/about 2023-03-11, superseding the stale Jan-2023 ~$2.4B reporting figure previously in dai_backing.json. The Block, \"USDC remains at about $0.90 following Circle's disclosure of funds at SVB\" by Tim Copeland and James Hunt, published 2023-03-11T05:10:40-05:00 (10:10:40 UTC), Wayback-captured 2023-03-11T10:54:27Z (44 min after publication). Verbatim: \"The stablecoin is about 36% backed by USDC, according to daistats. During the depegging events, some traders used their USDC as collateral to generate DAI, through its peg stability module. This has now reached its cap of 3.1 billion USDC, so no more DAI can be minted with USDC.\" Found via Wayback CDX domain sweep of www.theblock.co filtered to MakerDAO/DAI-titled URLs, 2023-03-08..2023-03-15 window, after daistats.com and makerburn.com (both client-side SPAs whose Wayback captures hold no embedded data) and forum.makerdao.com (governance threads, no balance figure) failed to yield a usable figure -- see data/n1/dai_psm_2023/cdx_search_log.json for the full query log and data/n1/dai_psm_2023/psm_source_20230311.json for the extracted figures. The $3.1B figure is a PSM-USDC-A debt-ceiling ('line') reading, not a custody reading, and differs materially from the existing $2.4B (Jan-2023) figure; the on-chain fields in dai_backing.json (block, dai_total_supply, on-chain PSM custody) are unchanged, since those are deterministic historical eth_call results already correctly frozen and do not require ETHERSCAN_API_KEY to re-verify. NOTE, UNRESOLVED (see constants.py): an earlier revision of this note asserted the $3.1B figure reconciled with the on-chain PSM balance via a 'refilled during the panic' story -- that reconciliation was wrong and is retracted; PSM sellGem transfers USDC INTO the join, so it cannot explain a ~$99 on-chain balance at the same block. Whether $3.1B was `line`, `Art`, or both is unresolved."
+    },
+    {
+      "file": "dai_backing.json",
+      "source": "Etherscan eth_call (apikey from env, redacted): USDC.balanceOf(PSM-USDC-A) + DAI.totalSupply()",
+      "block": 16804701,
+      "run_date_utc": "2023-03-11T12:00:00Z",
+      "on_chain_psm_usdc_total": 99.328577,
+      "on_chain_backing_clean": false,
+      "reported_psm_usdc": 3100000000.0,
+      "reported_source": "The Block, 2023-03-11 (Wayback-captured, contemporaneous): PSM-USDC-A reported at its $3.1B debt ceiling; same source reports 36% USDC share of DAI collateral. See data/n1/dai_psm_2023/psm_source_20230311.json",
+      "retrieved_utc": "2026-09-10T09:07:22Z"
+    },
+    {
+      "file": "n1/treasury2023/daily_treasury_yield_curve_2023.csv",
+      "series": "treasury2023_daily_par_yield_curve",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2023/all?type=daily_treasury_yield_curve&field_tdr_date_value=2023&page&_format=csv",
+      "retrieved_utc": "2026-09-10T10:41:58Z",
+      "sha256": "edb7f3904e11dcaa502cdcc03ad9b1b16c893802d166ce9bc5fa1118251249d4",
+      "bytes": 19098,
+      "notes": "U.S. Treasury daily par yield curve, full-year 2023 CSV (live pull, direct from treasury.gov -- no Wayback fallback needed). time_value.py reads only the 03/10/2023 row (1 Mo=4.81%, 3 Mo=5.01%) to compute the p.7/sec:disc time-value discount figures. See results/time_value.json."
+    },
+    {
+      "file": "n1/tusd2023/tusd_hourly.csv",
+      "series": "tusd2023_hourly_price",
+      "source_url": "https://coins.llama.fi/chart/coingecko:true-usd?start=1678233600&span=216&period=1h",
+      "retrieved_utc": "2026-09-10T10:37:47Z",
+      "sha256": "0bf91846080ef711ed5ce06a3c1b9e9dc5bde2a52e49a7d52323dd091755dbf6",
+      "bytes": 5702,
+      "notes": "TUSD hourly USD price, 2023-03-08->2023-03-17 UTC, same DeFiLlama coins endpoint and window data_fetch.py uses for USDC/USDT/DAI (constants.DLL_COINS pattern; coingecko:true-usd). tusd_2023.py computes the 11 March 2023 minimum and its deviation from par. See results/tusd_2023.json."
+    },
+    {
+      "file": "n1/busd2023/raw/paxos_busd_redemption_20230321083819.html",
+      "series": "busd2023_paxos_redemption_pressrelease",
+      "source_url": "https://web.archive.org/web/20230321083819/https://paxos.com/2023/03/17/paxos-manages-the-safe-redemption-of-7-9b-busd-in-one-month-without-market-disruption/",
+      "retrieved_utc": "2026-09-10T10:37:57Z",
+      "sha256": "da891c51cef35b3f9638e0f8392ad973f2f533ddecb0d299836c84aaeb0bc34f",
+      "bytes": 135089,
+      "notes": "Wayback capture (20230321083819, 2023-03-21T08:38:19Z; original published 2023-03-17T10:00:00+00:00 per the page's own JSON-LD datePublished) of the Paxos newsroom press release. Body text confirmed: \"has facilitated the safe, steady redemption of more than $7.9B Binance USD (BUSD) in 32 days\" and \"All BUSD remains fully-backed 1:1 with USD cash & cash equivalents held in custody\" -- sources both the Appendix D $7.9B figure and the adjacent \"Paxos affirmed full 1:1 backing throughout\" clause."
+    }
+  ],
+  "files": {
+    "price_hourly.csv": {
+      "sha256": "3c5e3b7975069af3706d7b6d60fd704a49fca77373162edb98d82283cd6eeae8",
+      "bytes": 15964
+    },
+    "binance_usdcusdt_1h.csv": {
+      "sha256": "01891bbc9b82700288585483b9801c86a4e9f7a914ee6d78ec41a90969991c5a",
+      "bytes": 7046
+    },
+    "usdc_supply_daily.csv": {
+      "sha256": "a5cd825b6be1e3ef01a32b47d60775b3e7409ca3c3e7ad6e6585501bce58cb53",
+      "bytes": 310
+    },
+    "excluded_coins_hourly.csv": {
+      "sha256": "4a2279c19886bdde544abfb073ed6908a4d6d99dad43e01c8bc795daaf43275b",
+      "bytes": 69735
+    },
+    "excluded_coins_volume.csv": {
+      "sha256": "20613eb55ff97a7d04c212d07d8d5fe9233051ac5385fcc816595a4a0e804572",
+      "bytes": 19215
+    },
+    "dai_backing.json": {
+      "sha256": "5093ecd2b170a74188207f96ac24873cd6a001f50ec13247213e89873b016fc4",
+      "bytes": 805
+    },
+    "terra_price_hourly.csv": {
+      "sha256": "0f98741f5765b65472c66f28b857e38ee82fb76ef26c80528a2128e8178d207f",
+      "bytes": 13779
+    },
+    "usdt_usd_hourly.csv": {
+      "sha256": "a6eaf89f1cef4596ef8ffb8b6351ada4dfe7a889811c8c7fb03b6ce7089454df",
+      "bytes": 11722
+    },
+    "n1/kraken_usdcusd/hourly.csv": {
+      "sha256": "20608fcc326354e9c3c4fccbd562f38f1f35e3b4d20186cf9365b8ca945fca3e",
+      "bytes": 21604
+    },
+    "n1/kraken_usdtusd/hourly.csv": {
+      "sha256": "2d5ffa9a7bdec73131a7796a2cdc2e3f74e679481add5bdcf0ec3ecd67c2e245",
+      "bytes": 22275
+    },
+    "n1/bitstamp_usdcusd/hourly.csv": {
+      "sha256": "fed4cb24ae03766e0f0ae588db0d76f1279ee17693832065d236160921c66872",
+      "bytes": 37
+    },
+    "n1/onchain/hourly_block_anchors.csv": {
+      "sha256": "fec1fb1cee9606b69ddc98b3ccad4493f3a932743e26f74c680c58d0301cd502",
+      "bytes": 12523
+    },
+    "n1/treasury2023/daily_treasury_yield_curve_2023.csv": {
+      "sha256": "edb7f3904e11dcaa502cdcc03ad9b1b16c893802d166ce9bc5fa1118251249d4",
+      "bytes": 19098
+    },
+    "n1/tusd2023/tusd_hourly.csv": {
+      "sha256": "0bf91846080ef711ed5ce06a3c1b9e9dc5bde2a52e49a7d52323dd091755dbf6",
+      "bytes": 5702
+    },
+    "n1/busd2023/raw/paxos_busd_redemption_20230321083819.html": {
+      "sha256": "da891c51cef35b3f9638e0f8392ad973f2f533ddecb0d299836c84aaeb0bc34f",
+      "bytes": 135089
+    },
+    "n1/kraken_usdcusd/trades_raw.jsonl": {
+      "sha256": "89917436536fa04abefee2ead465d5ca4f1fc775481d5e5f597a24dbb695d078",
+      "bytes": 50236271
+    },
+    "n1/paxos2023/disclosure_passages_paxos.json": {
+      "sha256": "abff35fe0da5c600fa7bf9583aa3d5cd9665603580d3caec9279b6f289ddb039",
+      "bytes": 2447
+    },
+    "n1/tether2019/disclosure_passages_nyag.json": {
+      "sha256": "15818e600c9f7610a4ceb924f5a7efd8cb966906219d6f175f904f6a2667b5fc",
+      "bytes": 10655
+    },
+    "n1/tether2019/usdt_liabilities_wayback.json": {
+      "sha256": "cba778540c01f9553a3ee96e1c91a3c28e6eb8649e85d1fcec41976109f67b49",
+      "bytes": 15143
+    },
+    "n1/circle2023/raw/circle_tweet_usdc_svb_20230311032209.html": {
+      "sha256": "85d90bd022e0ac6e844d16b2d0e39234d853518adf2869f300d088fee7f6c24f",
+      "bytes": 244658
+    },
+    "n1/circle2023/raw/circle_pressrelease_usdc_svb_20230313031348.html": {
+      "sha256": "76300c5eab10be53387092020e167fa9b6799a7c25fb06259d83a35506071b33",
+      "bytes": 124468
+    },
+    "n1/circle2023/disclosure_passages_circle.json": {
+      "sha256": "f29642ef976657a1a7f68baf047ed2cf968d5efb78f25983617114a464c84c43",
+      "bytes": 7370
+    }
+  },
+  "excluded_from_this_artifact": {
+    "reason": "Only the short paper is submitted, and it uses no wallet-level on-chain attribution. The redemption-concentration and DAI-contagion analyses, and the address-label corpora they consume, are not part of this artifact; their manifest entries are removed so that every entry here describes a file that is present.",
+    "files": [
+      "n1/labels/brianleect_etherscan-labels/combinedAccountLabels.json",
+      "n1/labels/dawsbot_eth-labels/accounts.csv",
+      "redemptions_by_wallet.csv"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "OK",
+  "event": "Terra/LUNA collapse (May 2022)",
+  "phi_terra_exposure": 0.0,
+  "floor_worstcase": 1.0,
+  "USDT": {
+    "trough": 0.9926410612684696,
+    "peak": 1.0051107066094462,
+    "max_depeg_bps": 73.6,
+    "max_premium_bps": 51.1,
+    "implied_failure_prob": null,
+    "below_floor_nonfundamental_share": 1.0
+  },
+  "USDC": {
+    "trough": 0.9909943933476608,
+    "peak": 1.0260168775261744,
+    "max_depeg_bps": 90.1,
+    "max_premium_bps": 260.2,
+    "implied_failure_prob": null,
+    "below_floor_nonfundamental_share": 1.0
+  },
+  "interpretation": "Neither USDT nor USDC had Terra reserve exposure (phi~=0), so the worst-case floor is ~1.00 and Proposition 1 attributes ~100% of each dip to non-fundamental -- the small, transient dips were panic/liquidity, not reserve repricing. The method does not invent a fundamental story where none exists. Contrast March 2023 USDC (phi=0.08, floor 0.92, 35-100% non-fundamental). q is undefined here because phi=0 (no impairment to fail on).",
+  "depth_caveat": "DeFiLlama aggregate troughs are shallow (USDT ~0.993); venue-specific CEX troughs were deeper (~0.95). The phi=0 -> 100% conclusion is depth-invariant.",
+  "degenerate_caveat": "phi=0 BY CONSTRUCTION, so the ~100% non-fundamental result is degenerate-by-design: it shows the method does NOT invent fundamentals (a falsification/honesty control), NOT that it produces a non-trivial intermediate bound or a second quantitative estimate."
+}

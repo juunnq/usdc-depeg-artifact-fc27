@@ -1,0 +1,52 @@
+{
+  "generated_utc": "2026-09-23T19:22:05Z",
+  "source_file": "data/n1/kraken_usdcusd/trades_raw.jsonl",
+  "n_trades_in_tape": 373000,
+  "floor": 0.92,
+  "window": {
+    "start_utc": "2023-03-11T03:11:00Z",
+    "start_basis": "Circle's tweet quantifying the SVB exposure; the frozen capture carries no to-the-second publication timestamp, so this is minute resolution",
+    "end_utc": "2023-03-12T22:15:00Z",
+    "end_basis": "joint federal statement guaranteeing SVB depositors",
+    "interval": "[start, end)"
+  },
+  "live": {
+    "n_trades": 37303,
+    "volume_usdc": 169898078.33,
+    "notional_usd": 154007404.51,
+    "clock_hours_touched": 12,
+    "first_trade_utc": "2023-03-11T03:58:58Z",
+    "last_trade_utc": "2023-03-11T15:43:52Z"
+  },
+  "excluded_before_disclosure": {
+    "n_trades": 0,
+    "volume_usdc": 0.0,
+    "notional_usd": 0.0,
+    "clock_hours_touched": 0,
+    "first_trade_utc": null,
+    "last_trade_utc": null
+  },
+  "excluded_after_backstop": {
+    "n_trades": 0,
+    "volume_usdc": 0.0,
+    "notional_usd": 0.0,
+    "clock_hours_touched": 0,
+    "first_trade_utc": null,
+    "last_trade_utc": null
+  },
+  "unrestricted": {
+    "n_trades": 37303,
+    "volume_usdc": 169898078.33,
+    "notional_usd": 154007404.51,
+    "clock_hours_touched": 12,
+    "first_trade_utc": "2023-03-11T03:58:58Z",
+    "last_trade_utc": "2023-03-11T15:43:52Z"
+  },
+  "units_note": "volume_usdc counts COINS; notional_usd is dollars paid. The unrestricted volume_usdc of 169,898,078.33 is a coin count and must not be written as '$169.9M'; the unrestricted dollar figure is notional_usd.",
+  "cross_check_vs_trough_corroboration": {
+    "expected_n_trades_below_floor": 37303,
+    "expected_volume_usdc_below_floor": 169898078.33,
+    "expected_notional_usd_below_floor": 154007404.51,
+    "matches": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "task": "G8.0 -- freeze the verbatim Circle disclosure passages backing phi = 0.08 (PHI_SVB) and the $40B / $42.1B reserve-denominator figures, for the three refs.bib entries (circle2023tweet, circle2023pressrelease, circle2023attestation) that had complete bib entries but no frozen capture under data/.",
+  "passages": [
+    {
+      "bib_key": "circle2023tweet",
+      "document": "Circle (@circle) tweet, status 1634391505988206592, posted approx. 10:11 PM ET March 10, 2023 ('1/' of a thread).",
+      "capture_timestamp": "20230311032209",
+      "capture_iso_utc": "2023-03-11T03:22:09Z",
+      "source_url": "https://twitter.com/circle/status/1634391505988206592",
+      "wayback_url": "http://web.archive.org/web/20230311032209id_/https://twitter.com/circle/status/1634391505988206592",
+      "raw_file": "data/n1/circle2023/raw/circle_tweet_usdc_svb_20230311032209.html",
+      "extraction_method": "Wayback's captured page is Twitter's legacy server-rendered embed (no live JS tweet body). Extracted from the <title> element, which is built from HTML entities (&quot;) and decodes cleanly; the og:title/og:description meta tags carry the same wording but with a mis-encoded leading numeral glyph (renders as U+FFFD in this capture) and were not used as the primary source for that reason.",
+      "verbatim_passage": "1/ Following the confirmation at the end of today that the wires initiated on Thursday to remove balances were not yet processed, $3.3 billion of the ~$40 billion of USDC reserves remain at SVB.",
+      "used_for": "Sources the $3.3B SVB-exposure figure and the ~$40B headline reserve-total denominator, i.e. the raw inputs to phi = 3.3/40 = 0.0825 (constants.PHI_SVB rounds this to the stated 0.08 / 'about 8%'); this is the tweet refs.bib's circle2023tweet entry cites verbatim."
+    },
+    {
+      "bib_key": "circle2023pressrelease",
+      "document": "Circle pressroom article, '$3.3 Billion of USDC Reserve Risk Removed, Dollar De-peg Closes', dateline Boston, March 12, 2023.",
+      "capture_timestamp": "20230313031348",
+      "capture_iso_utc": "2023-03-13T03:13:48Z",
+      "source_url": "https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes",
+      "note_on_url": "This is NOT the URL string currently in refs.bib (https://www.circle.com/pressroom/3-3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes). That exact URL has no Wayback capture near March 2023 (earliest capture: 2024-12-05) -- it is a post-redesign path Circle adopted later for the same article. This capture is the same article at its original, live-in-2023 URL ('/en/pressroom/' path, '3.3-billion' slug spelled with a period): confirmed by an identical <title> ('$3.3 Billion of USDC Reserve Risk Removed, Dollar De-peg Closes') and an identical dateline paragraph. See cdx_search_log_pressrelease.json for the full search trail.",
+      "wayback_url": "http://web.archive.org/web/20230313031348id_/https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes",
+      "raw_file": "data/n1/circle2023/raw/circle_pressrelease_usdc_svb_20230313031348.html",
+      "extraction_method": "Extracted per-<p> element text via BeautifulSoup (html.parser), which preserves inline hyperlink text inline (unlike a raw get_text(separator='\\n') pass, which splits a single sentence across multiple lines at each <a> tag boundary). Whitespace runs collapsed; wording, punctuation and figures otherwise unchanged from the capture.",
+      "verbatim_passage": "BOSTON – March 12, 2023 – Following the joint announcement by U.S. Treasury Secretary Janet Yellen and U.S. prudential regulators, all depositors with Silicon Valley Bank and Signature Bank, which was closed by regulators today, will be made whole. The $3.3B USDC reserve deposit held at Silicon Valley Bank, about 8% of the USDC total reserve, will be fully available when U.S. banks open tomorrow morning. No USDC cash reserves were held at Signature Bank. As a regulated payment token, USDC remains redeemable 1:1 with the U.S. Dollar.",
+      "used_for": "Sources the paper's 'about 8%' restatement of phi (the press release's own rounding of the $3.3B/total-reserve ratio, independent of the tweet's ~$40B denominator)."
+    },
+    {
+      "bib_key": "circle2023pressrelease",
+      "document": "Circle pressroom article, '$3.3 Billion of USDC Reserve Risk Removed, Dollar De-peg Closes', dateline Boston, March 12, 2023 (same capture as the passage above; second paragraph, reporting the March 11, 2023 reserve-composition update).",
+      "capture_timestamp": "20230313031348",
+      "capture_iso_utc": "2023-03-13T03:13:48Z",
+      "source_url": "https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes",
+      "wayback_url": "http://web.archive.org/web/20230313031348id_/https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes",
+      "raw_file": "data/n1/circle2023/raw/circle_pressrelease_usdc_svb_20230313031348.html",
+      "extraction_method": "Extracted per-<p> element text via BeautifulSoup (html.parser); same method as the passage above.",
+      "verbatim_passage": "On March 11, 2023, Circle shared details about the USDC reserve, stating it is currently collateralized 77% ($32.4B) with short-dated U.S. Treasury Bills. U.S. Treasury Bills are the most liquid assets in the world and are direct obligations of the U.S. government. These reserves are held in custody by BNY Mellon and active liquidity and asset management is done by BlackRock. The cash portion of the USDC reserve, 23% ($9.7B), is now held primarily at BNY Mellon. Anyone can view the entire liquidity ladder down to the CUSIP number on T-Bills via the USDXX ticker, and monthly USDC attestation reports, including the latest report from January, 2023, are available in the Trust & Transparency section of Circle’s website.",
+      "used_for": "Sources the ~$42.1B alternate reserve-composition denominator (77% Treasury Bills $32.4B + 23% cash $9.7B = $42.1B) that phi_denominator_sensitivity.json's static_phi_altreserve_42.1B_0.0784 convention and fc27.tex:443-444 cite. Note this figure is dated to Circle's March 11 reserve update, reported here on March 12 -- it is a different, slightly larger denominator than the tweet's '~$40 billion', which is the source of the paper's denominator-sensitivity analysis in the first place."
+    }
+  ],
+  "gaps": [
+    {
+      "bib_key": "circle2023attestation",
+      "target": "Deloitte & Touche LLP, Independent Accountants' Report on the USDC Reserve, Report Dates March 6 and March 31, 2023 (https://www.circle.com/transparency) -- the ~$38.5B March-31 reserve schedule",
+      "status": "NOT CAPTURED -- instrument gap, booked rather than fabricated",
+      "detail": "See data/n1/circle2023/cdx_search_log_attestation_gap.json for the full search trail (6 CDX queries). Summary: circle.com/transparency has no Wayback capture with real content anywhere near March 2023 (earliest: a bare redirect on 2023-06-02; earliest real page body on 2024-11-02). No March-2023 USDC attestation PDF or blog post, and no Deloitte-attributed page of any date, was ever crawled by Wayback under circle.com in this window. The ~$38.5B figure could not be frozen from a Wayback capture in this pass."
+    }
+  ]
+}

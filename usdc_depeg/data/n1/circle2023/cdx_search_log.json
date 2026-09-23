@@ -1,0 +1,45 @@
+{
+  "lane": "Bibliography-support fetch for the Circle blog post's first Wayback capture",
+  "target": "Circle blog post \"An Update on USDC and Silicon Valley Bank\" (bib key circle2023update), first Wayback capture timestamp",
+  "queries": [
+    {
+      "query": "exact-URL CDX, full history (no from/to bound)",
+      "url": "http://web.archive.org/cdx/search/cdx?url=https://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank&output=json",
+      "retrieved_utc": "2026-09-09T18:01:15Z",
+      "rows_returned": 111,
+      "sort_order": "ascending by timestamp (verified: rows already sorted, no explicit &sort= param needed)",
+      "first_row": [
+        "com,circle)/blog/an-update-on-usdc-and-silicon-valley-bank",
+        "20230311202753",
+        "https://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank",
+        "text/html",
+        "200",
+        "W6LMJ2SXRULK27YEEXP2XOB6QKESDOVT",
+        "24258"
+      ],
+      "last_row_timestamp": "20260627082553",
+      "first_capture_timestamp": "20230311202753",
+      "first_capture_iso_utc": "2023-03-11T20:27:53Z"
+    },
+    {
+      "query": "URL-variant sweep (confirms CDX urlkey canonicalization collapses http/https and www/non-www to the same capture set -- not a coincidence of one particular URL string)",
+      "variants_tried": [
+        "http://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank",
+        "https://circle.com/blog/an-update-on-usdc-and-silicon-valley-bank",
+        "http://circle.com/blog/an-update-on-usdc-and-silicon-valley-bank"
+      ],
+      "retrieved_utc": "2026-09-09T18:01:15Z",
+      "result": "all three variants return urlkey 'com,circle)/blog/an-update-on-usdc-and-silicon-valley-bank' with the identical first three rows (first capture 20230311202753) as the canonical https://www.circle.com/... query -- confirms 20230311202753 is the first capture across every URL-scheme/subdomain form, not an artifact of one query."
+    },
+    {
+      "query": "snapshot fetch of the first capture (raw, id_ suffix)",
+      "wayback_url": "http://web.archive.org/web/20230311202753id_/https://www.circle.com/blog/an-update-on-usdc-and-silicon-valley-bank",
+      "retrieved_utc": "2026-09-09T18:02:00Z",
+      "http_status": 200,
+      "note": "Wayback served this with Content-Encoding: gzip; the response was fetched with curl --compressed to decode it (a first attempt without that flag saved the raw gzip stream and was discarded/re-fetched). Decoded HTML matches its <title>/og:title ('An Update on USDC and Silicon Valley Bank') and contains the make-whole pledge language the manuscript cites -- confirms this capture is the correct page body, not a redirect/placeholder.",
+      "saved_to": "data/n1/circle2023/raw/circle_update_usdc_svb_20230311202753.html",
+      "decoded_bytes": 140190,
+      "sha256": "c59d383e99d811db5f83c0374812d84eaa04ff9f944cf390ade25ec1b2a9c1f1"
+    }
+  ]
+}

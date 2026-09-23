@@ -1,0 +1,253 @@
+{
+  "method_source": "rational_bound.py (floor_worstcase, implied_failure_prob, below_floor_share)",
+  "phi_conventions": [
+    {
+      "phi_label": "static_phi_svb_0.08",
+      "phi": 0.08,
+      "source": "constants.PHI_SVB -- Circle-disclosed $3.3B / ~$40B reserves (~8%)"
+    },
+    {
+      "phi_label": "static_phi_altreserve_42.1B_0.0784",
+      "phi": 0.0784,
+      "source": "results/phi_dynamic.json third_line_alt_reserve_total.phi -- Circle's alternate ~$42.1B reserve-composition total (fc27.tex:443-444)"
+    },
+    {
+      "phi_label": "static_phi_3.3_over_40.0_0.0825",
+      "phi": 0.0825,
+      "source": "$3.3B disclosed loss / $40.0B headline reserve total"
+    }
+  ],
+  "trough_readings": [
+    {
+      "trough_label": "composite_min_headline",
+      "trough_price": 0.876675,
+      "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+      "source_file": "data/price_hourly.csv",
+      "source_column": "price (symbol=USDC, global min)"
+    },
+    {
+      "trough_label": "composite_second_lowest",
+      "trough_price": 0.8949117593128258,
+      "trough_hour_utc": "2023-03-11T06:59:51+00:00",
+      "source_file": "data/price_hourly.csv",
+      "source_column": "price (symbol=USDC, second-lowest print; fc27.tex:402's \"$0.8949\")"
+    },
+    {
+      "trough_label": "kraken_close_min",
+      "trough_price": 0.901,
+      "trough_hour_utc": "2023-03-11T12:00:00Z",
+      "source_file": "data/n1/kraken_usdcusd/hourly.csv",
+      "source_column": "close (crisis window min)"
+    },
+    {
+      "trough_label": "kraken_vwap_min",
+      "trough_price": 0.8928599778743995,
+      "trough_hour_utc": "2023-03-11T07:00:00Z",
+      "source_file": "data/n1/kraken_usdcusd/hourly.csv",
+      "source_column": "vwap (crisis window min)"
+    },
+    {
+      "trough_label": "binance_usdcusdt_low_min",
+      "trough_price": 0.882,
+      "trough_hour_utc": "2023-03-11T14:00:00+00:00",
+      "source_file": "data/binance_usdcusdt_1h.csv",
+      "source_column": "low (global min)"
+    }
+  ],
+  "grid": [
+    {
+      "phi_label": "static_phi_svb_0.08",
+      "phi": 0.08,
+      "floor": 0.92,
+      "trough_label": "composite_min_headline",
+      "trough_price": 0.876675,
+      "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+      "q_star_rho0": 1.5416,
+      "s_nf0": 0.3513,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_svb_0.08",
+      "phi": 0.08,
+      "floor": 0.92,
+      "trough_label": "composite_second_lowest",
+      "trough_price": 0.8949117593128258,
+      "trough_hour_utc": "2023-03-11T06:59:51+00:00",
+      "q_star_rho0": 1.3136,
+      "s_nf0": 0.2387,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_svb_0.08",
+      "phi": 0.08,
+      "floor": 0.92,
+      "trough_label": "kraken_close_min",
+      "trough_price": 0.901,
+      "trough_hour_utc": "2023-03-11T12:00:00Z",
+      "q_star_rho0": 1.2375,
+      "s_nf0": 0.1919,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_svb_0.08",
+      "phi": 0.08,
+      "floor": 0.92,
+      "trough_label": "kraken_vwap_min",
+      "trough_price": 0.8928599778743995,
+      "trough_hour_utc": "2023-03-11T07:00:00Z",
+      "q_star_rho0": 1.3393,
+      "s_nf0": 0.2533,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_svb_0.08",
+      "phi": 0.08,
+      "floor": 0.92,
+      "trough_label": "binance_usdcusdt_low_min",
+      "trough_price": 0.882,
+      "trough_hour_utc": "2023-03-11T14:00:00+00:00",
+      "q_star_rho0": 1.475,
+      "s_nf0": 0.322,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_altreserve_42.1B_0.0784",
+      "phi": 0.0784,
+      "floor": 0.9216,
+      "trough_label": "composite_min_headline",
+      "trough_price": 0.876675,
+      "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+      "q_star_rho0": 1.573,
+      "s_nf0": 0.3643,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_altreserve_42.1B_0.0784",
+      "phi": 0.0784,
+      "floor": 0.9216,
+      "trough_label": "composite_second_lowest",
+      "trough_price": 0.8949117593128258,
+      "trough_hour_utc": "2023-03-11T06:59:51+00:00",
+      "q_star_rho0": 1.3404,
+      "s_nf0": 0.254,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_altreserve_42.1B_0.0784",
+      "phi": 0.0784,
+      "floor": 0.9216,
+      "trough_label": "kraken_close_min",
+      "trough_price": 0.901,
+      "trough_hour_utc": "2023-03-11T12:00:00Z",
+      "q_star_rho0": 1.2628,
+      "s_nf0": 0.2081,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_altreserve_42.1B_0.0784",
+      "phi": 0.0784,
+      "floor": 0.9216,
+      "trough_label": "kraken_vwap_min",
+      "trough_price": 0.8928599778743995,
+      "trough_hour_utc": "2023-03-11T07:00:00Z",
+      "q_star_rho0": 1.3666,
+      "s_nf0": 0.2682,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_altreserve_42.1B_0.0784",
+      "phi": 0.0784,
+      "floor": 0.9216,
+      "trough_label": "binance_usdcusdt_low_min",
+      "trough_price": 0.882,
+      "trough_hour_utc": "2023-03-11T14:00:00+00:00",
+      "q_star_rho0": 1.5051,
+      "s_nf0": 0.3356,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_3.3_over_40.0_0.0825",
+      "phi": 0.0825,
+      "floor": 0.9175,
+      "trough_label": "composite_min_headline",
+      "trough_price": 0.876675,
+      "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+      "q_star_rho0": 1.4948,
+      "s_nf0": 0.331,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_3.3_over_40.0_0.0825",
+      "phi": 0.0825,
+      "floor": 0.9175,
+      "trough_label": "composite_second_lowest",
+      "trough_price": 0.8949117593128258,
+      "trough_hour_utc": "2023-03-11T06:59:51+00:00",
+      "q_star_rho0": 1.2738,
+      "s_nf0": 0.2149,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_3.3_over_40.0_0.0825",
+      "phi": 0.0825,
+      "floor": 0.9175,
+      "trough_label": "kraken_close_min",
+      "trough_price": 0.901,
+      "trough_hour_utc": "2023-03-11T12:00:00Z",
+      "q_star_rho0": 1.2,
+      "s_nf0": 0.1667,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_3.3_over_40.0_0.0825",
+      "phi": 0.0825,
+      "floor": 0.9175,
+      "trough_label": "kraken_vwap_min",
+      "trough_price": 0.8928599778743995,
+      "trough_hour_utc": "2023-03-11T07:00:00Z",
+      "q_star_rho0": 1.2987,
+      "s_nf0": 0.23,
+      "fires": true
+    },
+    {
+      "phi_label": "static_phi_3.3_over_40.0_0.0825",
+      "phi": 0.0825,
+      "floor": 0.9175,
+      "trough_label": "binance_usdcusdt_low_min",
+      "trough_price": 0.882,
+      "trough_hour_utc": "2023-03-11T14:00:00+00:00",
+      "q_star_rho0": 1.4303,
+      "s_nf0": 0.3008,
+      "fires": true
+    }
+  ],
+  "cross_feed_range_at_phi_0.08": {
+    "phi": 0.08,
+    "phi_label": "static_phi_svb_0.08",
+    "n_trough_readings": 5,
+    "s_nf0_min": 0.1919,
+    "s_nf0_min_trough": "kraken_close_min",
+    "s_nf0_max": 0.3513,
+    "s_nf0_max_trough": "composite_min_headline",
+    "note": "Non-fundamental share stated as a cross-feed range, not a single point."
+  },
+  "feed_trough_only_at_phi_0.08": {
+    "phi": 0.08,
+    "phi_label": "static_phi_svb_0.08",
+    "n_trough_readings": 4,
+    "trough_labels_included": [
+      "composite_min_headline",
+      "kraken_close_min",
+      "kraken_vwap_min",
+      "binance_usdcusdt_low_min"
+    ],
+    "excludes": [
+      "composite_second_lowest"
+    ],
+    "excludes_reason": "a second print within the composite feed, not a distinct feed",
+    "s_nf0_min": 0.1919,
+    "s_nf0_min_trough": "kraken_close_min",
+    "s_nf0_max": 0.3513,
+    "s_nf0_max_trough": "composite_min_headline"
+  }
+}

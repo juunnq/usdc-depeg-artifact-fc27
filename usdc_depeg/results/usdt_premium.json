@@ -1,0 +1,11 @@
+{
+  "status": "OK",
+  "venue": "Coinbase USDT-USD (1h)",
+  "max_premium_bps": 265.9,
+  "min_price": 0.999,
+  "broke_par": false,
+  "total_volume_usdt": 1522563016.0100002,
+  "premium_volume_usdt": 1240022696.2000003,
+  "premium_held_on_material_volume": true,
+  "note": "USDT reached +266 bps and never broke par (min 0.9990); $1.24B of $1.52B traded above par on a fiat venue -> the premium is not a thin print."
+}

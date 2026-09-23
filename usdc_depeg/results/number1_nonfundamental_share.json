@@ -1,0 +1,75 @@
+{
+  "p_obs": 0.876675,
+  "phi_svb": 0.08,
+  "headline_band": {
+    "low_raw": 0.3513075207784311,
+    "high_raw": 1.0,
+    "low": 0.3513075207784311,
+    "high": 1.0,
+    "p_obs": 0.876675,
+    "phi": 0.08,
+    "delta_obs": 0.12332500000000002
+  },
+  "robustness_sweep": [
+    {
+      "phi": 0.06,
+      "rho": 0.0,
+      "nonfundamental_share": 0.5134806405838234
+    },
+    {
+      "phi": 0.06,
+      "rho": 0.5,
+      "nonfundamental_share": 0.7567403202919116
+    },
+    {
+      "phi": 0.06,
+      "rho": 0.9,
+      "nonfundamental_share": 0.9513480640583822
+    },
+    {
+      "phi": 0.06,
+      "rho": 1.0,
+      "nonfundamental_share": 1.0
+    },
+    {
+      "phi": 0.08,
+      "rho": 0.0,
+      "nonfundamental_share": 0.3513075207784311
+    },
+    {
+      "phi": 0.08,
+      "rho": 0.5,
+      "nonfundamental_share": 0.6756537603892154
+    },
+    {
+      "phi": 0.08,
+      "rho": 0.9,
+      "nonfundamental_share": 0.9351307520778431
+    },
+    {
+      "phi": 0.08,
+      "rho": 1.0,
+      "nonfundamental_share": 1.0
+    },
+    {
+      "phi": 0.1,
+      "rho": 0.0,
+      "nonfundamental_share": 0.1891344009730388
+    },
+    {
+      "phi": 0.1,
+      "rho": 0.5,
+      "nonfundamental_share": 0.5945672004865193
+    },
+    {
+      "phi": 0.1,
+      "rho": 0.9,
+      "nonfundamental_share": 0.9189134400973039
+    },
+    {
+      "phi": 0.1,
+      "rho": 1.0,
+      "nonfundamental_share": 1.0
+    }
+  ]
+}

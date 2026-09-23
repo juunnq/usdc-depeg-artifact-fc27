@@ -1,0 +1,8 @@
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.7
+requests>=2.31
+pytest>=8.0
+PyMuPDF>=1.24   # tools/figqa.py: PDF rasterization, text-span/font-size extraction
+Pillow>=10.0    # tools/figqa.py: grayscale/CVD-simulated raster export

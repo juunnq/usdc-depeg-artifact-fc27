@@ -1,0 +1,59 @@
+{
+  "lane": "Bibliography-support fetch ATTEMPT for the Circle March-2023 USDC reserve attestation (bib key circle2023attestation, 'Deloitte & Touche LLP, Independent Accountants' Report on the USDC Reserve, Report Dates March 6 and March 31, 2023') -- the ~$38.5B March-31 reserve schedule",
+  "target": "https://www.circle.com/transparency (the URL refs.bib cites) and, failing that, the underlying Deloitte USDC attestation PDF for report-dates March 6 / March 31, 2023",
+  "outcome": "INSTRUMENT GAP -- no Wayback capture found for this source anywhere near March 2023. Nothing was fetched or saved for circle2023attestation; no capture was invented.",
+  "queries": [
+    {
+      "query": "exact-URL CDX for the refs.bib URL, bounded to March-April 2023",
+      "url": "http://web.archive.org/cdx/search/cdx?url=https://www.circle.com/transparency&output=json&from=20230301&to=20230415",
+      "retrieved_utc": "2026-09-12T07:47:00Z",
+      "rows_returned": 0,
+      "note": "First attempt returned an Internet Archive 'Temporarily Offline' HTML error page instead of JSON (transient service outage, not a data result) -- retried after a short wait and got a clean empty JSON array '[]'."
+    },
+    {
+      "query": "exact-URL CDX for the refs.bib URL, full history (no date bound)",
+      "url": "http://web.archive.org/cdx/search/cdx?url=https://www.circle.com/transparency&output=json",
+      "retrieved_utc": "2026-09-12T07:49:00Z",
+      "rows_returned": 141,
+      "first_capture_timestamp": "20230602123953",
+      "first_capture_iso_utc": "2023-06-02T12:39:53Z",
+      "result": "The earliest capture of this exact URL is 2023-06-02 (a bare 301 redirect, 287 bytes, no content), roughly 12 weeks after the March 6/31 report dates the bib entry cites. The first capture carrying an actual 200-status page body is 20241102021348 (2024-11-02), 20 months later. No capture exists in the March-2023 window at all."
+    },
+    {
+      "query": "prefix CDX, circle.com/pressroom (no /en/), 2023-01-01..2023-06-01 -- checked in case an attestation announcement was pressroom-indexed under the bare (non-/en/) path",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com/pressroom&matchType=prefix&from=20230101&to=20230601&output=json",
+      "retrieved_utc": "2026-09-12T07:45:00Z",
+      "rows_returned": 0,
+      "result": "Zero -- confirms (alongside the pressrelease-lane finding that the live 2023 path was '/en/pressroom/') that the bare '/pressroom/' path segment simply did not exist on circle.com in 2023, for any content."
+    },
+    {
+      "query": "domain-wide CDX sweep, circle.com, 2023-03-01..2023-06-01, filter=urlkey:.*attestat.*",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com&matchType=domain&from=20230301&to=20230601&output=json&filter=urlkey:.*attestat.*",
+      "retrieved_utc": "2026-09-12T07:53:00Z",
+      "rows_returned": 315,
+      "result": "All hits are EITHER (a) circle.com/blog posts about audits/attestations in general terms ('circle-continues-to-enhance-details-in-the-usdc-reserve-attestations', 'how-to-build-trust-usdc-audits-and-attestations') with no March-2023-specific report figures, OR (b) monthly Grant Thornton USDC attestation report blog posts and hubfs PDFs for months January 2019 through November 2020 only -- Circle's historical monthly-attestation blog series stops well short of 2023 in what Wayback actually crawled. No March 2023 entry, no Deloitte-attributed entry."
+    },
+    {
+      "query": "domain-wide CDX sweep, circle.com, 2023-03-01..2023-06-01, filter=urlkey:.*(march-2023|march-6|march-31|hubfs).*",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com&matchType=domain&from=20230301&to=20230601&output=json&filter=urlkey:.*(march-2023|march-6|march-31|hubfs).*",
+      "retrieved_utc": "2026-09-12T07:56:00Z",
+      "rows_returned": 314,
+      "result": "No 'march-2023'/'march-6'/'march-31' slug hit at all; the 314 rows are entirely hubfs-path matches (see next query)."
+    },
+    {
+      "query": "domain-wide CDX sweep, circle.com, 2023-03-01..2023-06-01, filter=urlkey:.*hubfs.*  (unfiltered, to enumerate every hubfs-hosted asset Wayback crawled in this window)",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com&matchType=domain&from=20230301&to=20230601&output=json&filter=urlkey:.*hubfs.*",
+      "retrieved_utc": "2026-09-12T07:57:00Z",
+      "rows_returned": 3150,
+      "result": "Grepped for filenames containing 'attest', 'reserve', or 'usdc' AND ending '.pdf' (228 matches). Findings: (1) 'Euro Coin Attestations/...pdf' hits are EUROC (Circle's euro stablecoin) reports, not USDC. (2) The only USDC-labelled attestation PDF crawled in this window is 'USDC Attestation Reports/grant-thornton_circle_usdc_reserves_nov2020.pdf' -- a November 2020 report, re-crawled incidentally in March 2023 because it was still linked from an old page, not a March 2023 report. No USDC attestation PDF dated March 2023, and no Deloitte-attributed PDF of any date, appears anywhere in this crawl."
+    },
+    {
+      "query": "domain-wide CDX sweep, circle.com, 2023-03-01..2023-06-01, filter=urlkey:.*deloitte.*",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com&matchType=domain&from=20230301&to=20230601&output=json&filter=urlkey:.*deloitte.*",
+      "retrieved_utc": "2026-09-12T08:03:00Z",
+      "rows_returned": 0,
+      "result": "Zero. Circle switched attestation firms from Grant Thornton LLP to Deloitte & Touche LLP for the March 2023 reports the bib entry cites; nothing on circle.com bearing Deloitte's name was ever crawled by Wayback in this window, under any path."
+    }
+  ],
+  "conclusion": "GENUINE, BOOKED GAP -- not a fabrication. Wayback has no capture of circle.com/transparency (or any redirect target, PDF, or blog post standing in for it) that carries real content anywhere near March 2023: the page existed on the live web (Circle's own attestation reports reference it, and the March 2023 Deloitte reports are independently well-attested in the finance press) but was not meaningfully crawled by the Internet Archive until June 2023 (redirect only) / November 2024 (first real page body). The ~$38.5B March-31 reserve figure and the Deloitte attestation itself could NOT be frozen from a Wayback capture in this pass. No file was written to data/n1/circle2023/raw/ for this source, and no manifest or claim-map entry was created against a nonexistent capture. A human with access to Circle's own document retention (or a paid archival service with off-Wayback holdings, e.g. archive.today, which is out of scope for this network-restricted stage) is the most direct remaining path to freezing this specific attestation."
+}

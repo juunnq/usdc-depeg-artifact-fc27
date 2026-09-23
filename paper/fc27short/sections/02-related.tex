@@ -1,0 +1,35 @@
+%% ============================================================================
+\section{Related Work}
+\label{sec:lit}
+
+Since 2020 a literature applies run theory to stablecoin design and peg
+arbitrage~\cite{Moin_2020,Klages_Mundt_2020,Lyons_2023,ahmed2025stablecoins}. Anadu et
+al.~\cite{anadu2024} analyze the March 2023 de-peg through a discrete ``break-the-buck''
+threshold. Watsky et al.~\cite{watsky2024}, and a later Federal Reserve
+post-mortem~\cite{fedshadow2025}, attribute that break to a redemption window restricted
+to Circle's approved customers over the March 10--13 weekend. Secondary prices de-pegged
+while the arbitrage loop was closed. Uhlig~\cite{uhlig2022} finds many TerraUSD holders
+behaved as rational Bayesian updaters in May 2022, evidence that rational and panic
+behavior are hard to separate without a structural restriction.
+
+Other work measures the March~2023 de-peg without an expected-loss floor: the SVB
+link~\cite{galaticapalbo2023}, a daily cross-coin exposure ranking~\cite{diop2024fintech},
+a detection lead of about five hours before USDC crosses
+\$0.99~\cite{cintraholloway2023depegs}, a settlement-friction
+framing~\cite{li2026settlementfriction}, and the on-chain contagion
+pathway~\cite{sankaewtong2026contagion}. Our bound derives an expected loss from disclosed
+exposure. None of the papers just cited does.
+
+\noindent\textbf{Contribution boundary.} Structural calibrations~\cite{mzz2025} estimate a run
+probability, and event studies~\cite{anadu2024} document flows. We bound one
+episode's realized non-fundamental share from an accounting identity. Anadu et
+al.'s~\cite{anadu2024} rational run concerns the redemption decision and makes no
+claim about whether the price was justified. Watsky et al.'s~\cite{watsky2024} weekend
+discount is the microstructure friction the non-fundamental share includes. Ahmed,
+Aldasoro, and Duley~\cite{ahmedaldasoroduley2024} run synthetic-control tests on four
+other episodes and treat March 2023 only as a price path.
+Zhu~\cite{zhu2026redemptions} classifies which channel moves price and leaves
+how far unmeasured. Molinet and Filos-Ratsikas~\cite{molinetfilos2026} define
+fiat-backed coins as the always-stable case ($1/p_t=1$) and never analyze March 2023.
+Eichengreen, Nguyen, and Viswanath-Natraj~\cite{Eichengreen_2025} back a devaluation
+probability out of stablecoin prices, where the probability ours implies exceeds one.

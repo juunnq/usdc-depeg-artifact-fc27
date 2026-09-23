@@ -1,0 +1,497 @@
+{
+  "method_source": "rational_bound.py (floor_worstcase, implied_failure_prob, below_floor_share)",
+  "precondition_i": "publicly quantified while the exposure was unresolved",
+  "row1_usdc_march_2023": {
+    "episode": "USDC March 2023",
+    "classification": "true positive",
+    "precondition_i": "publicly quantified while the exposure was unresolved",
+    "disclosure_source": "Circle official account, restated ~8% in Circle 2023-03-12 press release",
+    "disclosure_ts_utc": "2023-03-11T03:11:00Z",
+    "combinations": [
+      {
+        "phi": 0.08,
+        "phi_label": "static_phi_svb_0.08",
+        "floor": 0.92,
+        "trough_price": 0.876675,
+        "trough_label": "headline_print",
+        "trough_feed": "composite",
+        "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+        "q_star_rho0": 1.5416,
+        "fires": true,
+        "silent_margin": -0.0433,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.08,
+        "phi_label": "static_phi_svb_0.08",
+        "floor": 0.92,
+        "trough_price": 0.874,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.575,
+        "fires": true,
+        "silent_margin": -0.046,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.08,
+        "phi_label": "static_phi_svb_0.08",
+        "floor": 0.92,
+        "trough_price": 0.901,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T12:00:00+00:00",
+        "q_star_rho0": 1.2375,
+        "fires": true,
+        "silent_margin": -0.019,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.08,
+        "phi_label": "static_phi_svb_0.08",
+        "floor": 0.92,
+        "trough_price": 0.89286,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.3393,
+        "fires": true,
+        "silent_margin": -0.0271,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0784,
+        "phi_label": "static_phi_altreserve_42.1B_0.0784",
+        "floor": 0.9216,
+        "trough_price": 0.876675,
+        "trough_label": "headline_print",
+        "trough_feed": "composite",
+        "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+        "q_star_rho0": 1.573,
+        "fires": true,
+        "silent_margin": -0.0449,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0784,
+        "phi_label": "static_phi_altreserve_42.1B_0.0784",
+        "floor": 0.9216,
+        "trough_price": 0.874,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.6071,
+        "fires": true,
+        "silent_margin": -0.0476,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0784,
+        "phi_label": "static_phi_altreserve_42.1B_0.0784",
+        "floor": 0.9216,
+        "trough_price": 0.901,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T12:00:00+00:00",
+        "q_star_rho0": 1.2628,
+        "fires": true,
+        "silent_margin": -0.0206,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0784,
+        "phi_label": "static_phi_altreserve_42.1B_0.0784",
+        "floor": 0.9216,
+        "trough_price": 0.89286,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.3666,
+        "fires": true,
+        "silent_margin": -0.0287,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0825,
+        "phi_label": "static_phi_3.3_over_40.0_0.0825",
+        "floor": 0.9175,
+        "trough_price": 0.876675,
+        "trough_label": "headline_print",
+        "trough_feed": "composite",
+        "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+        "q_star_rho0": 1.4948,
+        "fires": true,
+        "silent_margin": -0.0408,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0825,
+        "phi_label": "static_phi_3.3_over_40.0_0.0825",
+        "floor": 0.9175,
+        "trough_price": 0.874,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.5273,
+        "fires": true,
+        "silent_margin": -0.0435,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0825,
+        "phi_label": "static_phi_3.3_over_40.0_0.0825",
+        "floor": 0.9175,
+        "trough_price": 0.901,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T12:00:00+00:00",
+        "q_star_rho0": 1.2,
+        "fires": true,
+        "silent_margin": -0.0165,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.0825,
+        "phi_label": "static_phi_3.3_over_40.0_0.0825",
+        "floor": 0.9175,
+        "trough_price": 0.89286,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.2987,
+        "fires": true,
+        "silent_margin": -0.0246,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.079,
+        "phi_label": "dynamic_phi_at_composite_trough_hour",
+        "floor": 0.921,
+        "trough_price": 0.876675,
+        "trough_label": "headline_print",
+        "trough_feed": "composite",
+        "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+        "q_star_rho0": 1.5611,
+        "fires": true,
+        "silent_margin": -0.0443,
+        "phi_trough_hour_matched": true
+      },
+      {
+        "phi": 0.079,
+        "phi_label": "dynamic_phi_at_composite_trough_hour",
+        "floor": 0.921,
+        "trough_price": 0.874,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.5949,
+        "fires": true,
+        "silent_margin": -0.047,
+        "phi_trough_hour_matched": false
+      },
+      {
+        "phi": 0.079,
+        "phi_label": "dynamic_phi_at_composite_trough_hour",
+        "floor": 0.921,
+        "trough_price": 0.901,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T12:00:00+00:00",
+        "q_star_rho0": 1.2532,
+        "fires": true,
+        "silent_margin": -0.02,
+        "phi_trough_hour_matched": false
+      },
+      {
+        "phi": 0.079,
+        "phi_label": "dynamic_phi_at_composite_trough_hour",
+        "floor": 0.921,
+        "trough_price": 0.89286,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdc",
+        "trough_hour_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_rho0": 1.3562,
+        "fires": true,
+        "silent_margin": -0.0281,
+        "phi_trough_hour_matched": false
+      }
+    ],
+    "all_combinations_fire": true
+  },
+  "row2_tether_2019": {
+    "episode": "Tether April-May 2019",
+    "classification": "candidate true negative (per D14)",
+    "category": "publicly quantified while unresolved; regulator-quantified, issuer-contested on characterization; counsel percentage unfrozen",
+    "precondition_i": "publicly quantified while the exposure was unresolved",
+    "disclosure_source": "NYAG press release, ag.ny.gov, on-page date 2019-04-25 (exact intraday UTC publication time NOT in the frozen record; corroborated same-day by Tether's own response, Wayback-captured 2019-04-26T02:57:29Z, referencing 'Earlier today')",
+    "disclosure_ts_utc_gap": "date-level only (2019-04-25); no intraday UTC timestamp frozen",
+    "liabilities_L_2019-04-24_usd": 2707970602.5,
+    "liabilities_L_source_capture": "2019-04-24T18:52:08Z",
+    "post_disclosure_window": "2019-04-25 00:00 UTC through 2019-05-15 23:00 UTC (series slice; frozen series itself starts 2019-04-20)",
+    "dilution_check": {
+      "liabilities_at_window_start_usd": 2707970602.5,
+      "liabilities_at_window_end_usd": 2855176469.1,
+      "liabilities_rose_over_window": true,
+      "note": "Liabilities ROSE over the post-disclosure window (verified from usdt_liabilities_wayback.json) -- no residual-base adjustment (of the kind applied to Reserve 2008's post-redemption base) applies here."
+    },
+    "counsel_percentage_gap": "The ~2019-04-30 Tether counsel (Hoegner) affirmation reporting a cash/cash-equivalent backing percentage is UNFROZEN (see disclosure_passage_n1cretry.json instrument-gap log) -- would be a confirming source per D14, not required for this panel.",
+    "combinations": [
+      {
+        "phi": 0.2585,
+        "phi_label": "phi_700M_amount_already_drawn",
+        "floor": 0.7415,
+        "trough_price": 0.9551,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1737,
+        "fires": false,
+        "silent_margin": 0.2136,
+        "numerator_usd": 700000000.0,
+        "numerator_verbatim_passage": "According to the filings, Bitfinex has already taken at least $700 million from Tether\u2019s reserves."
+      },
+      {
+        "phi": 0.2585,
+        "phi_label": "phi_700M_amount_already_drawn",
+        "floor": 0.7415,
+        "trough_price": 0.9658,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1323,
+        "fires": false,
+        "silent_margin": 0.2243,
+        "numerator_usd": 700000000.0,
+        "numerator_verbatim_passage": "According to the filings, Bitfinex has already taken at least $700 million from Tether\u2019s reserves."
+      },
+      {
+        "phi": 0.2585,
+        "phi_label": "phi_700M_amount_already_drawn",
+        "floor": 0.7415,
+        "trough_price": 0.9646531338110148,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1367,
+        "fires": false,
+        "silent_margin": 0.2231,
+        "numerator_usd": 700000000.0,
+        "numerator_verbatim_passage": "According to the filings, Bitfinex has already taken at least $700 million from Tether\u2019s reserves."
+      },
+      {
+        "phi": 0.3139,
+        "phi_label": "phi_850M_ag_apparent_loss_characterisation",
+        "floor": 0.6861,
+        "trough_price": 0.9551,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.143,
+        "fires": false,
+        "silent_margin": 0.269,
+        "numerator_usd": 850000000.0,
+        "numerator_verbatim_passage": "The filings explain how Bitfinex no longer has access to over $850 million dollars of co-mingled client and corporate funds that it handed over, without any written contract or assurance, to a Panamanian entity called \u201cCrypto Capital Corp.,\u201d a loss Bitfinex never disclosed to investors."
+      },
+      {
+        "phi": 0.3139,
+        "phi_label": "phi_850M_ag_apparent_loss_characterisation",
+        "floor": 0.6861,
+        "trough_price": 0.9658,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.109,
+        "fires": false,
+        "silent_margin": 0.2797,
+        "numerator_usd": 850000000.0,
+        "numerator_verbatim_passage": "The filings explain how Bitfinex no longer has access to over $850 million dollars of co-mingled client and corporate funds that it handed over, without any written contract or assurance, to a Panamanian entity called \u201cCrypto Capital Corp.,\u201d a loss Bitfinex never disclosed to investors."
+      },
+      {
+        "phi": 0.3139,
+        "phi_label": "phi_850M_ag_apparent_loss_characterisation",
+        "floor": 0.6861,
+        "trough_price": 0.9646531338110148,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1126,
+        "fires": false,
+        "silent_margin": 0.2785,
+        "numerator_usd": 850000000.0,
+        "numerator_verbatim_passage": "The filings explain how Bitfinex no longer has access to over $850 million dollars of co-mingled client and corporate funds that it handed over, without any written contract or assurance, to a Panamanian entity called \u201cCrypto Capital Corp.,\u201d a loss Bitfinex never disclosed to investors."
+      },
+      {
+        "phi": 0.3324,
+        "phi_label": "phi_900M_credit_line_ceiling",
+        "floor": 0.6676,
+        "trough_price": 0.9551,
+        "trough_label": "low",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1351,
+        "fires": false,
+        "silent_margin": 0.2875,
+        "numerator_usd": 900000000.0,
+        "numerator_verbatim_passage": "In order to fill the gap, executives of Bitfinex and Tether engaged in a series of conflicted corporate transactions whereby Bitfinex gave itself access to up to $900 million of Tether\u2019s cash reserves, which Tether for years repeatedly told investors fully backed the tether virtual currency \u201c1-to-1.\u201d"
+      },
+      {
+        "phi": 0.3324,
+        "phi_label": "phi_900M_credit_line_ceiling",
+        "floor": 0.6676,
+        "trough_price": 0.9658,
+        "trough_label": "close",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1029,
+        "fires": false,
+        "silent_margin": 0.2982,
+        "numerator_usd": 900000000.0,
+        "numerator_verbatim_passage": "In order to fill the gap, executives of Bitfinex and Tether engaged in a series of conflicted corporate transactions whereby Bitfinex gave itself access to up to $900 million of Tether\u2019s cash reserves, which Tether for years repeatedly told investors fully backed the tether virtual currency \u201c1-to-1.\u201d"
+      },
+      {
+        "phi": 0.3324,
+        "phi_label": "phi_900M_credit_line_ceiling",
+        "floor": 0.6676,
+        "trough_price": 0.9646531338110148,
+        "trough_label": "vwap",
+        "trough_feed": "kraken_usdtusd_2019",
+        "trough_hour_utc": "2019-04-26T02:00:00Z",
+        "q_star_rho0": 0.1064,
+        "fires": false,
+        "silent_margin": 0.297,
+        "numerator_usd": 900000000.0,
+        "numerator_verbatim_passage": "In order to fill the gap, executives of Bitfinex and Tether engaged in a series of conflicted corporate transactions whereby Bitfinex gave itself access to up to $900 million of Tether\u2019s cash reserves, which Tether for years repeatedly told investors fully backed the tether virtual currency \u201c1-to-1.\u201d"
+      }
+    ],
+    "any_combination_fires": false
+  },
+  "row4_terra_2022": {
+    "episode": "Terra/LUNA collapse (May 2022)",
+    "classification": "degenerate (phi = 0 by construction)",
+    "precondition_i": "publicly quantified while the exposure was unresolved",
+    "degenerate": true,
+    "phi": 0.0,
+    "floor": 1.0,
+    "disclosure_source": "no USDT/USDC Terra/UST/LUNA reserve exposure (phi ~= 0 by construction)",
+    "USDT": {
+      "trough": 0.9926410612684696,
+      "fires": true,
+      "silent_margin": -0.007359,
+      "below_floor_nonfundamental_share": 1.0
+    },
+    "USDC": {
+      "trough": 0.9909943933476608,
+      "fires": true,
+      "silent_margin": -0.009006,
+      "below_floor_nonfundamental_share": 1.0
+    }
+  },
+  "row5_paxos2023_candidate": {
+    "episode": "Paxos/USDP March 2023 (Silvergate/Signature Bank exposure)",
+    "classification": "candidate true negative -- DISQUALIFIED (disclosed after resolution)",
+    "category": "resolved-impairment control (q-dimension)",
+    "precondition_i": "publicly quantified while the exposure was unresolved",
+    "disclosure_source": "https://twitter.com/PaxosGlobal/status/1635061959950495744",
+    "disclosure_ts_utc": "2023-03-12T23:35:23.891000Z",
+    "disclosure_verbatim_passage": "Paxos currently holds $250M at Signature Bank and holds private deposit insurance well in excess of our cash balance and FDIC per-account limits. Seeking private deposit insurance is part of our conservative approach to managing customer assets exceeding FDIC insurance limits.",
+    "dollar_exposure_usd": 250000000.0,
+    "dollar_exposure_source": "Paxos official Twitter statement (@PaxosGlobal), 2023-03-12",
+    "contemporaneous_usdp_supply_usd": 826745086.0,
+    "contemporaneous_usdp_supply_source": "DeFiLlama stablecoincharts, USDP id=11, 2023-03-12T00:00:00Z point",
+    "combinations": [
+      {
+        "phi": 0.3024,
+        "phi_label": "phi_250M_signature_bank_over_contemporaneous_usdp_supply",
+        "floor": 0.6976,
+        "trough_price": 0.9829322413144633,
+        "trough_label": "low",
+        "trough_feed": "excluded_coins_hourly_usdp_crisis",
+        "trough_hour_utc": "2023-03-13T08:01:02Z",
+        "q_star_rho0": 0.0564,
+        "fires": false,
+        "silent_margin": 0.2853
+      }
+    ],
+    "post_disclosure_trough": {
+      "trough_price": 0.9829322413144633,
+      "trough_hour_utc": "2023-03-13T08:01:02Z",
+      "disclosure_ts_utc": "2023-03-12T23:35:23.891000Z",
+      "n_post_disclosure_hours": 95,
+      "source_file": "data/excluded_coins_hourly.csv (already frozen; read-only, matches placebo.excluded_coins()'s symbol/window filter)"
+    },
+    "joint_statement_ts_utc": "2023-03-12T22:15:00Z",
+    "joint_statement_source": "https://home.treasury.gov/news/press-releases/jy1337",
+    "qualification": {
+      "qualifies": false,
+      "criterion_i_quantified": true,
+      "criterion_ii_public": true,
+      "criterion_iii_pre_resolution": false,
+      "minutes_after_joint_statement": 80.4,
+      "reason": "Disclosure FOLLOWED the joint Treasury/Fed/FDIC statement (2023-03-12T22:15:00Z) by 80.4 minutes -- the government had already guaranteed all Signature Bank depositors before Paxos posted the $250M figure (the same tweet thread explicitly references the guarantee). A disclosure issued after the exposure was resolved cannot test whether the bound stays silent under live uncertainty."
+    },
+    "status": "disclosed-after-resolution, not a panel member",
+    "non_quantified_pre_backstop_context": "Paxos's only pre-backstop statements on this exposure were qualitative, not quantified: 2023-03-08 'virtually no exposure to Silvergate' and 2023-03-10 'no relationship with Silicon Valley Bank' (see disclosure_passages_paxos.json) -- so even setting the timing issue aside, no quantified PRE-resolution disclosure exists for this episode.",
+    "category_evidence": {
+      "framing": "C7: evidence for the paper's SCARCITY mechanism as a resolved-impairment control, not a rejected panel candidate -- the bound stays silent once backstop risk is retired, dated to the minute.",
+      "post_backstop_offset_minutes": 80.4,
+      "phi": 0.3024,
+      "floor": 0.6976,
+      "trough_price": 0.9829322413144633,
+      "silent_margin": 0.2853
+    }
+  },
+  "footer_appendix_d_non_qualifying_candidates": [
+    {
+      "candidate": "BUSD",
+      "fails": "no disclosed own-reserve impairment (phi=0); sets degenerate Terra-style null, not a second identification"
+    },
+    {
+      "candidate": "Tether (2022)",
+      "fails": "no disclosed own-reserve impairment (phi=0); disclosures are asset-composition breakdowns / rumour denials, not an impairment fraction"
+    },
+    {
+      "candidate": "DAI (2020, 'Black Thursday')",
+      "fails": "has a disclosed bad-debt figure, but is a collateral-liquidation cascade requiring a different fundamental-value model -- violates precondition (iii)"
+    },
+    {
+      "candidate": "USDR",
+      "fails": "tokenized-real-estate hybrid -- violates (A1)"
+    },
+    {
+      "candidate": "USDP",
+      "fails": "fails the diagnostic-print test (calm-window baseline already crosses the 1% threshold on this feed)"
+    },
+    {
+      "candidate": "GUSD",
+      "fails": "fails the diagnostic-print test (calm-window baseline already crosses the 1% threshold on this feed)"
+    },
+    {
+      "candidate": "TUSD",
+      "fails": "fails precondition (i), the public-information scope condition: the alleged impairment (SEC 2024 complaint) sat in nonpublic internal records, became public ~18mo after the analysis window; phi drawn from the contemporaneous public information set was effectively zero",
+      "precondition_i": "publicly quantified while the exposure was unresolved",
+      "precondition_i_failure": "the SEC complaint that quantified TUSD's impairment was not made public until 2024 -- roughly 18 months after the March 2023 window had already resolved one way or the other. Nothing was publicly quantified DURING the unresolved period; the quantification exists only in hindsight, so the row fails precondition (i) on the same 'quantified while still unresolved' test that disqualifies Paxos (row5) on timing, not on the fact of quantification itself."
+    }
+  ],
+  "for_print": {
+    "tether2019_phi_lo": 0.2585,
+    "tether2019_phi_hi": 0.3324,
+    "tether2019_floor_lo": 0.6676,
+    "tether2019_floor_hi": 0.7415,
+    "tether2019_q_star_low_feed_lo": 0.1351,
+    "tether2019_q_star_low_feed_hi": 0.1737,
+    "screened_candidates": [
+      "BUSD",
+      "Tether (2022)",
+      "DAI (2020, 'Black Thursday')",
+      "USDR",
+      "USDP",
+      "GUSD",
+      "TUSD"
+    ],
+    "screened_candidates_n": 7,
+    "below_par_screen_excludes": "DAI (2020, 'Black Thursday')",
+    "below_par_screen_exclusion_basis": "A RULING, not a measurement from this snapshot. DAI traded ABOVE par through the March 2020 episode, so precondition (ii) -- a fall of more than one percent BELOW par while the disclosure is live -- is not testable on it, and it is not a candidate for a below-par floor test. No DAI 2020 price series is frozen here, so this file records the ruling and its basis rather than deriving it. The candidate stays in the screened list above with its own separate failure reason.",
+    "below_par_screen_n": 6
+  }
+}

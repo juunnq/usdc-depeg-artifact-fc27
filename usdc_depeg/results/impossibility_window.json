@@ -1,0 +1,105 @@
+{
+  "phi": 0.08,
+  "floor_worstcase": 0.92,
+  "coins": {
+    "USDC": {
+      "hours_observed": 212,
+      "breaching_hours": 9,
+      "firing_rate": 0.0425,
+      "min_price": 0.876675,
+      "max_q": 1.5416,
+      "max_below_floor_share": 0.3513,
+      "independence": {
+        "n_hours": 212,
+        "lag1_autocorr": 0.9631,
+        "effective_n": 4.0
+      }
+    },
+    "DAI": {
+      "hours_observed": 214,
+      "breaching_hours": 2,
+      "firing_rate": 0.0093,
+      "min_price": 0.885938,
+      "max_q": 1.4258,
+      "max_below_floor_share": 0.2986,
+      "independence": {
+        "n_hours": 214,
+        "lag1_autocorr": 0.9554,
+        "effective_n": 4.9
+      }
+    },
+    "USDT": {
+      "hours_observed": 213,
+      "breaching_hours": 0,
+      "firing_rate": 0.0,
+      "min_price": 0.992437,
+      "max_q": 0.0945,
+      "max_below_floor_share": 0.0,
+      "independence": {
+        "n_hours": 213,
+        "lag1_autocorr": 0.8287,
+        "effective_n": 20.0
+      }
+    }
+  },
+  "impossibility_region_usdc": {
+    "symbol": "USDC",
+    "breaches": true,
+    "breaching_hours": 9,
+    "hours_observed": 212,
+    "firing_rate": 0.0425,
+    "first_breach_utc": "2023-03-11T06:59:51+00:00",
+    "peak_utc": "2023-03-11T07:57:53+00:00",
+    "last_breach_utc": "2023-03-11T16:00:05+00:00",
+    "span_hours": 9.0,
+    "contiguous": false,
+    "max_q": 1.5416,
+    "max_below_floor_share": 0.3513,
+    "trough_price": 0.876675
+  },
+  "excluded_coin_floor_check": {
+    "floor": 0.92,
+    "phi": 0.08,
+    "coins": {
+      "BUSD": {
+        "calm": {
+          "n_hours": 480,
+          "min_price": 0.989414,
+          "hours_below_floor": 0
+        },
+        "crisis": {
+          "n_hours": 216,
+          "min_price": 0.985461,
+          "hours_below_floor": 0
+        }
+      },
+      "GUSD": {
+        "calm": {
+          "n_hours": 480,
+          "min_price": 0.988012,
+          "hours_below_floor": 0
+        },
+        "crisis": {
+          "n_hours": 215,
+          "min_price": 0.928187,
+          "hours_below_floor": 0
+        }
+      },
+      "USDP": {
+        "calm": {
+          "n_hours": 480,
+          "min_price": 0.987405,
+          "hours_below_floor": 0
+        },
+        "crisis": {
+          "n_hours": 215,
+          "min_price": 0.948243,
+          "hours_below_floor": 0
+        }
+      }
+    },
+    "total_hours": 2086,
+    "total_hours_below_floor": 0
+  },
+  "interpretation": "DURATION and SPECIFICITY result, NOT an evidence-density result. Hourly prices within one episode are near-unit-root; see coins[*].independence for the AR(1)-adjusted effective sample size, which is roughly 4 for USDC. The identification still rests on one episode and one disclosed phi."
+}

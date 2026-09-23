@@ -1,0 +1,40 @@
+% Source: results/specificity_panel.json --
+%   row1_usdc_march_2023.combinations[phi=0.08, trough_label="headline_print", trough_feed="composite"]
+%   row2_tether_2019.{combinations[trough_label="low", phi in {0.2585,0.3139,0.3324}]}
+%   row4_terra_2022.USDT.{trough, silent_margin, fires}
+% + results/second_event_terra.json (USDT.implied_failure_prob = null -- q* undefined at phi=0; trough feed = DeFiLlama composite aggregate).
+% D17: row5_paxos2023_candidate (USDP Mar 2023) is no longer read here -- moved out
+%   of the panel to a one-sentence timing control in the body prose.
+% Width pass: the Category prose column is replaced by footnote marks [a]/[b]
+% (defined in the footnote row below, not in fc27.tex's caption -- see docstring).
+% Plain bracketed letters, not raised math superscripts ($^a$ etc.): a superscript
+% is auto-shrunk by TeX's scriptstyle well under 8pt regardless of the surrounding
+% \small (verified empirically), breaching the table-text legibility floor.
+% phi/floor/q*/margin are displayed at 3 decimals (_r3), matching the precision the
+% main text already uses for this same Tether range (fc27.tex:673); full-precision
+% values remain in the source JSON. Tether's q*/margin range holds the trough
+%   convention fixed at Kraken USDT/USD "low" (the deepest single print) and varies only
+% phi -- narrower than the cross-convention quote of q* in [0.103, 0.174],
+% which additionally spans the close/vwap conventions.
+\begin{tabular}{@{}p{1.2cm} p{2.1cm} p{1.05cm} p{1.05cm} p{2.3cm} p{1.05cm} p{0.75cm} p{1.1cm}@{}}
+\toprule
+Episode & Disclosure & $\phi$ & Floor & Trough (feed) & $q^\star$ & Fires & Margin \\
+\midrule
+USDC Mar 2023 &
+  \cite{circle2023tweet}, 11 Mar 03:11 UTC &
+  0.08 & 0.92 &
+  composite, headline: \$0.877 (11 Mar 07:57 UTC) &
+  1.54 & Yes & $-0.043$ \\
+Tether 2019 [a] &
+  NYAG press release, 25 Apr 2019 &
+  $[0.259,\allowbreak 0.332]$ & $[0.668,\allowbreak 0.742]$ &
+  Kraken, low: \$0.955 (26 Apr 2019 02:00 UTC) &
+  $[0.135,\allowbreak 0.174]$ & No & $[0.214,\allowbreak 0.288]$ \\
+USDT, Terra episode (May 2022), not counted [b] &
+  no disclosure &
+  0.00 & 1.00 &
+  composite: \$0.993 &
+  -- & Yes & $-0.007$ \\
+\bottomrule
+\multicolumn{8}{p{10.6cm}}{[a] regulator-quantified, issuer-contested. [b] degenerate by construction, with $\phi=0$, and not counted as a panel member.} \\
+\end{tabular}

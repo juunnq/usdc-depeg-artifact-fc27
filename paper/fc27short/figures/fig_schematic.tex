@@ -1,0 +1,96 @@
+%% Fig. 1 -- the estimator, as a flow. A bare tikzpicture fragment: no figure
+%% environment, no caption, no label. The manuscript wraps it; figqa's TikZ lane
+%% compiles it standalone.
+%%
+%% Symbols only, no numbers: the schematic states the RECIPE, and every number it could
+%% carry is already in Section 4's prose, where a reader can trace it through the claim
+%% map. A number inside a figure has no such trace.
+%%
+%% Accent is figstyle.PALETTE["usdc"] = #0072B2, the same blue the plotted figures use
+%% for USDC, so the schematic does not introduce a second blue into the paper.
+%%
+%% STYLE NAME WARNING: the verdict style must NOT be called "out". TikZ reserves `out`
+%% as the outgoing-angle key of `to[out=..,in=..]`, and defining out/.style makes every
+%% later \node[out] fail with "The key '/tikz/out' requires a value", whose second,
+%% louder error ("Not allowed in LR mode") points nowhere near the cause.
+%%
+%% PLACEMENT IS BORDER-TO-BORDER, via the positioning library's `right=Xmm of Y`, not
+%% explicit `at (x,y)`. The previous revision placed nodes by centre coordinate with
+%% hand-estimated half-widths, and two of those estimates were wrong: the decision
+%% node's west tip ended up INSIDE the input boxes' right edge, so both input arrows
+%% were drawn backwards, and the floor-to-test arrow had non-positive length and
+%% rendered with its head pointing back into the node it started from. `right=of`
+%% cannot produce either defect, because the gap it takes is between BORDERS. Every
+%% shaft below is therefore at least its stated length whatever the text measures.
+%%
+%% NO PRECONDITION NODE: THE FALLBACK LAYOUT SHIPPED, and the reason is arithmetic.
+%% A five-column version (inputs, precondition decision, floor, floor test, verdicts)
+%% was built and measured with every label already shortened to one line and the gaps
+%% at the 3 mm minimum: 13.67 x 2.37 cm against a 12.20 x 2.83 budget, 1.47 cm over.
+%%
+%% WHY A DIAMOND IS SO EXPENSIVE HERE, since that is what settles it: a diamond's text
+%% sits in an inscribed rectangle roughly half its width, so a decision node costs
+%% about twice the width of its own label. "$P_{obs} < 1-\phi$?" alone measured wider
+%% than any box in the figure. Two of them cannot share this measure with three boxes
+%% and five shafts. Shortening the surviving decision to "breach?" is what brought the
+%% shipped layout down to 10.49 x 2.42 cm; the floor node immediately to its left
+%% already defines 1-phi, so the short label loses nothing a reader needs.
+%%
+%% The precondition is therefore carried by the phi input's own wording -- "quantified
+%% while unresolved" IS precondition (i), stated on the input it constrains -- and the
+%% single decision keeps both branches labelled. Section 6's prose has to agree with
+%% this: an undisclosed impairment never reaches the test, which is what the input
+%% label says.
+%%
+%% The one colour this figure uses, declared here so the fragment is self-contained and
+%% the manuscript preamble needs nothing added for it. Value is figstyle.PALETTE["usdc"].
+\definecolor{schematicaccent}{HTML}{0072B2}
+\begin{tikzpicture}[
+  %% \small, not \footnotesize. TeX derives math script sizes from the base, so
+  %% \footnotesize (8pt here) put the "obs" subscript at 5.98pt. At \small (9pt) it
+  %% sets at 6.3pt, closer to the 6.97pt the manuscript's own body subscripts use.
+  font=\small,
+  %% Separate x and y padding so text clears all four borders. With one combined inner
+  %% sep tuned for width, the ascenders in the verdict node's first line touched its
+  %% top rule.
+  box/.style={draw, thin, rounded corners=1pt, align=center,
+              inner xsep=4pt, inner ysep=3pt},
+  dec/.style={draw, thin, diamond, aspect=2.7, align=center, inner sep=1.5pt},
+  %% D41. Every stroke and every glyph in this figure is black. The accent appears
+  %% once, as a ~12% fill tint marking the two verdict nodes (the estimator's two
+  %% possible outputs) apart from the process nodes. A tint carries that distinction
+  %% into greyscale as a light grey panel, which a coloured stroke does not, and it
+  %% keeps the figure legible when printed in black and white.
+  verdict/.style={box, fill=schematicaccent!12},
+  flow/.style={-{Stealth[length=1.4mm]}, thin},
+  brlab/.style={font=\scriptsize, inner sep=1.5pt},
+]
+\node[box] (phi) at (0,0) {$\phi$, quantified\\while unresolved};
+\node[box, below=3mm of phi] (feed) {trough $P_{\mathrm{obs}}$};
+\node[box, right=6mm of phi, yshift=-9.5mm] (floor) {floor $1-\phi$};
+\node[dec, right=6mm of floor] (test) {breach?};
+\node[verdict, right=7mm of test, yshift=8.5mm]  (share)
+  {share $\ge$\\$1-\phi/(1-P_{\mathrm{obs}})$};
+\node[verdict, right=7mm of test, yshift=-8.5mm] (null) {no verdict};
+
+%% The trough feeds the BREACH TEST, not the floor: the floor is 1-phi and needs only
+%% the disclosed impairment. Routing the price into the floor node, as an earlier
+%% revision did, asserts a dependency the estimator does not have.
+\draw[flow] (phi.east)   -- (floor.west);
+\draw[flow] (floor.east) -- (test.west);
+%% Routed BELOW the floor node, not across it: at feed's own height the horizontal run
+%% passes straight through the floor box and arrives inside the diamond.
+\draw[flow] (feed.south) -- ++(0,-3.5mm) -| (test.south);
+%% The branch labels are anchored by CORNER, not by `above`/`below`. Both shafts rise or
+%% fall steeply, and a node centred over such a shaft keeps half its width on the far
+%% side of the line: at print size the shaft struck through the "s" of "yes" and the "o"
+%% of "no". Anchoring the south-east corner of "yes" and the north-east corner of "no"
+%% puts each label wholly in the open wedge on the upper-left of its own shaft, which is
+%% the only region no part of the figure occupies.
+\draw[flow] (test.east)
+  -- node[brlab, pos=0.55, anchor=south east, xshift=-0.3mm, yshift=0.3mm] {yes}
+  (share.west);
+\draw[flow] (test.east)
+  -- node[brlab, pos=0.55, anchor=north east, xshift=-0.3mm, yshift=-0.3mm] {no}
+  (null.west);
+\end{tikzpicture}

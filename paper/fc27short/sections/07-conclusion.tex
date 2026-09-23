@@ -1,0 +1,46 @@
+\section{Limitations and Conclusion}
+\label{sec:conc}
+
+The panic-versus-fundamentals split is contested~\cite{anadu2024,watsky2024}. The
+composite feed could mismeasure the trough. The disclosed $\phi$ could understate
+exposure. The breakeven impairment is $12.3\%$ on the composite and $9.9\%$ on Kraken's
+close, and the
+worst case the disclosure admits, $\phi=0.102$, sits between them. A time-value discount
+prices a delayed
+redemption for a holder who has an approved claim. Convertibility risk is the cost to a
+holder without an approved claim during the restricted window. That cost is not bounded
+by the discount and belongs to the residual. No public data source can bound it further. We identify the mechanism from a
+single episode. The ex-post $100\%$ is an aggregate statement, and holders who sold
+at the trough still realized losses.
+
+%% The identifier is wrapped in its own \mbox so it cannot break across a line. url's
+%% hyphens option lets a URL break at any hyphen, which here rendered
+%% "usdcdepeg-artifact" across a break and read as a different identifier. The \mbox
+%% costs no line: the prefix still breaks after "/r/". No trailing slash, matching the
+%% registered URL.
+%% Two \url calls emit TWO link annotations, and the second one targets the bare
+%% identifier as a relative reference, so clicking it does not reach the artifact. One
+%% \href carrying the whole address wraps both \nolinkurl pieces in a single annotation,
+%% and \nolinkurl keeps the url typography and breakpoints without adding a link of its
+%% own.
+%% The URL sits at the END of its sentence, which is what keeps the gate clean. Prefix
+%% plus boxed identifier is about 304pt and fits a 347pt line ALONE, but not after a
+%% leading "An anonymized artifact at" (about 118pt). With the URL leading the sentence
+%% every interior breakpoint of the prefix left a first line too short to fill, so TeX
+%% preferred an overfull box and the build gate failed at 88.3pt. \allowbreak at the
+%% seam does not fix that; only letting the URL start a fresh line does.
+The frozen snapshot, the seeded analysis code, and a manifest with a SHA-256 digest for
+every file it lists sit in an anonymized artifact at
+\href{https://anonymous.4open.science/r/usdc-depeg-artifact-fc27}%
+{\nolinkurl{https://anonymous.4open.science/r/}\mbox{\nolinkurl{usdc-depeg-artifact-fc27}}}.
+Every computed number and figure regenerates offline from the
+artifact without an API key.
+
+A disclosed impairment implies a worst-case floor, and the USDC trough lies below it.
+Under (A1)--(A3) and at the disclosed $\phi$, at least $35\%$ of the de-peg was non-fundamental by impossibility on the composite feed, and at least $19\%$ on Kraken's
+close, the most conservative feed. At the worst case the disclosure itself admits,
+$\phi=0.102$, the composite still returns a verdict and Kraken's close does not.
+Whether that residual is coordination panic or
+convertibility friction on a closed redemption rail, both point to backstop and redemption
+design rather than reserve-quality rules alone, so the policy reading does not depend on
+the split. The estimator needs only a price and a publicly quantified $\phi$.

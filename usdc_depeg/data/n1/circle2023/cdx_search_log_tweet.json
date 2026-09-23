@@ -1,0 +1,32 @@
+{
+  "lane": "Bibliography-support fetch for the Circle tweet's Wayback capture (bib key circle2023tweet)",
+  "target": "Circle tweet \"$3.3 billion of the ~$40 billion of USDC reserves remain at SVB\" (@circle, posted approx. 10:11 PM ET, March 10, 2023); refs.bib already names capture timestamp 20230311032209",
+  "queries": [
+    {
+      "query": "exact-URL CDX, full history (no from/to bound)",
+      "url": "http://web.archive.org/cdx/search/cdx?url=twitter.com/circle/status/1634391505988206592&output=json",
+      "retrieved_utc": "2026-09-12T07:41:00Z",
+      "rows_returned": 58,
+      "first_row": [
+        "com,twitter)/circle/status/1634391505988206592",
+        "20230311032209",
+        "https://twitter.com/circle/status/1634391505988206592",
+        "text/html",
+        "200",
+        "RYQPDRCYOEGGC5TFYQIEXFHS6EBIPRNN",
+        "25097"
+      ],
+      "result": "First row's timestamp (20230311032209) matches the capture refs.bib already names, confirming it is the first Wayback capture of this tweet URL. 58 total captures exist through 2025; one intervening capture (20230318065506) returned HTTP 429 (rate-limited by Twitter at crawl time), not used."
+    },
+    {
+      "query": "snapshot fetch of the refs.bib-named capture (raw, id_ suffix)",
+      "wayback_url": "http://web.archive.org/web/20230311032209id_/https://twitter.com/circle/status/1634391505988206592",
+      "retrieved_utc": "2026-09-12T07:52:00Z",
+      "http_status": 200,
+      "note": "Wayback served this with Content-Encoding: gzip; fetched with curl --compressed to decode it, per the house pattern already documented in cdx_search_log.json (the circle2023update lane). Decoded HTML is Twitter's legacy server-rendered embed page (no live JS tweet body); the <title> element (built from HTML entities: &quot;) decodes cleanly via BeautifulSoup to 'Circle on Twitter: \"1/ Following the confirmation at the end of today that the wires initiated on Thursday to remove balances were not yet processed, $3.3 billion of the ~$40 billion of USDC reserves remain at SVB.\" / Twitter' -- an exact match to refs.bib's title field. The og:title/og:description meta tags carry the same text but with a leading tweet-thread-numeral glyph that decodes as a mis-encoded byte (renders as U+FFFD in this capture) -- the <title> tag was used as the verbatim extraction source instead since it round-trips cleanly through HTML-entity decoding and carries the identical wording.",
+      "saved_to": "data/n1/circle2023/raw/circle_tweet_usdc_svb_20230311032209.html",
+      "decoded_bytes": 244658,
+      "sha256": "85d90bd022e0ac6e844d16b2d0e39234d853518adf2869f300d088fee7f6c24f"
+    }
+  ]
+}

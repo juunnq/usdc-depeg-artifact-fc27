@@ -1,0 +1,8 @@
+{
+  "venue": "Binance USDCUSDT (1h)",
+  "min_low": 0.882,
+  "min_low_utc": "2023-03-11T14:00:00",
+  "volume_in_trough_hour_usdc": 108959660.0,
+  "composite_trough": 0.876675,
+  "note": "the impossibility gap rests on a material-volume clearing price; the single trough hour traded ~$109M on Binance alone, consistent with the multi-venue composite trough."
+}

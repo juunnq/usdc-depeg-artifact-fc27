@@ -1,0 +1,23 @@
+{
+  "publisher": "The Block",
+  "title": "USDC remains at about $0.90 following Circle's disclosure of funds at SVB",
+  "url": "https://www.theblock.co/post/218993/usdc-and-dai-remain-at-about-0-90-following-circles-disclosure-of-funds-at-svb",
+  "authors": ["Tim Copeland", "James Hunt"],
+  "section": "Stablecoins",
+  "date_published_page": "March 11, 2023, 5:10AM EST",
+  "date_published_iso": "2023-03-11T05:10:40-05:00",
+  "date_published_utc": "2023-03-11T10:10:40Z",
+  "wayback_capture_utc": "2023-03-11T10:54:27Z",
+  "wayback_snapshot_url": "https://web.archive.org/web/20230311105427/https://www.theblock.co/post/218993/usdc-and-dai-remain-at-about-0-90-following-circles-disclosure-of-funds-at-svb",
+  "raw_file": "data/n1/dai_psm_2023/raw/theblock_218993_20230311105427.html",
+  "raw_file_sha256": "c570db25a6551ff40a1959b99361279ca3515bb4eb5da3e2c34f2484fa23f9c0",
+  "extraction_method": "strip <script>/<style>, strip remaining HTML tags, collapse whitespace, then located the paragraph verbatim (extraction script not persisted -- trivial regex strip, re-derivable from the raw HTML file above)",
+  "verbatim_passage": "Backed by USDC While DAI is a decentralized stablecoin, it's collateralized by other stablecoins — the biggest among them USDC. The stablecoin is about 36% backed by USDC, according to daistats. During the depegging events, some traders used their USDC as collateral to generate DAI, through its peg stability module. This has now reached its cap of 3.1 billion USDC, so no more DAI can be minted with USDC. Frax, another decentralized stablecoin that's also partly backed by USDC, was down to $0.90.",
+  "extracted_figures": {
+    "psm_usdc_cap_reached_usd": 3100000000.0,
+    "psm_usdc_cap_reached_note": "article states the PSM 'reached its cap of 3.1 billion USDC' -- i.e. PSM-USDC-A's debt ceiling was full at the time of writing, so PSM-USDC holdings = the $3.1B cap at capture time. This is the figure used for reported_psm_usdc (see dai_contagion.py).",
+    "dai_backed_by_usdc_pct": 0.36,
+    "dai_backed_by_usdc_pct_note": "article's separately-stated 'about 36% backed by USDC, according to daistats' -- this is DAI's OVERALL USDC-collateralization ratio (daistats' own live metric, likely including USDC-A vault collateral in addition to PSM-USDC-A, not necessarily PSM-balance/total-DAI-supply). NOT used to override reported_backing_fraction in dai_backing.json, which stays defined as reported_psm_usdc / dai_total_supply (the same definition the frozen Jan-2023 figure used) for methodological consistency; recorded here only as corroborating contemporaneous context."
+  },
+  "notes": "Found via Wayback CDX domain sweep of www.theblock.co filtered to MakerDAO/DAI-titled URLs in the 2023-03-08..2023-03-15 window (see cdx_search_log.json). Captured within 44 minutes of publication (05:10:40 EST / 10:10:40 UTC publish -> 10:54:27 UTC capture), inside the paper's 2023-03-09..2023-03-13 target window and on the same UTC day as the frozen on-chain run date (2023-03-11T12:00:00Z) dai_backing.json anchors to."
+}

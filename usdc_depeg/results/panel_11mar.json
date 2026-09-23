@@ -1,0 +1,941 @@
+{
+  "date_utc": "2023-03-11",
+  "phi": 0.08,
+  "floor": 0.92,
+  "floor_source": "static (rational_bound.floor_worstcase(PHI_SVB)); results/phi_dynamic.json exists but carries only point values (variant_i.phi_at_trough, max_phi/min_phi at single hours) -- no hourly phi(t) series to derive a dynamic floor(t) from, so the static floor is used for every hour in this panel.",
+  "panel": {
+    "composite_USDC": [
+      {
+        "hour_utc": "2023-03-11T00:00:28+00:00",
+        "price": 0.994072,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.0741
+      },
+      {
+        "hour_utc": "2023-03-11T01:00:01+00:00",
+        "price": 0.991265,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.1092
+      },
+      {
+        "hour_utc": "2023-03-11T02:00:56+00:00",
+        "price": 0.984067,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.1992
+      },
+      {
+        "hour_utc": "2023-03-11T03:00:22+00:00",
+        "price": 0.979826,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.2522
+      },
+      {
+        "hour_utc": "2023-03-11T03:59:38+00:00",
+        "price": 0.93476,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.8155
+      },
+      {
+        "hour_utc": "2023-03-11T05:00:02+00:00",
+        "price": 0.945149,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.6856
+      },
+      {
+        "hour_utc": "2023-03-11T06:00:22+00:00",
+        "price": 0.936149,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.7981
+      },
+      {
+        "hour_utc": "2023-03-11T06:59:51+00:00",
+        "price": 0.894912,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.3136
+      },
+      {
+        "hour_utc": "2023-03-11T07:57:53+00:00",
+        "price": 0.876675,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.5416
+      },
+      {
+        "hour_utc": "2023-03-11T08:57:55+00:00",
+        "price": 0.921553,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9806
+      },
+      {
+        "hour_utc": "2023-03-11T10:00:11+00:00",
+        "price": 0.907328,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.1584
+      },
+      {
+        "hour_utc": "2023-03-11T11:00:53+00:00",
+        "price": 0.902825,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.2147
+      },
+      {
+        "hour_utc": "2023-03-11T12:00:48+00:00",
+        "price": 0.904355,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.1956
+      },
+      {
+        "hour_utc": "2023-03-11T12:59:32+00:00",
+        "price": 0.895477,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.3065
+      },
+      {
+        "hour_utc": "2023-03-11T14:00:00+00:00",
+        "price": 0.907849,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.1519
+      },
+      {
+        "hour_utc": "2023-03-11T15:00:01+00:00",
+        "price": 0.911565,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.1054
+      },
+      {
+        "hour_utc": "2023-03-11T16:00:05+00:00",
+        "price": 0.915019,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.0623
+      },
+      {
+        "hour_utc": "2023-03-11T17:00:19+00:00",
+        "price": 0.92174,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9783
+      },
+      {
+        "hour_utc": "2023-03-11T18:00:36+00:00",
+        "price": 0.935443,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.807
+      },
+      {
+        "hour_utc": "2023-03-11T19:02:19+00:00",
+        "price": 0.948315,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.6461
+      },
+      {
+        "hour_utc": "2023-03-11T20:00:46+00:00",
+        "price": 0.944877,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.689
+      },
+      {
+        "hour_utc": "2023-03-11T20:59:55+00:00",
+        "price": 0.973775,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.3278
+      },
+      {
+        "hour_utc": "2023-03-11T22:00:32+00:00",
+        "price": 0.955496,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.5563
+      },
+      {
+        "hour_utc": "2023-03-11T23:00:16+00:00",
+        "price": 0.949734,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.6283
+      }
+    ],
+    "composite_DAI": [
+      {
+        "hour_utc": "2023-03-11T00:00:53+00:00",
+        "price": 0.995431,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.0571
+      },
+      {
+        "hour_utc": "2023-03-11T01:00:54+00:00",
+        "price": 0.993698,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.0788
+      },
+      {
+        "hour_utc": "2023-03-11T02:00:45+00:00",
+        "price": 0.985443,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.182
+      },
+      {
+        "hour_utc": "2023-03-11T03:00:49+00:00",
+        "price": 0.986754,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.1656
+      },
+      {
+        "hour_utc": "2023-03-11T04:01:20+00:00",
+        "price": 0.952759,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.5905
+      },
+      {
+        "hour_utc": "2023-03-11T04:55:18+00:00",
+        "price": 0.948531,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.6434
+      },
+      {
+        "hour_utc": "2023-03-11T06:00:57+00:00",
+        "price": 0.945908,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.6762
+      },
+      {
+        "hour_utc": "2023-03-11T07:01:01+00:00",
+        "price": 0.920816,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9898
+      },
+      {
+        "hour_utc": "2023-03-11T08:01:33+00:00",
+        "price": 0.885938,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.4258
+      },
+      {
+        "hour_utc": "2023-03-11T09:01:24+00:00",
+        "price": 0.930216,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.8723
+      },
+      {
+        "hour_utc": "2023-03-11T09:55:44+00:00",
+        "price": 0.923723,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9535
+      },
+      {
+        "hour_utc": "2023-03-11T11:01:04+00:00",
+        "price": 0.924976,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9378
+      },
+      {
+        "hour_utc": "2023-03-11T12:01:17+00:00",
+        "price": 0.91534,
+        "floor": 0.92,
+        "firing": true,
+        "q_star": 1.0582
+      },
+      {
+        "hour_utc": "2023-03-11T13:01:02+00:00",
+        "price": 0.921891,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9764
+      },
+      {
+        "hour_utc": "2023-03-11T14:01:22+00:00",
+        "price": 0.92413,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9484
+      },
+      {
+        "hour_utc": "2023-03-11T15:01:02+00:00",
+        "price": 0.920699,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.9913
+      },
+      {
+        "hour_utc": "2023-03-11T16:01:20+00:00",
+        "price": 0.93347,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.8316
+      },
+      {
+        "hour_utc": "2023-03-11T17:01:22+00:00",
+        "price": 0.938973,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.7628
+      },
+      {
+        "hour_utc": "2023-03-11T18:01:09+00:00",
+        "price": 0.956596,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.5425
+      },
+      {
+        "hour_utc": "2023-03-11T19:01:07+00:00",
+        "price": 0.968669,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.3916
+      },
+      {
+        "hour_utc": "2023-03-11T19:56:13+00:00",
+        "price": 0.96402,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.4498
+      },
+      {
+        "hour_utc": "2023-03-11T21:01:06+00:00",
+        "price": 0.984121,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.1985
+      },
+      {
+        "hour_utc": "2023-03-11T22:01:30+00:00",
+        "price": 0.965059,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.4368
+      },
+      {
+        "hour_utc": "2023-03-11T23:00:55+00:00",
+        "price": 0.957862,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.5267
+      }
+    ],
+    "composite_USDT": [
+      {
+        "hour_utc": "2023-03-11T00:00:31+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T01:00:18+00:00",
+        "price": 1.002,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T02:00:35+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T03:00:22+00:00",
+        "price": 1.001096,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T04:00:23+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T05:00:37+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T06:00:30+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T07:00:34+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T08:00:38+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T09:00:37+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T10:00:07+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T10:55:13+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T12:00:37+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T13:00:27+00:00",
+        "price": 1.0,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T14:00:38+00:00",
+        "price": 0.999716,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.0035
+      },
+      {
+        "hour_utc": "2023-03-11T15:00:29+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T16:00:22+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T17:00:34+00:00",
+        "price": 1.002,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T18:00:24+00:00",
+        "price": 0.999253,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": 0.0093
+      },
+      {
+        "hour_utc": "2023-03-11T18:55:12+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T21:00:30+00:00",
+        "price": 1.002,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T22:00:49+00:00",
+        "price": 1.003,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      },
+      {
+        "hour_utc": "2023-03-11T23:00:19+00:00",
+        "price": 1.001,
+        "floor": 0.92,
+        "firing": false,
+        "q_star": null
+      }
+    ],
+    "kraken_usdcusd": [
+      {
+        "hour_utc": "2023-03-11T00:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9944,
+        "close_firing": false,
+        "close_q_star": 0.07,
+        "vwap": 0.995162,
+        "vwap_firing": false,
+        "vwap_q_star": 0.0605,
+        "low": 0.99,
+        "low_firing": false,
+        "low_q_star": 0.125
+      },
+      {
+        "hour_utc": "2023-03-11T01:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9921,
+        "close_firing": false,
+        "close_q_star": 0.0988,
+        "vwap": 0.993482,
+        "vwap_firing": false,
+        "vwap_q_star": 0.0815,
+        "low": 0.9903,
+        "low_firing": false,
+        "low_q_star": 0.1213
+      },
+      {
+        "hour_utc": "2023-03-11T02:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9945,
+        "close_firing": false,
+        "close_q_star": 0.0687,
+        "vwap": 0.991446,
+        "vwap_firing": false,
+        "vwap_q_star": 0.1069,
+        "low": 0.982,
+        "low_firing": false,
+        "low_q_star": 0.225
+      },
+      {
+        "hour_utc": "2023-03-11T03:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.915,
+        "close_firing": true,
+        "close_q_star": 1.0625,
+        "vwap": 0.966171,
+        "vwap_firing": false,
+        "vwap_q_star": 0.4229,
+        "low": 0.8948,
+        "low_firing": true,
+        "low_q_star": 1.315
+      },
+      {
+        "hour_utc": "2023-03-11T04:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.947,
+        "close_firing": false,
+        "close_q_star": 0.6625,
+        "vwap": 0.940739,
+        "vwap_firing": false,
+        "vwap_q_star": 0.7408,
+        "low": 0.9108,
+        "low_firing": true,
+        "low_q_star": 1.115
+      },
+      {
+        "hour_utc": "2023-03-11T05:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9433,
+        "close_firing": false,
+        "close_q_star": 0.7087,
+        "vwap": 0.94763,
+        "vwap_firing": false,
+        "vwap_q_star": 0.6546,
+        "low": 0.9365,
+        "low_firing": false,
+        "low_q_star": 0.7937
+      },
+      {
+        "hour_utc": "2023-03-11T06:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9143,
+        "close_firing": true,
+        "close_q_star": 1.0713,
+        "vwap": 0.918984,
+        "vwap_firing": true,
+        "vwap_q_star": 1.0127,
+        "low": 0.8774,
+        "low_firing": true,
+        "low_q_star": 1.5325
+      },
+      {
+        "hour_utc": "2023-03-11T07:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9059,
+        "close_firing": true,
+        "close_q_star": 1.1762,
+        "vwap": 0.89286,
+        "vwap_firing": true,
+        "vwap_q_star": 1.3393,
+        "low": 0.874,
+        "low_firing": true,
+        "low_q_star": 1.575
+      },
+      {
+        "hour_utc": "2023-03-11T08:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9216,
+        "close_firing": false,
+        "close_q_star": 0.98,
+        "vwap": 0.906837,
+        "vwap_firing": true,
+        "vwap_q_star": 1.1645,
+        "low": 0.884,
+        "low_firing": true,
+        "low_q_star": 1.45
+      },
+      {
+        "hour_utc": "2023-03-11T09:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9125,
+        "close_firing": true,
+        "close_q_star": 1.0938,
+        "vwap": 0.913385,
+        "vwap_firing": true,
+        "vwap_q_star": 1.0827,
+        "low": 0.9043,
+        "low_firing": true,
+        "low_q_star": 1.1963
+      },
+      {
+        "hour_utc": "2023-03-11T10:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.914,
+        "close_firing": true,
+        "close_q_star": 1.075,
+        "vwap": 0.911384,
+        "vwap_firing": true,
+        "vwap_q_star": 1.1077,
+        "low": 0.9085,
+        "low_firing": true,
+        "low_q_star": 1.1438
+      },
+      {
+        "hour_utc": "2023-03-11T11:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9128,
+        "close_firing": true,
+        "close_q_star": 1.09,
+        "vwap": 0.915124,
+        "vwap_firing": true,
+        "vwap_q_star": 1.0609,
+        "low": 0.907,
+        "low_firing": true,
+        "low_q_star": 1.1625
+      },
+      {
+        "hour_utc": "2023-03-11T12:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.901,
+        "close_firing": true,
+        "close_q_star": 1.2375,
+        "vwap": 0.91103,
+        "vwap_firing": true,
+        "vwap_q_star": 1.1121,
+        "low": 0.9,
+        "low_firing": true,
+        "low_q_star": 1.25
+      },
+      {
+        "hour_utc": "2023-03-11T13:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.912,
+        "close_firing": true,
+        "close_q_star": 1.1,
+        "vwap": 0.910037,
+        "vwap_firing": true,
+        "vwap_q_star": 1.1245,
+        "low": 0.9,
+        "low_firing": true,
+        "low_q_star": 1.25
+      },
+      {
+        "hour_utc": "2023-03-11T14:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9168,
+        "close_firing": true,
+        "close_q_star": 1.04,
+        "vwap": 0.913619,
+        "vwap_firing": true,
+        "vwap_q_star": 1.0798,
+        "low": 0.9077,
+        "low_firing": true,
+        "low_q_star": 1.1538
+      },
+      {
+        "hour_utc": "2023-03-11T15:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9207,
+        "close_firing": false,
+        "close_q_star": 0.9913,
+        "vwap": 0.91994,
+        "vwap_firing": true,
+        "vwap_q_star": 1.0007,
+        "low": 0.915,
+        "low_firing": true,
+        "low_q_star": 1.0625
+      },
+      {
+        "hour_utc": "2023-03-11T16:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.93,
+        "close_firing": false,
+        "close_q_star": 0.875,
+        "vwap": 0.925311,
+        "vwap_firing": false,
+        "vwap_q_star": 0.9336,
+        "low": 0.9202,
+        "low_firing": false,
+        "low_q_star": 0.9975
+      },
+      {
+        "hour_utc": "2023-03-11T17:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9499,
+        "close_firing": false,
+        "close_q_star": 0.6263,
+        "vwap": 0.944448,
+        "vwap_firing": false,
+        "vwap_q_star": 0.6944,
+        "low": 0.9298,
+        "low_firing": false,
+        "low_q_star": 0.8775
+      },
+      {
+        "hour_utc": "2023-03-11T18:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.954,
+        "close_firing": false,
+        "close_q_star": 0.575,
+        "vwap": 0.950719,
+        "vwap_firing": false,
+        "vwap_q_star": 0.616,
+        "low": 0.9412,
+        "low_firing": false,
+        "low_q_star": 0.735
+      },
+      {
+        "hour_utc": "2023-03-11T19:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9545,
+        "close_firing": false,
+        "close_q_star": 0.5687,
+        "vwap": 0.952818,
+        "vwap_firing": false,
+        "vwap_q_star": 0.5898,
+        "low": 0.95,
+        "low_firing": false,
+        "low_q_star": 0.625
+      },
+      {
+        "hour_utc": "2023-03-11T20:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9814,
+        "close_firing": false,
+        "close_q_star": 0.2325,
+        "vwap": 0.972731,
+        "vwap_firing": false,
+        "vwap_q_star": 0.3409,
+        "low": 0.9537,
+        "low_firing": false,
+        "low_q_star": 0.5788
+      },
+      {
+        "hour_utc": "2023-03-11T21:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.96,
+        "close_firing": false,
+        "close_q_star": 0.5,
+        "vwap": 0.970713,
+        "vwap_firing": false,
+        "vwap_q_star": 0.3661,
+        "low": 0.9502,
+        "low_firing": false,
+        "low_q_star": 0.6225
+      },
+      {
+        "hour_utc": "2023-03-11T22:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.9559,
+        "close_firing": false,
+        "close_q_star": 0.5513,
+        "vwap": 0.957362,
+        "vwap_firing": false,
+        "vwap_q_star": 0.533,
+        "low": 0.943,
+        "low_firing": false,
+        "low_q_star": 0.7125
+      },
+      {
+        "hour_utc": "2023-03-11T23:00:00+00:00",
+        "floor": 0.92,
+        "close": 0.967,
+        "close_firing": false,
+        "close_q_star": 0.4125,
+        "vwap": 0.968872,
+        "vwap_firing": false,
+        "vwap_q_star": 0.3891,
+        "low": 0.9558,
+        "low_firing": false,
+        "low_q_star": 0.5525
+      }
+    ]
+  },
+  "coverage_gap_check_08_57_utc": {
+    "checked_window_utc": [
+      "2023-03-11T08:57:00Z",
+      "2023-03-11T09:00:00Z"
+    ],
+    "genuine_data_gap": false,
+    "row_utc": "2023-03-11T08:57:55+00:00",
+    "price": 0.921553,
+    "note": "No genuine data gap: the composite USDC row at 2023-03-11T08:57:55+00:00 is present (price 0.921553). The 'interruption' in review/loci/appD.md:84-87 ('impossibility region is interrupted at 08:57 by a recovery to $0.9216') is ECONOMIC -- this hour's price clears the 0.92 floor and so breaks the breaching-hour streak in impossibility_window.json (contiguous: false) -- not a missing timestamp. Nothing was interpolated."
+  },
+  "cross_coin_cross_window_summary": {
+    "source_files": [
+      "results/impossibility_window.json",
+      "results/placebo_excluded_coins.json"
+    ],
+    "cross_coin_firing_counts_full_record": {
+      "USDC": {
+        "breaching_hours": 9,
+        "hours_observed": 212,
+        "firing_rate": 0.0425
+      },
+      "DAI": {
+        "breaching_hours": 2,
+        "hours_observed": 214,
+        "firing_rate": 0.0093
+      },
+      "USDT": {
+        "breaching_hours": 0,
+        "hours_observed": 213,
+        "firing_rate": 0.0
+      }
+    },
+    "excluded_coin_floor_check_0.92": {
+      "note": "from impossibility_window.json's excluded_coin_floor_check key (the 0.92-floor check across the full 2,086-hour calm+crisis excluded-coin panel).",
+      "floor": 0.92,
+      "phi": 0.08,
+      "coins": {
+        "BUSD": {
+          "calm": {
+            "n_hours": 480,
+            "min_price": 0.989414,
+            "hours_below_floor": 0
+          },
+          "crisis": {
+            "n_hours": 216,
+            "min_price": 0.985461,
+            "hours_below_floor": 0
+          }
+        },
+        "GUSD": {
+          "calm": {
+            "n_hours": 480,
+            "min_price": 0.988012,
+            "hours_below_floor": 0
+          },
+          "crisis": {
+            "n_hours": 215,
+            "min_price": 0.928187,
+            "hours_below_floor": 0
+          }
+        },
+        "USDP": {
+          "calm": {
+            "n_hours": 480,
+            "min_price": 0.987405,
+            "hours_below_floor": 0
+          },
+          "crisis": {
+            "n_hours": 215,
+            "min_price": 0.948243,
+            "hours_below_floor": 0
+          }
+        }
+      },
+      "total_hours": 2086,
+      "total_hours_below_floor": 0
+    },
+    "excluded_coin_1pct_break_threshold_check": {
+      "note": "from placebo_excluded_coins.json (the 0.99 / 1%-break-threshold calm-vs-crisis check per excluded coin -- a DIFFERENT test from the 0.92 floor check above).",
+      "break_threshold": 0.99,
+      "calm_window_utc": [
+        "2023-02-16T00:00:00Z",
+        "2023-03-08T00:00:00Z"
+      ],
+      "coins": {
+        "USDP": {
+          "crisis_trough": 0.9482426366645652,
+          "crisis_max_deviation_bps": 517.6,
+          "crosses_break_threshold": true,
+          "calm_min_price": 0.987405,
+          "calm_hours_below_threshold": 7,
+          "calm_hours_total": 480,
+          "calm_false_positive": true
+        },
+        "GUSD": {
+          "crisis_trough": 0.9281871173276136,
+          "crisis_max_deviation_bps": 718.1,
+          "crosses_break_threshold": true,
+          "calm_min_price": 0.9880120307568048,
+          "calm_hours_below_threshold": 1,
+          "calm_hours_total": 480,
+          "calm_false_positive": true
+        },
+        "BUSD": {
+          "crisis_trough": 0.985461,
+          "crisis_max_deviation_bps": 145.4,
+          "crosses_break_threshold": true,
+          "calm_min_price": 0.989414,
+          "calm_hours_below_threshold": 1,
+          "calm_hours_total": 480,
+          "calm_false_positive": true
+        }
+      },
+      "interpretation": "USDP, GUSD, and BUSD are excluded because the 1%-break test is not diagnostic for them: each coin's frozen composite feed already prints below 0.99 during the calm pre-SVB baseline window (7 / 1 / 1 hours respectively), so a crisis-window crossing on these feeds cannot be distinguished from ordinary no-shock noise, and no clean exposure prediction is identified for them."
+    }
+  }
+}

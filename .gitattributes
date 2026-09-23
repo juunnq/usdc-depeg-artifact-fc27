@@ -1,0 +1,11 @@
+# Store every file's bytes verbatim.
+#
+# EXPORT_MANIFEST.sha256 is computed over the working tree. If git converted
+# line endings on commit (core.autocrlf), the bytes this repository serves
+# would not be the bytes the manifest attests, and `sha256sum -c` would fail
+# on every text file. It has done exactly that before.
+#
+# Text files in this export are LF. The frozen snapshot under usdc_depeg/data/
+# keeps its original bytes, because usdc_depeg/data/MANIFEST.json pins a
+# SHA-256 over each of them.
+* -text

@@ -1,0 +1,40 @@
+{
+  "task": "D10 archival-state probe: USDC.totalSupply() at block 16804701 (0x1006265)",
+  "params": [
+    {
+      "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "data": "0x18160ddd"
+    },
+    "0x1006265"
+  ],
+  "verdict": "NOT_SUPPORTED",
+  "supported_via_endpoint": null,
+  "decoded_total_supply_usdc": null,
+  "attempts": [
+    {
+      "endpoint": "https://ethereum-rpc.publicnode.com",
+      "ok": false,
+      "error": "HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}",
+      "decoded_supply_usdc": null
+    },
+    {
+      "endpoint": "https://eth.llamarpc.com",
+      "ok": false,
+      "error": "HTTP 525: <!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n\n<title>llamarpc.com | 525: SSL handshake failed</title>\n<meta charset=\"UTF-8\"",
+      "decoded_supply_usdc": null
+    },
+    {
+      "endpoint": "https://cloudflare-eth.com",
+      "ok": false,
+      "error": "rpc_error: {\"code\": -32603, \"message\": \"Internal error\"}",
+      "decoded_supply_usdc": null
+    },
+    {
+      "endpoint": "https://rpc.ankr.com/eth",
+      "ok": false,
+      "error": "rpc_error: {\"code\": -32000, \"message\": \"Unauthorized: You must authenticate your request with an API key. Create an account on https://www.ankr.com/rpc/ and generate your personal API key for free.\"}",
+      "decoded_supply_usdc": null
+    }
+  ],
+  "retrieval_utc": "2026-09-09T08:04:36Z"
+}

@@ -1,0 +1,8 @@
+{
+  "source_file": "data/n1/tusd2023/tusd_hourly.csv",
+  "source_url": "https://coins.llama.fi/chart/coingecko:true-usd",
+  "date": "2023-03-11",
+  "min_price": 0.988439,
+  "min_price_timestamp_utc": "2023-03-11T10:57:53+00:00",
+  "deviation_from_par_bps": 115.61
+}

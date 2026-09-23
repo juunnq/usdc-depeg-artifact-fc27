@@ -1,0 +1,44 @@
+{
+  "coins": [
+    "USDC",
+    "DAI",
+    "USDT"
+  ],
+  "manuscript_claim_lines": {
+    "ex_ante_claim": "Reserve exposure orders the three coins ex ante: USDC held direct SVB exposure, DAI was pinned to USDC through the peg-stability module, and USDT held none. That gives the ex-ante fragility ordering USDC, DAI, USDT.",
+    "ex_ante_claim_tex_line": 506,
+    "realized_ordering_claim": "Troughs are \\$0.877, \\$0.886, and \\$0.992 in that order.",
+    "realized_ordering_claim_tex_line": 508
+  },
+  "claim_type_determination": "FULL RANK ORDER over a linked pair and one free coin. The ex-ante paragraph (fc27short.tex:506) states an explicit 3-way ranking (USDC most fragile, DAI next, USDT least) and the realized-ordering paragraph (fc27short:508) reports the realized troughs as consistent with that ex-ante exposure ranking. DAI is mechanically linked to USDC through the PSM (the DAI-contagion result), so it is not an exchangeable draw and the USDC-DAI pair moves as one block. The null space is the 2 placements of USDT relative to that block, not the 6 permutations of 3 free items.",
+  "claimed_order_most_fragile_first": [
+    "USDC",
+    "DAI",
+    "USDT"
+  ],
+  "permutations": [
+    {
+      "order_most_fragile_first": [
+        "USDC",
+        "DAI",
+        "USDT"
+      ],
+      "description": "USDT least fragile, outside the linked USDC-DAI block",
+      "matches_claimed_order": true
+    },
+    {
+      "order_most_fragile_first": [
+        "USDT",
+        "USDC",
+        "DAI"
+      ],
+      "description": "USDT more fragile than the linked USDC-DAI block",
+      "matches_claimed_order": false
+    }
+  ],
+  "n_permutations": 2,
+  "n_matching_claimed_order": 1,
+  "probability_null_uniform": 0.5,
+  "probability_as_fraction": "1/2",
+  "note": "1/2 under the ruled null (D16). The free comparison is USDT against the linked USDC-DAI pair, because the DAI-contagion result establishes DAI's break runs through its USDC exposure rather than an independent run. Scoring the match against all 6 permutations would treat DAI as exchangeable, which the paper's own contagion argument denies."
+}

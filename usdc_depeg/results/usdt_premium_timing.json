@@ -1,0 +1,86 @@
+{
+  "reference_points_utc": {
+    "disclosure": "2023-03-11T03:11:00Z",
+    "usdc_trough_hour": "2023-03-11T07:57:53Z",
+    "joint_statement_treasury_fed_fdic": "2023-03-12T22:15:00Z"
+  },
+  "reference_points_provenance": {
+    "disclosure": "phi_dynamic.DISCLOSURE_TS_UTC (cross-checked against specificity_panel.json / trough_corroboration.json / phi_dynamic.json -- all identical, no discrepancy found)",
+    "usdc_trough_hour": "results/trough_corroboration.json dynamic_floor_check.raw.variant_i.trough_hour_utc (source=live_read)",
+    "joint_statement_treasury_fed_fdic": "data/n1/paxos2023/joint_statement_treasury_fed_fdic.json (frozen record, read verbatim)"
+  },
+  "peaks": {
+    "coinbase_usdt_usd": {
+      "status": "OK",
+      "venue": "Coinbase USDT-USD (1h high)",
+      "source_file": "data/usdt_usd_hourly.csv",
+      "timestamp_utc": "2023-03-11T02:00:00Z",
+      "premium_bps": 265.9,
+      "relative_to": {
+        "disclosure": {
+          "reference_ts_utc": "2023-03-11T03:11:00Z",
+          "delta_minutes": -71.0,
+          "flag": "before"
+        },
+        "usdc_trough_hour": {
+          "reference_ts_utc": "2023-03-11T07:57:53Z",
+          "delta_minutes": -357.88,
+          "flag": "before"
+        },
+        "joint_statement_treasury_fed_fdic": {
+          "reference_ts_utc": "2023-03-12T22:15:00Z",
+          "delta_minutes": -2655.0,
+          "flag": "before"
+        }
+      }
+    },
+    "composite_usdt": {
+      "status": "OK",
+      "venue": "DeFiLlama composite, USDT leg (single price/hour)",
+      "source_file": "data/price_hourly.csv",
+      "timestamp_utc": "2023-03-13T19:00:56Z",
+      "premium_bps": 270.0,
+      "relative_to": {
+        "disclosure": {
+          "reference_ts_utc": "2023-03-11T03:11:00Z",
+          "delta_minutes": 3829.93,
+          "flag": "after"
+        },
+        "usdc_trough_hour": {
+          "reference_ts_utc": "2023-03-11T07:57:53Z",
+          "delta_minutes": 3543.05,
+          "flag": "after"
+        },
+        "joint_statement_treasury_fed_fdic": {
+          "reference_ts_utc": "2023-03-12T22:15:00Z",
+          "delta_minutes": 1245.93,
+          "flag": "after"
+        }
+      }
+    },
+    "kraken_usdt_usd_march2023": {
+      "status": "OK",
+      "venue": "Kraken USDT/USD (1h high), March 2023",
+      "source_file": "data/n1/kraken_usdtusd/hourly.csv",
+      "timestamp_utc": "2023-03-11T02:00:00Z",
+      "premium_bps": 600.0,
+      "relative_to": {
+        "disclosure": {
+          "reference_ts_utc": "2023-03-11T03:11:00Z",
+          "delta_minutes": -71.0,
+          "flag": "before"
+        },
+        "usdc_trough_hour": {
+          "reference_ts_utc": "2023-03-11T07:57:53Z",
+          "delta_minutes": -357.88,
+          "flag": "before"
+        },
+        "joint_statement_treasury_fed_fdic": {
+          "reference_ts_utc": "2023-03-12T22:15:00Z",
+          "delta_minutes": -2655.0,
+          "flag": "before"
+        }
+      }
+    }
+  }
+}

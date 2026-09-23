@@ -1,0 +1,95 @@
+{
+  "task": "Dollar-amount angle on the NYAG Tether/Bitfinex 2019 disclosure (distinct from the prior two sessions' percentage-disclosure search).",
+  "passages": [
+    {
+      "document": "NYAG press release \"Attorney General James Announces Court Order Against ‘Crypto’ Currency Company Under Investigation For Fraud,\" published on ag.ny.gov, dated on-page April 25, 2019. Distinct from the already-frozen signed ex parte order PDF (2019.04.24_signed_order.pdf) -- this is the AG's own press statement summarizing and quoting \"filings\" made with the Manhattan Supreme Court (the Whitehurst affirmation / petition / memorandum of law referenced by the signed order, which could NOT independently be located as a standalone document -- see instrument_gap_affirmation_petition below).",
+      "date": "2019-04-25",
+      "page": null,
+      "verbatim_passage": "“Our investigation has determined that the operators of the ‘Bitfinex’ trading platform, who also control the ‘tether’ virtual currency, have engaged in a cover-up to hide the apparent loss of $850 million dollars of co-mingled client and corporate funds,” said Attorney General James.",
+      "search_term_matched": "850 / million",
+      "category": "impairment_amount",
+      "source_url": "https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company",
+      "retrieval_method": "direct (live HTTP, 200 OK)",
+      "retrieval_utc": "2026-09-09T06:58:03Z",
+      "raw_file": "data/n1/tether2019/raw/2019.04.25_ag_press_release.html"
+    },
+    {
+      "document": "NYAG press release \"Attorney General James Announces Court Order Against ‘Crypto’ Currency Company Under Investigation For Fraud,\" published on ag.ny.gov, dated on-page April 25, 2019. Distinct from the already-frozen signed ex parte order PDF (2019.04.24_signed_order.pdf) -- this is the AG's own press statement summarizing and quoting \"filings\" made with the Manhattan Supreme Court (the Whitehurst affirmation / petition / memorandum of law referenced by the signed order, which could NOT independently be located as a standalone document -- see instrument_gap_affirmation_petition below).",
+      "date": "2019-04-25",
+      "page": null,
+      "verbatim_passage": "The filings explain how Bitfinex no longer has access to over $850 million dollars of co-mingled client and corporate funds that it handed over, without any written contract or assurance, to a Panamanian entity called “Crypto Capital Corp.,” a loss Bitfinex never disclosed to investors.",
+      "search_term_matched": "850 / million",
+      "category": "impairment_amount",
+      "source_url": "https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company",
+      "retrieval_method": "direct (live HTTP, 200 OK)",
+      "retrieval_utc": "2026-09-09T06:58:03Z",
+      "raw_file": "data/n1/tether2019/raw/2019.04.25_ag_press_release.html"
+    },
+    {
+      "document": "NYAG press release \"Attorney General James Announces Court Order Against ‘Crypto’ Currency Company Under Investigation For Fraud,\" published on ag.ny.gov, dated on-page April 25, 2019. Distinct from the already-frozen signed ex parte order PDF (2019.04.24_signed_order.pdf) -- this is the AG's own press statement summarizing and quoting \"filings\" made with the Manhattan Supreme Court (the Whitehurst affirmation / petition / memorandum of law referenced by the signed order, which could NOT independently be located as a standalone document -- see instrument_gap_affirmation_petition below).",
+      "date": "2019-04-25",
+      "page": null,
+      "verbatim_passage": "In order to fill the gap, executives of Bitfinex and Tether engaged in a series of conflicted corporate transactions whereby Bitfinex gave itself access to up to $900 million of Tether’s cash reserves, which Tether for years repeatedly told investors fully backed the tether virtual currency “1-to-1.”",
+      "search_term_matched": "900 / million / line of credit (ceiling)",
+      "category": "credit_line_ceiling",
+      "source_url": "https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company",
+      "retrieval_method": "direct (live HTTP, 200 OK)",
+      "retrieval_utc": "2026-09-09T06:58:03Z",
+      "raw_file": "data/n1/tether2019/raw/2019.04.25_ag_press_release.html"
+    },
+    {
+      "document": "NYAG press release \"Attorney General James Announces Court Order Against ‘Crypto’ Currency Company Under Investigation For Fraud,\" published on ag.ny.gov, dated on-page April 25, 2019. Distinct from the already-frozen signed ex parte order PDF (2019.04.24_signed_order.pdf) -- this is the AG's own press statement summarizing and quoting \"filings\" made with the Manhattan Supreme Court (the Whitehurst affirmation / petition / memorandum of law referenced by the signed order, which could NOT independently be located as a standalone document -- see instrument_gap_affirmation_petition below).",
+      "date": "2019-04-25",
+      "page": null,
+      "verbatim_passage": "According to the filings, Bitfinex has already taken at least $700 million from Tether’s reserves.",
+      "search_term_matched": "700 / million",
+      "category": "amount_drawn",
+      "source_url": "https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company",
+      "retrieval_method": "direct (live HTTP, 200 OK)",
+      "retrieval_utc": "2026-09-09T06:58:03Z",
+      "raw_file": "data/n1/tether2019/raw/2019.04.25_ag_press_release.html"
+    }
+  ],
+  "sub_items_not_found": [
+    {
+      "sub_item": "date(s) of the Bitfinex<->Tether transfers",
+      "status": "NOT FOUND after exhausting CDX results and the full press-release text",
+      "notes": "Page states the AG issued subpoenas to Bitfinex/Tether in November 2018 (investigation start, not a transfer date) and that the $700M/$900M/$850M figures came from court filings, but gives no specific date(s) for when the transfers/drawdowns occurred."
+    },
+    {
+      "sub_item": "total tethers outstanding (USD figure) as stated in an AG document",
+      "status": "NOT FOUND in the press release; see usdt_liabilities_wayback.json for the independent Wayback-sourced tether.to figure for the same window (not an AG-authored figure)."
+    }
+  ],
+  "instrument_gap_affirmation_petition_memorandum": {
+    "target": "Brian M. Whitehurst affirmation (dated 2019-04-24, with Exhibits A-M) and/or the accompanying memorandum of law and/or a “verified petition”, referenced by the already-frozen signed ex parte order as its basis -- the AG's OWN supporting papers, distinct from Tether counsel's later (~2019-04-30) response affirmation that two prior attempts searched for.",
+    "status": "NOT LOCATED as a standalone document on ag.ny.gov -- INSTRUMENT GAP",
+    "cdx_queries_run": [
+      {
+        "request": "GET http://web.archive.org/cdx/search/cdx?url=ag.ny.gov&matchType=domain&from=20190424&to=20190531&output=json",
+        "result": "200 OK, 5375 rows (excl. header)."
+      },
+      {
+        "request": "client-side filter of the 5375 rows for 'ifinex'/'bitfinex'/'tether' anywhere in the URL",
+        "result": "0 matches (consistent with a prior domain-wide 2019-04-01..2019-08-01 sweep, which also found 0 case-related URL hits)."
+      },
+      {
+        "request": "client-side filter of the 5375 rows for URLs under /sites/default/files/ ending in .pdf",
+        "result": "35 unique PDF URLs. All 35 were reviewed by filename; three were judged plausible candidates by naming convention and fetched + text-extracted via pdfplumber: complaint_as-filed.pdf (2019-04-24 capture) -- 64 pages, 158,572 chars extracted, ZERO ifinex/bitfinex/tether hits; opening page identifies it as Case No. 18-cv-01747, State of New York et al. v. U.S. Dept. of Labor (filed 2018-07-26) -- an unrelated matter. petition_-_filed.pdf (2019-05-01 capture) -- 11 pages, image-only (0 extractable chars via pdfplumber; PDF metadata CreationDate=2018-01-16, i.e. created 15 months before the Bitfinex/Tether case existed) -- confirmed unrelated by creation date; no OCR tool was available in this environment (pytesseract/tesseract both absent) so no further identification was attempted beyond metadata. court_stamped_petition.pdf (2019-05-08 capture) -- 41 pages, 81,063 chars extracted, ZERO ifinex/bitfinex/tether hits."
+      },
+      {
+        "request": "client-side filter of the 5375 rows for any URL containing '2019.04.2' (the signed order's own date-prefix naming convention), '450545' (the docket number), 'whitehurst', 'affirmation', 'memorandum', or 'martin'",
+        "result": "1 match: the already-frozen 2019.04.24_signed_order.pdf itself. No sibling document using the same naming convention was ever crawled by Wayback in this window."
+      },
+      {
+        "request": "GET https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company (re-fetched live, full body text extracted this time, not just the PDF link)",
+        "result": "200 OK, 49,781 bytes HTML. Contains no link to, and no filename reference for, any affirmation/petition/memorandum -- only the signed-order PDF link (already frozen) and prose paraphrasing/quoting the filings (captured above as the four dollar-amount passages)."
+      },
+      {
+        "request": "client-side filter of the same 5375 rows for any second 2019 press-release URL containing crypto/currency/virtual/coin",
+        "result": "2 hits, both malformed/duplicate captures of the SAME press release URL (one missing '/2019/', one with a corrupted trailing '...underhttps://...' concatenation) -- no second, follow-up press release exists in this window."
+      }
+    ],
+    "conclusion": "Per the task's own framing, this is a different angle from two prior attempts (which searched for Tether counsel's ~2019-04-30 percentage disclosure); this confirms the AG's OWN affirmation/petition/memorandum of law (the Whitehurst papers) is likewise not present anywhere in ag.ny.gov's Wayback-crawled footprint for this window. The dollar figures the affirmation would contain were, however, recovered secondhand -- quoted/paraphrased in the AG's own press release (see the 4 passages above), which IS an AG-authored document, just not the affirmation itself. A human with NYSCEF e-filing access to docket 450545/2019 remains the most direct remaining path to the affirmation text verbatim."
+  }
+}

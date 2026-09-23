@@ -1,0 +1,181 @@
+# Claim map: every reported number to the results file and key it regenerates from.
+#
+# Written in G5a from the inline "(Source: ...)" markers that were removed from the
+# manuscript's running prose. tables.py reads this file and emits the Appendix C table
+# (tables/tab_claimmap.tex). Adding a results file to report.py without adding a row
+# here fails tests/test_claim_map.py, so the mapping cannot silently fall behind.
+#
+# Fields per entry:
+#   claim -- short stub naming the quantity as the manuscript states it
+#   label -- the \label of the section where the number is DERIVED, not where it is
+#            summarised. The abstract and the introduction restate most of these and
+#            are never the answer.
+#   file  -- results file, relative to usdc_depeg/results/
+#   key   -- the top-level key (or dotted path) carrying the value
+#   source_capture -- OPTIONAL, path under data/ to the frozen PRIMARY SOURCE the
+#            results file's own inputs came from. Most rows need none: a computed
+#            number's provenance ends at the results file that computes it. A row needs
+#            one when the number is not computed from frozen series but READ OFF a
+#            disclosure, because then the results file records a transcription and the
+#            capture is what makes it checkable. phi = 0.08 is the case that forced this
+#            field: it is the constant every headline figure derives from, and until
+#            G8.0 froze Circle's tweet and press release it had no capture at all.
+#            Deliberately NOT the `file` column: file/key name a results file report.py
+#            regenerates, and pointing either at a data capture breaks that invariant.
+#
+# WHY label AND NOT A SECTION NUMBER (G5b, 2026-09-11)
+# Every row used to carry a hand-typed `section: "6"`. Twelve of the twenty-two had
+# drifted: ten were off by one from Section 5 onward, so no row pointed at Section 5 at
+# all and one pointed at the Conclusion, which derives nothing; two more pointed at the
+# wrong part of the paper outright. Nothing could catch that, because a section number
+# is a literal string with no referent. A \label has a referent: tables.py emits
+# \ref{label} and LaTeX resolves it, so the printed number is whatever the section
+# actually is and cannot drift again. tests/test_claim_map.py additionally fails if a
+# label here is missing from fc27.aux, which catches a typo or a deleted label before
+# the reader sees "??".
+
+# WHY key IS NOW CHECKED TOO (G7.3, 2026-09-12)
+# The label note above describes a literal string with no referent silently drifting.
+# The same disease was in the `key` column the whole time and nothing looked: 18 of the
+# 22 rows named a key absent from the file they point at, and 229 tests passed anyway,
+# because test_claim_map.py checked required fields, label resolution, and file coverage
+# but never opened a results file to look the key up. Two independent G7.3 audit lanes
+# found it. tests/test_claim_map.py now resolves every key against its own JSON, literal
+# key first and then as a dotted path -- literal first because several real keys contain
+# a dot (feed_trough_only_at_phi_0.08), and splitting those reports a key that exists as
+# missing.
+
+claims:
+  - claim: Worst-case floor and implied unremediated-loss probability
+    label: sec:ident
+    file: number1b_rational_bound.json
+    key: p_obs, floor_worstcase, implied_failure_prob_rho0
+
+  - claim: Non-fundamental share, lower edge and band
+    label: sec:ident
+    file: number1_nonfundamental_share.json
+    key: headline_band.low, headline_band.high
+
+  - claim: Denominator sensitivity of phi and the share
+    label: sec:ident
+    file: phi_denominator_sensitivity.json
+    key: phi_conventions, grid, feed_trough_only_at_phi_0.08
+    source_capture: n1/circle2023/disclosure_passages_circle.json
+
+  - claim: Dated impossibility window and per-coin firing counts
+    label: sec:ident
+    file: impossibility_window.json
+    key: impossibility_region_usdc, coins.USDC.independence.effective_n
+
+  - claim: Dilution-adjusted phi(t) and its interpolation band
+    label: sec:sensitivity
+    file: phi_dynamic.json
+    key: variant_i, interpolation_band, firing_set
+
+  - claim: Cross-feed trough corroboration and below-floor depth
+    label: sec:sensitivity
+    file: trough_corroboration.json
+    key: firing_report, below_floor_depth, independence
+
+  # Was "3". The per-coin counts and the 216-hour denominator are stated only in the
+  # reproducibility appendix; Section 3 gives Kraken's 240 rows, a different quantity.
+  - claim: Hourly observation counts per coin
+    label: app:repro
+    file: hourly_counts.json
+    key: per_coin, window.expected_hours
+
+  - claim: Cross-coin placebo troughs and break threshold
+    label: sec:placebo
+    file: number3_placebo.json
+    key: USDC, DAI, USDT, break_threshold
+
+  - claim: USDT premium depth and timing
+    label: sec:placebo
+    file: usdt_premium.json
+    key: max_premium_bps, premium_volume_usdt
+
+  - claim: USDT premium peak timestamps by venue
+    label: sec:placebo
+    file: usdt_premium_timing.json
+    key: peaks.coinbase_usdt_usd, peaks.composite_usdt
+
+  - claim: Redemption concentration and entity resolution
+    label: app:hhi
+    file: number2_redemption_hhi.json
+    key: upper_bound.hhi_raw, entity_resolved, coverage
+
+  # The rule is described in Section 3, but G5b's repetition cut leaves the coverage
+  # fraction itself in Appendix A, which is what a reader traces.
+  - claim: FIFO burn-attribution rule
+    label: app:hhi
+    file: fifo_rule.json
+    key: matching_window, tie_break, truncation
+
+  - claim: DAI reported USDC exposure
+    label: app:dai
+    file: number4_dai_contagion.json
+    key: psm_share_of_dai_supply, source_collateral_share, no_decomposition
+
+  - claim: Specificity panel rows and breach combinations
+    label: sec:sensitivity
+    file: specificity_panel.json
+    key: row1_usdc_march_2023, row2_tether_2019, row4_terra_2022, for_print
+
+  - claim: Terra degenerate control
+    label: sec:sensitivity
+    file: second_event_terra.json
+    key: phi_terra_exposure, degenerate_caveat
+
+  - claim: Excluded-coin calm-baseline evidence
+    label: app:excl
+    file: placebo_excluded_coins.json
+    key: USDP, GUSD, BUSD
+
+  - claim: Exposure-ordering null probability
+    label: sec:placebo
+    file: ordering_null.json
+    key: probability_as_fraction
+
+  # Was "D". Appendix D argues the exclusion; the 116 bps deviation is printed only in
+  # the policy section's scope-condition paragraph.
+  - claim: TrueUSD scope-condition deviation
+    label: sec:disc
+    file: tusd_2023.json
+    key: deviation_from_par_bps
+
+  - claim: Make-whole pledge timing bound
+    label: sec:ident
+    file: makewhole_timing.json
+    key: circle_makewhole_pledge.by_trough_reference
+
+  - claim: Time-value discount on a delayed redemption
+    label: sec:disc
+    file: time_value.json
+    key: discount_bps_range_2to3d
+
+  - claim: Trough print volume
+    label: sec:placebo
+    file: trough_volume.json
+    key: volume_in_trough_hour_usdc
+
+  - claim: Hour-by-hour panel series for 11 March
+    label: sec:ident
+    file: panel_11mar.json
+    key: panel, cross_coin_cross_window_summary
+
+  # The issuer's own itemisation of the cash leg, and the estimator re-evaluated at each
+  # impairment reading it admits. Sourced from the frozen 11 March capture rather than
+  # from a margin argument, so the worst case is computed rather than asserted.
+  - claim: Cash-leg itemisation and phi under each impairment scenario it admits
+    label: sec:ident
+    file: phi_cash_leg_scenarios.json
+    key: disclosure.figures_usd_bn, grid, for_print, feed_zero_crossings_phi
+    source_capture: n1/circle2023/raw/circle_update_usdc_svb_20230311202753.html
+
+  # Sub-floor executed depth restricted to the interval in which the floor existed.
+  # Reproduces the unrestricted totals as a cross-check; the two exclusions are empty,
+  # which is itself the finding.
+  - claim: Executed sub-floor depth while the disclosure was live
+    label: sec:sensitivity
+    file: subfloor_depth_live.json
+    key: live, unrestricted, excluded_before_disclosure, cross_check_vs_trough_corroboration

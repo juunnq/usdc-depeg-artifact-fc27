@@ -1,0 +1,83 @@
+{
+  "disclosed_loss_usd": 3300000000.0,
+  "disclosure_ts_utc": "2023-03-11T03:11:00Z",
+  "variant_i": {
+    "description": "B(t) = usdc_supply_daily.csv circulating_usd, linearly interpolated to the frozen hourly USDC price timestamps.",
+    "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+    "trough_price": 0.876675,
+    "phi_at_trough": 0.079,
+    "floor_at_trough": 0.921,
+    "q_at_trough": 1.558,
+    "s_nf0_at_trough": 0.358,
+    "max_phi": 0.09,
+    "max_phi_hour_utc": "2023-03-16T22:57:55+00:00",
+    "max_phi_window_edge_artifact": true,
+    "max_phi_window_edge_note": "phi is monotone in a monotone supply series and continues past the window; this is the window's last observed hour, where the coin trades above par and q* < 0 (bound vacuous), not a true maximum.",
+    "min_phi": 0.076,
+    "min_phi_hour_utc": "2023-03-07T23:57:49+00:00",
+    "min_phi_window_edge_artifact": true,
+    "min_phi_window_edge_note": "shares max_phi's defect at the window's other edge -- this is the window's first observed hour; the true minimum sits outside the observed window, not at this hour."
+  },
+  "interpolation_band": {
+    "description": "phi under the two daily supply snapshots bracketing the trough hour, held constant across the window (same construction as static_comparison's use of PHI_SVB) -- the firing set ranges from firing_count_hi to firing_count_lo and never falls below firing_count_hi.",
+    "phi_lo": 0.0782,
+    "phi_hi": 0.0812,
+    "firing_count_lo": 11,
+    "firing_count_hi": 9,
+    "extra_firing_hours_utc": [
+      "2023-03-11T08:57:55+00:00",
+      "2023-03-11T17:00:19+00:00"
+    ]
+  },
+  "variant_ii_gap": "no frozen per-block burn/mint timestamps exist; data/redemptions_by_wallet.csv is a wallet-aggregated (wallet, volume) table with no per-event timestamps or block numbers; redemptions.py computes burns/mints from live Etherscan logs held only in memory (fifo_attribute()) and writes no per-block/per-event file to disk anywhere under data/. Regenerating one requires ETHERSCAN_API_KEY, unavailable to this offline reproduction path.",
+  "third_line_alt_reserve_total": {
+    "description": "Circle's alternate ~$42.1B reserve-composition total (paper/fc27/fc27.tex lines 443-444, cite key circle2023pressrelease) -- a SINGLE POINT figure, not a daily series; a constant comparison line, NOT a time series.",
+    "is_time_varying": false,
+    "alt_reserve_total_usd": 42100000000.0,
+    "phi": 0.0784,
+    "floor": 0.9216,
+    "q_at_trough": 1.5733,
+    "s_nf0_at_trough": 0.3644
+  },
+  "static_comparison": {
+    "source": "usdc_depeg/results/impossibility_window.json (read, not recomputed)",
+    "phi_static": 0.08,
+    "floor_static": 0.92,
+    "firing_hours_count": 9,
+    "firing_hours_utc": [
+      "2023-03-11T06:59:51+00:00",
+      "2023-03-11T07:57:53+00:00",
+      "2023-03-11T10:00:11+00:00",
+      "2023-03-11T11:00:53+00:00",
+      "2023-03-11T12:00:48+00:00",
+      "2023-03-11T12:59:32+00:00",
+      "2023-03-11T14:00:00+00:00",
+      "2023-03-11T15:00:01+00:00",
+      "2023-03-11T16:00:05+00:00"
+    ]
+  },
+  "dynamic_firing": {
+    "firing_hours_count": 9,
+    "firing_hours_utc": [
+      "2023-03-11T06:59:51+00:00",
+      "2023-03-11T07:57:53+00:00",
+      "2023-03-11T10:00:11+00:00",
+      "2023-03-11T11:00:53+00:00",
+      "2023-03-11T12:00:48+00:00",
+      "2023-03-11T12:59:32+00:00",
+      "2023-03-11T14:00:00+00:00",
+      "2023-03-11T15:00:01+00:00",
+      "2023-03-11T16:00:05+00:00"
+    ]
+  },
+  "firing_set_identical": true,
+  "flip_hours_utc": [],
+  "firing_set": {
+    "composite_close_hours": 9,
+    "kraken_convention_range_hours": [
+      9,
+      11
+    ],
+    "statement_verbatim": "9 hours on the composite close; 9-11 across Kraken conventions"
+  }
+}

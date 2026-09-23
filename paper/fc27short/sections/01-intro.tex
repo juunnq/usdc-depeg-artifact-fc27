@@ -1,0 +1,60 @@
+\section{Introduction}
+\label{sec:intro}
+
+Stablecoins are becoming payment infrastructure, and the GENIUS Act gives them their
+first comprehensive U.S. federal framework~\cite{geniusact2025}. A fiat-backed stablecoin that
+trades below par admits two readings. Under rational repricing, an impaired reserve
+is worth less. Under non-fundamental repricing, a self-fulfilling coordination
+run~\cite{diamonddybvig1983,goldsteinpauzner2005}
+and microstructure friction push the price below the floor a reserve loss can justify. No
+measurement of March 2023 cited in Section~\ref{sec:lit} forms that floor. A de-peg with
+a non-fundamental share bounded away from zero calls for backstop and redemption design,
+since a reserve-quality rule addresses only the fundamental share.
+
+We offer a reusable estimator for any disclosed-impairment de-peg. From an issuer's
+disclosed reserve impairment, derive a worst-case floor. Test whether the observed
+trough breaches that floor. Read the breach, if any, as a bound on the non-fundamental
+share. Figure~\ref{fig:schematic} shows those three steps. A supervisor can run it on any
+public hourly print, within hours of a break. It returns no verdict when the trough does not
+breach the floor.
+
+%% H2 T6. Declared inside Section 1, immediately after the paragraph that cites it,
+%% rather than in the skeleton between \input lines. A float is only considered from
+%% its own position forward, and this is the earliest position that is still after its
+%% first citation. The fragment is \input, not \includegraphics: it is a bare
+%% tikzpicture with no figure environment of its own, so the wrapper lives here.
+\begin{figure}[t]
+\centering
+\input{figures/fig_schematic}
+\caption{The estimator. A disclosed impairment gives a floor, and a public price that
+breaches it bounds the non-fundamental share.}
+\label{fig:schematic}
+\end{figure}
+
+We apply it to the March 2023 USD~Coin (USDC) de-peg, where Silicon Valley Bank (SVB)
+failed holding about $8\%$ of reserves, and a joint federal
+backstop~\cite{fedtreasfdic2023pressrelease} restored the peg within days.
+
+Under expected-loss pricing, fundamental value cannot fall below $1-\phi$, where $\phi$ is
+the disclosed impairment fraction. Under (A4), a preference-free corollary extends that
+floor to any monotone-utility valuation. The observed trough breaches the floor at every admissible
+unremediated-loss probability and recovery rate, and requires $q^{\star}=1.54$, which
+exceeds one. Under (A1)--(A3), no expected-loss account of the disclosed impairment is
+consistent with the trough. At the disclosed $\phi$ the lower edge of the resulting
+non-fundamental share runs from $19\%$ on Kraken's close to $35\%$ on the composite. It
+stays positive across impairment readings, and at the full re-peg is $100\%$ ex post, an
+identity
+(Section~\ref{sec:ident}).
+
+The paper makes two contributions:
+\begin{itemize}
+\item \textbf{An identification argument} (Proposition~\ref{prop:floor}) turning a
+  disclosed impairment into a floor that a price either breaches or does not, with the
+  breach read as a bound on the non-fundamental share.
+\item \textbf{A screen} over six candidate de-pegs, none of which satisfies all three
+  preconditions, so the single qualifying application is a property of the disclosure
+  record rather than of the method.
+\end{itemize}
+Two analyses stay outside the estimator: the ex-ante fragility
+ordering by reserve exposure that the realized troughs match, with null probability $1/2$
+(Section~\ref{sec:placebo}), and a three-episode panel (Section~\ref{sec:spec}).

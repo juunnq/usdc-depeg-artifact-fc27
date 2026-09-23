@@ -1,0 +1,116 @@
+{
+  "lane": "Paxos/USDP March 2023 disclosure fetch",
+  "queries": [
+    {
+      "query": "paxos.com domain-wide",
+      "params": {
+        "url": "paxos.com",
+        "matchType": "domain",
+        "from": "20230310",
+        "to": "20230315",
+        "output": "json"
+      },
+      "url": "http://web.archive.org/cdx/search/cdx?url=paxos.com&matchType=domain&from=20230310&to=20230315&output=json",
+      "rows_returned": 607,
+      "keyword_filtered_rows": 19,
+      "keywords": [
+        "blog",
+        "newsroom",
+        "press",
+        "status",
+        "transparency",
+        "attestation"
+      ]
+    },
+    {
+      "query": "promising-page fetches (manual selection from matched_a)",
+      "candidates": [
+        {
+          "name": "usdp_transparency",
+          "timestamp": "20230315083355",
+          "url": "http://paxos.com/usdp-transparency/"
+        },
+        {
+          "name": "attestation",
+          "timestamp": "20230314212456",
+          "url": "https://www.paxos.com/attestation/"
+        },
+        {
+          "name": "busd_transparency",
+          "timestamp": "20230311202607",
+          "url": "https://paxos.com/busd-transparency/"
+        }
+      ],
+      "results": {
+        "usdp_transparency": {
+          "status": "200 OK",
+          "wayback_url": "http://web.archive.org/web/20230315083355id_/http://paxos.com/usdp-transparency/",
+          "source_url": "http://paxos.com/usdp-transparency/",
+          "capture_timestamp": "20230315083355",
+          "raw_path": "data/n1/paxos2023/raw/usdp_transparency_20230315083355.html",
+          "silvergate_signature_svb_mentions": {
+            "Silvergate": null,
+            "Signature": null,
+            "SVB": null
+          }
+        },
+        "attestation": {
+          "status": "200 OK",
+          "wayback_url": "http://web.archive.org/web/20230314212456id_/https://www.paxos.com/attestation/",
+          "source_url": "https://www.paxos.com/attestation/",
+          "capture_timestamp": "20230314212456",
+          "raw_path": "data/n1/paxos2023/raw/attestation_20230314212456.html",
+          "silvergate_signature_svb_mentions": {
+            "Silvergate": null,
+            "Signature": null,
+            "SVB": null
+          }
+        },
+        "busd_transparency": {
+          "status": "200 OK",
+          "wayback_url": "http://web.archive.org/web/20230311202607id_/https://paxos.com/busd-transparency/",
+          "source_url": "https://paxos.com/busd-transparency/",
+          "capture_timestamp": "20230311202607",
+          "raw_path": "data/n1/paxos2023/raw/busd_transparency_20230311202607.html",
+          "silvergate_signature_svb_mentions": {
+            "Silvergate": null,
+            "Signature": null,
+            "SVB": null
+          }
+        }
+      }
+    },
+    {
+      "query": "USDP Feb-2023 monthly report PDF, exact-URL CDX",
+      "url": "http://web.archive.org/cdx/search/cdx?url=https://paxos.com/wp-content/uploads/2023/03/USDP-Monthly-Stablecoin-Reporting-February-2023.pdf&output=json",
+      "rows_returned": 4
+    },
+    {
+      "query": "Twitter / nitter / x.com CDX sweep",
+      "domains": {
+        "twitter.com/PaxosGlobal": {
+          "rows": 3,
+          "snowflake_decode_sample": {
+            "1635062389300432896": "2023-03-12T23:37:06.256000Z",
+            "1635062221083660288": "2023-03-12T23:36:26.150000Z",
+            "1635062132319600643": "2023-03-12T23:36:04.987000Z",
+            "1635061959950495744": "2023-03-12T23:35:23.891000Z",
+            "1635061864974655490": "2023-03-12T23:35:01.247000Z",
+            "1635061720854200320": "2023-03-12T23:34:26.886000Z",
+            "1634242623916642304": "2023-03-10T17:19:38.958000Z",
+            "1633598794637119488": "2023-03-08T22:41:18.096000Z"
+          },
+          "target_tweet_id": "1635061959950495744",
+          "target_tweet_ts_utc": "2023-03-12T23:35:23.891000Z"
+        },
+        "nitter.net/PaxosGlobal": {
+          "rows": 0
+        },
+        "x.com/PaxosGlobal": {
+          "rows": 0
+        }
+      }
+    }
+  ],
+  "pdf_note1_extracted_text": "Paxos Pax Dollar (USDP)\nUnaudited Holdings for February 28, 2023 at 5pm EST\nWeighted Average Maturity: 2 days\nTotal Tokens Outstanding: $766,369,357\nTotal assets held in custody meet or exceed the token balance\nU.S. Treasury Debt\nCurrent Market Value of\nDescription CUSIP Maturity Date Notional Position Value\nSecurities Purchased\nU.S. Treasury Bills 912796Y86 03/07/2023 149,889,000 149,565,417\nTotal U.S. Treasury Debt: 149,889,000 149,565,417\nU.S. Treasury Reverse Repurchase Agreements (overnight maturity and overcollateralized)\nCurrent Market Value of\nDescription CUSIP Maturity Date Notional Position Value\nCollateral Provided\nU.S. Treasury Debt 912810TF5 02/15/2042 148,569,818 145,656,670\nU.S. Treasury Debt 912810TH1 05/15/2042 208,430,196 204,343,330\nTotal U.S. Treasury Collateralized Reverse Repurchase Agreements: 357,000,014 350,000,000\nCash Deposits via FDIC Deposit Placement Networks (Note 1): 185,500,000 185,500,000\nCash Deposits with Private Insurance Coverage (Note 1): 72,490,408 72,490,408\nOther Cash Deposits at Insured Depository Institutions (Note 1): 10,923,002 10,923,002\nTotal Cash Deposits: 268,913,410 268,913,410\nTotal Net Assets: 775,802,424 768,478,826\nReverse Repurchase Agreements:\nThis is a contractual arrangement between two parties, where one party agrees to sell securities to another party at a specified price with a commitment\nto buy the securities back at a later date for another (usually higher) specified price. Our Repurchase Agreements are overnight maturity with reputable\nfinancial institutions and overcollaterized with U.S. Treasuries. In the event of a default by the counterparty, Paxos is able to liquidate the U.S. Treasury\ncollateral to make itself whole. As all trades are overcollateralized, the risk of loss is not deemed to be material.\nNotional Position Value:\nThis is the value at time of purchase of the particular security.\nWeighted Average Maturity (WAM):\nThis is a Value $ weighted average of all the maturities of the securities held including Reverse Repurchase Agreements and Cash at 1 day. WAM can\nbe used as a measure of sensitivity to interest rate changes and market changes.\nThe following link can be used to obtain the historical publicly available information filed: https://paxos.com/regulation-and-transparency/\nNote 1: In order to support overnight and weekend liquidity, Paxos maintains balances in excess of FDIC insurance limits. At the Report Date and Time,\nPaxos currently holds $268,913,410 of fiat currency at insured depository institutions (the \"Cash Deposits\"). Paxos holds $185,500,000 of the Cash\nDeposits in deposit placement networks operated by IntraFi Network LLC and/or Reich & Tang Deposit Solutions, LLC wherein the totality of balances\nin these deposit networks are FDIC-insured. A full listing of insured depository institutions of which deposits may be placed within each of these\nnetworks can be found at the links below. FDIC-insured deposits may also be held at BMO Harris Bank N.A. (FDIC Certificate #16571), Signature Bank\n(FDIC Certificate #57053), Silvergate Bank (FDIC Certificate #27330), State Street Bank and Trust Company (FDIC Certificate #14), and Customers\nBank (FDIC Certificate #34444). Further, Paxos has obtained private uninsured deposit insurance in the amount of $72,490,408. Not all deposits are\ncovered by the FDIC or private insurance, and Paxos may still incur losses in the event of a bank insolvency. Please refer to our terms and conditions at\nhttps://paxos.com/stablecoin-terms-and-conditions/.\nA list identifying IntraFi Network insured depository institutions at which funds may be placed can be found at https://www.intrafi.com/network-banks/\nA list identifying Reich & Tang Deposit Solutions insured depository institutions at which funds may be placed can be found at\nhttps://www.reichandtang.com/about/bank-lists/.\nPaxos may exclude particular insured depository institutions within each network from eligibility to receive funds."
+}

@@ -1,0 +1,16 @@
+{
+  "run_date_ts": 1678536000,
+  "run_date_utc": "2023-03-11T12:00:00Z",
+  "block": 16804701,
+  "on_chain_psm_usdc_join": 99.328577,
+  "on_chain_psm_usdc_contract": 0.0,
+  "on_chain_psm_usdc_total": 99.328577,
+  "dai_total_supply": 4193955100.3838315,
+  "on_chain_backing_clean": false,
+  "on_chain_note": "PSM custody ~$0 on-chain; USDC held off-chain (Coinbase Custody + US Treasuries)",
+  "reported_psm_usdc": 3100000000.0,
+  "reported_backing_fraction": 0.7391590815353001,
+  "reported_source": "The Block, 2023-03-11 (Wayback-captured, contemporaneous): PSM-USDC-A reported at its $3.1B debt ceiling; same source reports 36% USDC share of DAI collateral. See data/n1/dai_psm_2023/psm_source_20230311.json",
+  "retrieved_utc": "2026-09-10T09:07:22Z",
+  "source_collateral_share": 0.36
+}

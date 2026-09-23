@@ -1,0 +1,26 @@
+[
+  {
+    "capture_timestamp": "20230311204229",
+    "source_url": "https://paxos.com/wp-content/uploads/2023/03/USDP-Monthly-Stablecoin-Reporting-February-2023.pdf",
+    "wayback_url": "http://web.archive.org/web/20230311204229id_/https://paxos.com/wp-content/uploads/2023/03/USDP-Monthly-Stablecoin-Reporting-February-2023.pdf",
+    "verbatim_passage": "FDIC-insured deposits may also be held at BMO Harris Bank N.A. (FDIC Certificate #16571), Signature Bank (FDIC Certificate #57053), Silvergate Bank (FDIC Certificate #27330), State Street Bank and Trust Company (FDIC Certificate #14), and Customers Bank (FDIC Certificate #34444).",
+    "quantified": false,
+    "coverage_language": "Names Signature Bank and Silvergate Bank as 2 of 5 possible depository institutions within a $268,913,410 pooled 'Total Cash Deposits' figure (itself broken into $185.5M FDIC deposit-placement-network cash / $72.49M privately-insured cash / $10.92M other insured cash) -- NO per-bank dollar allocation given, so this passage does not quantify Silvergate- or Signature-specific exposure."
+  },
+  {
+    "capture_timestamp": "2023-03-08T22:41:18Z",
+    "source_url": "https://twitter.com/PaxosGlobal",
+    "wayback_url": "http://web.archive.org/web/20230314092146id_/https://twitter.com/PaxosGlobal",
+    "verbatim_passage": "Statement from Paxos on Silvergate Bank: Paxos has virtually no exposure to Silvergate. Last week we discontinued SEN connectivity and wires into our Silvergate account and have continued processing outgoing withdrawals.",
+    "quantified": false,
+    "coverage_language": "Qualitative ('virtually no exposure') -- no dollar figure given."
+  },
+  {
+    "capture_timestamp": "2023-03-12T23:35:23.891000Z",
+    "source_url": "https://twitter.com/PaxosGlobal/status/1635061959950495744",
+    "wayback_url": "http://web.archive.org/web/20230314092146id_/https://twitter.com/PaxosGlobal",
+    "verbatim_passage": "Paxos currently holds $250M at Signature Bank and holds private deposit insurance well in excess of our cash balance and FDIC per-account limits. Seeking private deposit insurance is part of our conservative approach to managing customer assets exceeding FDIC insurance limits.",
+    "quantified": true,
+    "coverage_language": "Private deposit insurance held 'well in excess of' the Signature Bank cash balance and FDIC per-account limits (no dollar cap given for the private policy itself)."
+  }
+]

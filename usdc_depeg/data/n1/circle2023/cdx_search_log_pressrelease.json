@@ -1,0 +1,53 @@
+{
+  "lane": "Bibliography-support fetch for the Circle press release's Wayback capture (bib key circle2023pressrelease)",
+  "target": "Circle pressroom article \"$3.3 Billion of USDC Reserve Risk Removed, Dollar De-Peg Closes\" (dateline Boston, March 12, 2023) -- the 'about 8%' restatement of phi and the 77%/23% ($32.4B/$9.7B) reserve-composition split",
+  "queries": [
+    {
+      "query": "exact-URL CDX for the refs.bib URL as given, full history",
+      "url": "http://web.archive.org/cdx/search/cdx?url=https://www.circle.com/pressroom/3-3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes&output=json",
+      "retrieved_utc": "2026-09-12T07:42:00Z",
+      "rows_returned": 19,
+      "result": "GAP AT THIS URL: zero captures anywhere near March 2023. Earliest capture is 20241205041647 (2024-12-05), i.e. more than 20 months after the crisis. The refs.bib URL (path '/pressroom/...', slug spelled with hyphens '3-3-billion') did not exist on circle.com in 2023 -- it is a post-redesign URL that keeps the article's original March 2023 dateline in the byline but was not live, and therefore not crawled by Wayback, until Circle's later site restructuring."
+    },
+    {
+      "query": "domain-wide CDX sweep, circle.com, 2023-03-01..2023-04-01, matchType=domain, filter=urlkey:.*press.*",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com&matchType=domain&from=20230301&to=20230401&output=json&filter=urlkey:.*press.*",
+      "retrieved_utc": "2026-09-12T07:44:00Z",
+      "rows_returned": 318,
+      "result": "DEAD END: the substring filter '.*press.*' matched 'express' (circle.com/en/express, a checkout product page), not any pressroom path -- all 318 rows are /en/express variants. Confirms Wayback's crawl of circle.com in this window used '/en/pressroom/' as the actual press-index path segment, not a bare '/press' or '/pressroom' at domain root reachable by this filter."
+    },
+    {
+      "query": "prefix CDX, circle.com/en/pressroom, 2023-01-01..2023-06-01",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com/en/pressroom&matchType=prefix&from=20230101&to=20230601&output=json",
+      "retrieved_utc": "2026-09-12T07:46:00Z",
+      "rows_returned": 458,
+      "result": "Confirms '/en/pressroom' (not bare '/pressroom') was the live 2023 path prefix -- e.g. circle.com/en/pressroom itself (index) has 200-status captures from January 2023 onward, and circle.com/en/pressroom/3 (a numeric-id path) returns 404 on 2023-03-14, showing the section was live and crawled. No row in this listing carries the '3-3-billion' or '3.3-billion' slug near the top rows scanned, which is what prompted the targeted exact-URL retry below with the '/en/' prefix restored."
+    },
+    {
+      "query": "exact-URL CDX, https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes (restoring the '/en/' path segment AND respelling the slug with a period, '3.3-billion', matching the bib title's literal '$3.3' rendering, instead of the refs.bib URL's hyphenated '3-3-billion')",
+      "url": "http://web.archive.org/cdx/search/cdx?url=https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes&output=json",
+      "retrieved_utc": "2026-09-12T07:58:00Z",
+      "rows_returned": 47,
+      "first_capture_timestamp": "20230313031348",
+      "first_capture_iso_utc": "2023-03-13T03:13:48Z",
+      "result": "FOUND. This is the real 2023 URL for the same article (confirmed by title and body-text match, see the fetch note below) -- the refs.bib URL is evidently the modern (2024+) redesigned path/slug for the identical piece, which Wayback never crawled in 2023 under that spelling."
+    },
+    {
+      "query": "domain-wide CDX sweep, circle.com, 2023-03-01..2023-06-01, filter=urlkey:.*deloitte.*  (run opportunistically alongside the pressrelease search to check for any Deloitte-attributed page at all near this window)",
+      "url": "http://web.archive.org/cdx/search/cdx?url=circle.com&matchType=domain&from=20230301&to=20230601&output=json&filter=urlkey:.*deloitte.*",
+      "retrieved_utc": "2026-09-12T08:03:00Z",
+      "rows_returned": 0,
+      "result": "Zero. Logged here because it is one data point supporting the circle2023attestation gap booked in cdx_search_log_attestation_gap.json."
+    },
+    {
+      "query": "snapshot fetch of the found 2023 capture (raw, id_ suffix)",
+      "wayback_url": "http://web.archive.org/web/20230313031348id_/https://www.circle.com/en/pressroom/3.3-billion-of-usdc-reserve-risk-removed-dollar-de-peg-closes",
+      "retrieved_utc": "2026-09-12T07:59:00Z",
+      "http_status": 200,
+      "note": "Fetched with curl --compressed (gzip). Decoded HTML's <title> reads '$3.3 Billion of USDC Reserve Risk Removed, Dollar De-peg Closes' -- matches refs.bib's title field verbatim except bib's capitalization of 'De-Peg'. Body dateline paragraph reads 'BOSTON – March 12, 2023 – ...' -- matches refs.bib's howpublished dateline. Confirms this capture is the correct article body, not a redirect or placeholder.",
+      "saved_to": "data/n1/circle2023/raw/circle_pressrelease_usdc_svb_20230313031348.html",
+      "decoded_bytes": 124468,
+      "sha256": "76300c5eab10be53387092020e167fa9b6799a7c25fb06259d83a35506071b33"
+    }
+  ]
+}

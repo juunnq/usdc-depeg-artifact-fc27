@@ -1,0 +1,41 @@
+%% ============================================================================
+\section{Setting and Data}
+\label{sec:setting}
+
+%% C6. Compressed, but the arbitrage loop is NOT dropped: Section 2 uses the term
+%% ("while the arbitrage loop was closed") and Section 1 does not define it, so cutting
+%% the clause entirely would leave Section 2 resting on an undefined term.
+USDC is a fiat-backed stablecoin redeemable one-for-one against Circle's
+reserves of short-dated Treasuries and bank cash, so a bank failure impairs
+backing through the cash leg and through the arbitrage loop of redemption at par.
+
+Silicon Valley Bank failed on March~10, 2023. Late that evening, Circle
+disclosed on its official X account that ``\$3.3 billion of the
+${\sim}$\$40 billion of USDC reserves remain at SVB''~\cite{circle2023tweet}.
+Circle restated that figure as ``about $8\%$'' of total reserves in its
+March~12 press release~\cite{circle2023pressrelease}, and contemporaneous
+reporting corroborates it~\cite{capoot2023}. We take $\phi\approx 0.08$,
+Circle's own rounded disclosure. The
+secondary-market price fell below par over March~10--11, reaching a trough of
+\$0.877. On March~12 at 22:15~UTC, the FDIC, the Federal Reserve, and the
+Treasury issued a joint statement guaranteeing SVB depositors in
+full~\cite{fedtreasfdic2023pressrelease}, and USDC restored its peg over the
+following days.
+
+DAI, the contagion coin, is linked to USDC through MakerDAO's
+peg-stability module, which swaps the two one-for-one up to a debt ceiling that
+press reporting says was reached on 11~March 2023~\cite{theblock2023psm}.
+Tether (USDT), the largest fiat-backed stablecoin, had no disclosed exposure to
+SVB and serves as the unexposed coin.
+
+All analysis runs offline on a frozen snapshot over the window 2023-03-08 to
+2023-03-17 (UTC), and no proprietary data enters it. The headline USD price
+series is an hourly cross-venue aggregate from the public aggregator
+DeFiLlama~\cite{defillama2026api}. The
+frozen record does not enumerate its constituent venues, so we do not treat it as an
+independent venue. Kraken's fiat-settled USDC/USD close and
+VWAP~\cite{kraken2026api} cross-check the \$0.877
+trough, at minimum prints of \$0.901 and \$0.893. The pair's \$0.874 hourly low rests on
+a single 3{,}373-USDC trade, so we do not read the cross-check off it. In
+Figure~\ref{fig:event}(b) circles mark Kraken's close, drawn at its hour's end, and
+triangles its VWAP, drawn at the midpoint.

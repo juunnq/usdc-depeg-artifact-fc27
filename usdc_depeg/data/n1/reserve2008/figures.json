@@ -1,0 +1,118 @@
+[
+  {
+    "figure": "(a) total fund net assets on 12 September 2008 (last date before the collapse)",
+    "status": "GAP",
+    "value": null,
+    "document": null,
+    "date": null,
+    "page": null,
+    "verbatim_passage": null,
+    "note": "No document reachable headlessly states the Primary Fund's own net assets specifically on 12 September 2008 (Friday, last business day before the Lehman bankruptcy filing on Monday 15 September). The only September-12-dated dollar figure found in any retrieved source is for RMCI's total assets under management across ALL 22 open-end portfolios of the 5 Reserve Funds trusts (i.e. not the Primary Fund alone) -- see 'a-related' entry below. Searched: all 15 documents retrieved for this lane (7 fund press releases from Sept 2008, 2 fund news-index pages, the SEC litigation release, and the 45-page SEC complaint -- the complaint's full text was grepped for every 'September 12' occurrence; only one dollar figure co-occurs with that date, and it is the RMCI-wide figure below)."
+  },
+  {
+    "figure": "(a-related) RMCI total assets under management, all 22 Reserve Funds portfolios, as of 12 September 2008 -- NOT the Primary Fund alone; supplied because it is the only Sept-12-dated dollar figure found in any reachable source",
+    "status": "FOUND (related, not an exact match to (a))",
+    "value": "approximately $120 billion",
+    "document": "SEC v. Reserve Management Company, Inc., et al., Complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.)",
+    "date": "2009-05-05",
+    "page": 8,
+    "verbatim_passage": "In 2008, RMCI provided investment advisory services to five registered, open-end, investment companies set up as trusts, offering a total of 22 open-end investment portfolios (collectively, the “Reserve Funds”). RMCI had approximately $120 billion in assets under management as of September 12, 2008."
+  },
+  {
+    "figure": "(b) total fund net assets on 15 and/or 16 September 2008",
+    "status": "FOUND",
+    "value": "approximately $62.4 billion in total assets (Primary Fund), as of the morning of September 15, 2008",
+    "document": "SEC v. Reserve Management Company, Inc., et al., Complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.)",
+    "date": "2009-05-05",
+    "page": 17,
+    "verbatim_passage": "As of the morning of September 15, 2008, the Primary Fund held various Lehman Brothers debt securities that it valued -- under an amortized cost method, as permitted by Rule 18-7 -- at $785 million, the assets' par value. The Primary Fund held approximately $62.4 billion in total assets, such that the Lehman debt, valued at par, constituted approximately 1.2% of the Fund's assets."
+  },
+  {
+    "figure": "(b-corroborating) independent corroboration from the fund's own contemporaneous press release",
+    "status": "FOUND (corroborating)",
+    "value": "approximately $62 billion in assets under management at the opening of business on September 15, 2008",
+    "document": "The Reserve, \"A Statement Regarding The Reserve Primary and U.S. Government Funds\" (fund press release)",
+    "date": "2008-09-19",
+    "page": 1,
+    "verbatim_passage": "The Primary Fund, which had approximately $62 billion in assets under management at the opening of business on September 15, 2008, has received redemption requests this week of approximately $60 billion."
+  },
+  {
+    "figure": "(c) face value of Lehman Brothers debt instruments held by the fund",
+    "status": "FOUND",
+    "value": "$785 million (face/par value)",
+    "document": "The Reserve, \"A Statement Regarding The Primary Fund\" (fund press release, the fund's own 16 Sept 2008 announcement)",
+    "date": "2008-09-16",
+    "page": 1,
+    "verbatim_passage": "The value of the debt securities issued by Lehman Brothers Holdings, Inc. (face value $785 million) and held by the Primary Fund has been valued at zero effective as of 4:00PM New York time today.",
+    "corroborating_sources": [
+      {
+        "document": "SEC Litigation Release No. 21025",
+        "date": "2009-05-05",
+        "page": 1,
+        "verbatim_passage": "The fund, which held $785 million in Lehman-issued securities, became illiquid on that day when the fund was unable to meet investor requests for redemptions."
+      },
+      {
+        "document": "SEC v. Reserve Management Company, Inc., et al., Complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.)",
+        "date": "2009-05-05",
+        "page": 2,
+        "verbatim_passage": "On September 15, 2008 - the day Lehman Brothers filed for bankruptcy protection - the Fund held $785 million in Lehman debt securities."
+      },
+      {
+        "document": "SEC v. Reserve Management Company, Inc., et al., Complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.)",
+        "date": "2009-05-05",
+        "page": 17,
+        "verbatim_passage": "The Primary Fund held ... Lehman Brothers debt securities that it valued ... at $785 million, the assets' par value."
+      }
+    ]
+  },
+  {
+    "figure": "(d) dollar volume of redemptions PAID OUT AT $1.00 on 15-16 September 2008 before the NAV was formally reset/broken",
+    "status": "FOUND",
+    "value": "approximately $10.7 billion paid (of approximately $24.6 billion in cumulative redemption requests), as of 9:00 a.m. on September 16, 2008 -- i.e. before the 4:00 p.m. September 16 NAV break",
+    "document": "SEC v. Reserve Management Company, Inc., et al., Complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.)",
+    "date": "2009-05-05",
+    "page": 33,
+    "verbatim_passage": "Bent II also disclosed that the level of redemption requests as of 9:00 a.m. on September 16 was approximately $24.6 billion, but that the Primary Fund had only been able to generate liquidity to pay approximately the first $10.7 billion of those requests.",
+    "extraction_note": "The source PDF's embedded text layer has a character-encoding artifact affecting the letter 'h' in some words (independently reproduced by two different extraction libraries, pdfplumber and PyMuPDF, so it is a property of the PDF's text layer itself, not a library bug). The raw extracted string reads 'the Primary Fund mid only been able' where the visible-page word is almost certainly 'had' (compare 'RMCI bas been registered' for 'has been registered' on p.8, and 'RMCI bad not' for 'RMCI had not' on p.33 para 115, same document). The verbatim_passage above silently corrects only this single, unambiguous OCR/text-layer artifact for readability; the dollar figures themselves ($24.6 billion / $10.7 billion) were extracted identically and unambiguously by both libraries with no artifact.",
+    "related_chronology_not_used_as_the_answer": [
+      {
+        "document": "SEC v. Reserve Management Company, Inc., et al., Complaint",
+        "date": "2009-05-05",
+        "page": 19,
+        "verbatim_passage": "net redemptions, which were at that time already approximately $10 billion [mid-morning, September 15, 2008]",
+        "note": "Redemption REQUESTS received, not a paid-out figure; earlier timepoint (Sept 15 mid-morning, not the 15-16 window closest to the break)."
+      },
+      {
+        "document": "SEC v. Reserve Management Company, Inc., et al., Complaint",
+        "date": "2009-05-05",
+        "page": 31,
+        "verbatim_passage": "By approximately 5:00 p.m. on September 15, redemption requests had climbed to over $20 billion, nearly half of which were unfunded.",
+        "note": "Gives a qualitative fraction ('nearly half...unfunded') at 5pm Sept 15, not an explicit paid-dollar figure; a paid amount was not computed/inferred from this to avoid synthesizing a number the source does not itself state."
+      }
+    ]
+  },
+  {
+    "figure": "(e) the declared NAV value (e.g. $0.97) and the time of day it was announced on 16 September 2008",
+    "status": "FOUND",
+    "value": "$0.97 per share, effective as of 4:00 PM New York time, 16 September 2008",
+    "document": "The Reserve, \"A Statement Regarding The Primary Fund\" (fund press release, the fund's own 16 Sept 2008 announcement)",
+    "date": "2008-09-16",
+    "page": 1,
+    "verbatim_passage": "As a result, the NAV of the Primary Fund, effective as of 4:00PM, is $0.97 per share. All redemption requests received prior to 3:00PM today will be redeemed at a net asset value of $1.00 per share.",
+    "corroborating_sources": [
+      {
+        "document": "SEC v. Reserve Management Company, Inc., et al., Complaint, Civil Action No. 09-CV-4346 (S.D.N.Y.)",
+        "date": "2009-05-05",
+        "page": 3,
+        "verbatim_passage": "Defendants' campaign of misinformation came to an end at 4:00 p.m. EST on September 16, 2008, when RMCI disclosed that the Primary Fund had broken the buck, i.e., its shares had declined in value below $0.995, the lowest point at which they could permissibly be rounded to $1.00."
+      }
+    ],
+    "internal_inconsistency_observed_not_resolved": {
+      "document": "The Reserve, \"Statement Regarding Net Asset Values\" (fund press release, dated the following day)",
+      "date": "2008-09-17",
+      "page": 1,
+      "verbatim_passage": "The following were the net asset values of the Primary Fund, Reserve Yield Plus Fund, and Reserve International Liquidity Fund, Ltd., as of 5:00pm ET on September 16, 2008. Primary Fund: $0.97",
+      "note": "The fund's own 17 Sept 2008 follow-up release restates the same $0.97 figure as being 'as of 5:00pm ET' rather than 4:00PM. This is reported verbatim as an inconsistency in the fund's own paperwork; it is not resolved here. Two independent sources (the fund's own same-day 16 Sept release, and the SEC complaint) agree on 4:00 p.m."
+    }
+  }
+]

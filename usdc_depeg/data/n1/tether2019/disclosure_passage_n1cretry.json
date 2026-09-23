@@ -1,0 +1,143 @@
+{
+  "lane": "NYSCEF affirmation retry search",
+  "target_document": "Affirmation of Tether General Counsel Stuart Hoegner, filed 2019-04-30, In the Matter of the Inquiry by Letitia James, AG of NY, v. iFinex Inc. et al., NY Supreme Court, index no. 450545/2019 -- reported to first disclose the fraction of outstanding tethers backed by cash and cash equivalents.",
+  "status": "NOT LOCATED -- INSTRUMENT GAP REMAINS FULLY OPEN. No primary or secondary verbatim passage containing the backing-fraction percentage was obtained. No number is recorded anywhere in this file.",
+  "routes_attempted_in_order": [
+    {
+      "route": "(a) CourtListener REST API",
+      "outcome": "Case FOUND, target document NOT found.",
+      "queries": [
+        {
+          "request": "GET https://www.courtlistener.com/api/rest/v4/search/?q=Tether+affirmation+Hoegner+2019&type=r",
+          "result": "200 OK, count=6 (federal SDNY In re Tether/Bitfinex MDL matters -- a DIFFERENT case, not the NY AG Article 23-A/Martin Act matter, index 450545/2019)."
+        },
+        {
+          "request": "GET https://www.courtlistener.com/api/rest/v4/search/?q=450545/2019+Letitia+James+iFinex",
+          "result": "HTTP 500 (server-side error, likely the literal '/' in the query breaking CourtListener's query parser). Not retried with the identical query per the task's 'move on quickly' guidance for empty/failing route (a) queries -- reformulated instead (see next row)."
+        },
+        {
+          "request": "GET https://www.courtlistener.com/api/rest/v4/search/?q=New+York+Attorney+General+Tether+iFinex+Bitfinex+affirmation+Hoegner",
+          "result": "200 OK, count=0."
+        },
+        {
+          "request": "GET https://www.courtlistener.com/api/rest/v4/search/?q=iFinex+Letitia+James+450545+2019",
+          "result": "200 OK, count=1. Hit: 'Matter of James v. iFinex Inc.', Appellate Division of the Supreme Court of the State of New York, docketNumber='450545/19 11320', cluster_id=4766776, docket_id=17334853, citation=['185 A.D.3d 22','127 N.Y.S.3d 456','2020 NY Slip Op 3880'], dateFiled=2020-07-09, judge='Gesmer, J.'. This IS the same docket (450545/19) as the already-frozen ex parte order, but this document is the Appellate Division's July 2020 decision on respondents' jurisdictional appeal -- NOT the April 2019 Hoegner affirmation."
+        },
+        {
+          "request": "GET https://www.courtlistener.com/api/rest/v4/opinions/4547123/ (CourtListener's own full-text opinion endpoint for the hit above)",
+          "result": "HTTP 401 {\"detail\":\"Authentication credentials were not provided.\"} -- full opinion text requires an API key/auth not available offline."
+        },
+        {
+          "request": "GET https://www.courtlistener.com/api/rest/v4/dockets/17334853/ (docket detail, to check for any attached RECAP/PACER documents)",
+          "result": "HTTP 401 {\"detail\":\"Authentication credentials were not provided.\"} after 4 backoff retries -- same auth wall."
+        },
+        {
+          "request": "GET http://www.courts.state.ny.us/reporter/3dseries/2020/2020_03880.htm (the official NY courts slip-opinion mirror, from the search hit's own 'download_url' field -- bypasses CourtListener's auth wall entirely)",
+          "result": "200 OK, 27324 chars extracted text. FROZEN -- see MANIFEST entry 'tether2019_nyag_appellate_opinion'. Full text read; contains a verbatim passage restating Tether's reserve-composition representation but NO percentage figure (quoted below under 'related_passage_found')."
+        }
+      ]
+    },
+    {
+      "route": "(b) Wayback CDX over iapps.courts.state.ny.us (NYSCEF)",
+      "outcome": "FAILED -- domain-wide capture set too sparse to locate this specific docket.",
+      "queries": [
+        {
+          "request": "GET http://web.archive.org/cdx/search/cdx?url=iapps.courts.state.ny.us&matchType=domain&from=2019&to=2020&output=json&collapse=urlkey&limit=5000",
+          "result": "200 OK, 1777 rows total across the ENTIRE iapps.courts.state.ny.us domain (all NY state courts, all case types) for 2019-2020. Zero rows contain the literal string '450545' anywhere in the URL. NYSCEF's ViewDocument/DocumentList/CaseDetails URLs address cases via an opaque encrypted 'docketId' token (e.g. 'docketId=2u6i5stoBGhgg12pZyvDxw==') that cannot be derived from the plaintext index number 450545/2019 -- there is no way to construct or filter for the correct docketId without already knowing it."
+        },
+        {
+          "request": "Fetched all 10 Wayback-archived CaseDetails?docketId=... captures in the 2019-2020 window (the only case-identifying page type with few enough captures to check exhaustively): timestamps 20201112042310, 20200619000050, 20201204183514, 20201111225103, 20190620202934, 20191023030550, 20201101085449, 20201112020357, 20201209130911, 20190917151317",
+          "result": "All 10 fetched 200 OK (17.6KB-51KB each). Checked each for '450545' / 'iFinex' / ('Tether' AND 'James') substrings -- ZERO matches. None of the 10 randomly-crawled CaseDetails snapshots in this window happen to be our docket (out of what NYSCEF's own docket-search implies are hundreds of thousands of NY Supreme Court matters)."
+        }
+      ],
+      "conclusion": "Wayback's crawl of NYSCEF is sparse and effectively unfiltered by case; with only 10 CaseDetails + 86 DocumentList captures for the WHOLE domain across 14 months, and no way to map index-number to docketId without a working NYSCEF session (blocked by the headless-only / no-browser constraint), this route cannot succeed without a human providing the docketId directly."
+    },
+    {
+      "route": "(c) Wayback CDX over tether.to and bitfinex.com, 2019-04-01..2019-06-01 (then re-run 2019-04-30..2019-07-15), filtered for content plausibly containing the disclosure",
+      "outcome": "Several genuinely relevant Tether/Bitfinex-authored pages located and fetched; NONE contain the cash/cash-equivalent backing percentage.",
+      "cdx_queries": [
+        "GET http://web.archive.org/cdx/search/cdx?url=tether.to&matchType=domain&from=20190401&to=20190601&output=json&collapse=urlkey&limit=5000 -> 200 OK, 367 rows",
+        "GET http://web.archive.org/cdx/search/cdx?url=bitfinex.com&matchType=domain&from=20190401&to=20190601&output=json&collapse=urlkey&limit=5000 -> 200 OK, 1240 rows",
+        "GET http://web.archive.org/cdx/search/cdx?url=tether.to&matchType=domain&from=20190430&to=20190715&output=json&collapse=urlkey&limit=5000 -> 200 OK, 202 rows",
+        "GET http://web.archive.org/cdx/search/cdx?url=bitfinex.com&matchType=domain&from=20190430&to=20190715&output=json&collapse=urlkey&limit=5000 -> 200 OK, 1157 rows"
+      ],
+      "pages_fetched_and_checked": [
+        {
+          "url": "http://web.archive.org/web/20190501161954/https://tether.to/fss-report-transparency-update/",
+          "finding": "Discusses a DIFFERENT, EARLIER engagement (Freeh Sporkin & Sullivan LLP bank-balance confirmation, referenced as done 'earlier this year' i.e. before May 2019) -- not the Hoegner affirmation. No percentage."
+        },
+        {
+          "url": "http://web.archive.org/web/20190406075312/https://tether.to/announcement-transparency-update/",
+          "finding": "Predates the affirmation (2019-04-06); boilerplate 'fully backed' language only, no percentage."
+        },
+        {
+          "url": "http://web.archive.org/web/20190426025729/https://tether.to/tether-respond-to-new-york-attorney-generals-actions/ (also captured 20190513151012)",
+          "finding": "Tether's public statement responding to the ex parte order (dated on-page to the order's release, ~2019-04-25); disputes the Crypto Capital $850M framing, does not mention the affirmation or any percentage."
+        },
+        {
+          "url": "http://web.archive.org/web/20190519051922/https://tether.to/new-york-court-grants-tether-motion-to-modify-injunction/",
+          "finding": "Tether's statement on the 2019-05-16 modify order; no mention of the affirmation or a percentage."
+        },
+        {
+          "url": "http://web.archive.org/web/20190430164905/http://tether.to/transparency (redirects to wallet.tether.to/transparency, captured exactly 2019-04-30)",
+          "finding": "Tether's live/automated balance-sheet page (assets vs. tether-in-circulation liabilities table). Boilerplate line: 'All tethers are backed 100% by Tether's reserves.' This is NOT the affirmation and does not break out a cash/cash-equivalent percentage -- it is the ordinary daily reserve-report page, same format before and after 2019-04-30."
+        }
+      ],
+      "conclusion": "No tether.to or bitfinex.com page in the captured window hosts the affirmation text or quotes its specific backing-fraction figure. Tether's own public communications around this date discuss the litigation and the (unrelated, earlier) FSS bank-confirmation engagement, but never restate the court filing's cash/cash-equivalent percentage."
+    },
+    {
+      "route": "(d) SECONDARY -- news outlets (coindesk.com, reuters.com, bloomberg.com, theblock.co), Wayback CDX for 2019-04-29..2019-05-04",
+      "outcome": "FAILED for all four outlets -- no usable capture identified.",
+      "queries": [
+        {
+          "request": "GET .../cdx?url=theblock.co&matchType=domain&from=20190429&to=20190504&filter=urlkey:.*(tether|hoegner|bitfinex|ifinex).*&output=json",
+          "result": "200 OK, 0 rows."
+        },
+        {
+          "request": "GET .../cdx?url=bloomberg.com&matchType=domain&from=20190429&to=20190504&filter=urlkey:.*(tether|hoegner|bitfinex|ifinex).*&output=json",
+          "result": "200 OK, 0 rows."
+        },
+        {
+          "request": "GET .../cdx?url=reuters.com&matchType=domain&from=20190429&to=20190504&filter=urlkey:.*(tether|hoegner|bitfinex|ifinex).*&output=json",
+          "result": "HTTP 504 (Wayback CDX gateway timeout) -- exhausted all 5 attempts (1 initial + 4 backoff retries at 4/8/16/32s)."
+        },
+        {
+          "request": "GET .../cdx?url=coindesk.com&matchType=domain&from=20190429&to=20190504&filter=urlkey:.*(tether|hoegner|bitfinex|ifinex).*&output=json",
+          "result": "HTTP 504 -- exhausted after 5 attempts."
+        },
+        {
+          "request": "GET .../cdx?url=coindesk.com&matchType=domain&from=20190429&to=20190504&output=json (retry without server-side regex filter, in case the filter itself was causing the CDX index scan to time out)",
+          "result": "HTTP 504 -- exhausted after 5 attempts. coindesk.com's CDX index appears too large for this query shape to resolve within the timeout regardless of filtering."
+        },
+        {
+          "request": "GET .../cdx?url=www.coindesk.com/2019/04/30&matchType=prefix ; .../2019/05/01 ; .../2019/05/02 ; .../2019/05/03 (narrower date-path prefix probes, both with and without the 'www.' host)",
+          "result": "200 OK for all four, 0 rows each -- CoinDesk's 2019 URL scheme is not a bare /YYYY/MM/DD/ path (likely /markets/YYYY/MM/DD/<slug>/ or similar), so a prefix guess without a known slug cannot enumerate captures this way."
+        },
+        {
+          "request": "GET .../cdx?url=reuters.com/article/us-usa-tether&matchType=prefix ; www.reuters.com/article/us-usa-tether&matchType=prefix",
+          "result": "200 OK for both, 0 rows -- constructed slug guess, unverified against any actual source, does not resolve to a real capture."
+        }
+      ],
+      "conclusion": "Per task instruction, no article URL was guessed beyond the above disclosed, clearly-marked attempts, and no outlet's verbatim quotation of the disclosure was found or fetched. NO disclosure_passage_secondary.json was written, because that file's schema requires a verbatim quoted passage from a named outlet and none was obtained -- writing it empty or with unverified content would violate the no-fabrication constraint."
+    },
+    {
+      "route": "(e) usdc_depeg/data/n1/tether2019/manual/",
+      "outcome": "Directory does not exist. Nothing created there (per task instruction, absence is noted, not remedied)."
+    }
+  ],
+  "related_passage_found": {
+    "note": "NOT the target disclosure and NOT a percentage -- included because it is a verbatim, dated, sourced passage from the SAME litigation matter (docket 450545/19) bearing on Tether's reserve composition, obtained via successful route (a).",
+    "document": "Matter of James v. iFinex Inc., 185 A.D.3d 22, 127 N.Y.S.3d 456, 2020 NY Slip Op 03880 (App. Div., 1st Dept, decided 2020-07-09)",
+    "verbatim_passage": "Until on or about March 4, 2019, respondent Tether Holdings's represented that every tether is \"backed\" by one US dollar, and any holder of tether may redeem it for one US dollar at any time. After that date, Tether Holdings changed its representation on its website to state that, while every tether is still valued at one US dollar, tether is backed by Tether Holdings's \"reserves,\" which include unspecified currency, \"cash equivalents,\" and \"other assets and receivables from loans made by Tether [Holdings] to third parties,\" including to affiliated entities.",
+    "also_confirms": "\"On or about April 30, 2019, respondents moved to modify or vacate the ex parte order.\" -- corroborates the task brief's April 30, 2019 filing date for the Tether-side response, though this opinion does not identify that response as the Hoegner affirmation by name or quote its contents.",
+    "raw_file": "data/n1/tether2019/raw/2020.07.09_appellate_division_opinion_matter_of_james_v_ifinex.html",
+    "manifest_series": "tether2019_nyag_appellate_opinion"
+  },
+  "signed_order_reread": {
+    "document": "data/n1/tether2019/raw/2019.04.24_signed_order.pdf (already frozen previously; re-read end-to-end per task instruction)",
+    "pages_read": 5,
+    "method": "pdfplumber page.extract_text(), all 5 pages",
+    "finding": "NONE FOUND. No sentence in any of the 5 pages states or restates a backing fraction/percentage. The order's only reserve-related language is generic and procedural, e.g. (p.2) an injunction clause restraining Respondents from 'access[ing], loan[ing], extend[ing] credit, encumber[ing], pledg[ing], or mak[ing] any other claim...on the U.S. dollar reserves held by Tether'; and (p.1) a reference to 'the [affirmation] of Brian M. Whitehurst, Assistant Attorney General, dated April 24, 2019, with exhibits A through M thereto' -- this is the AG's OWN supporting affirmation (a different document from the Tether-side Hoegner affirmation the task targets), and even that affirmation's content is not reproduced in the order itself."
+  },
+  "conclusion": "Gap remains fully open. No number is recorded in this file or anywhere else in this repository. A human with NYSCEF e-filing access (or a purchased/obtained copy of the Hoegner affirmation, e.g. via PACER-adjacent NY court-record services or a FOIL-style request) is the most direct remaining path; none of the sanctioned headless methods located it."
+}

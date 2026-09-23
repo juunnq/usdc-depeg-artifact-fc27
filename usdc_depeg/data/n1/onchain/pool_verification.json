@@ -1,0 +1,83 @@
+{
+  "retrieval_utc": "2026-09-09T08:04:50Z",
+  "curve_3pool": {
+    "address": "0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7",
+    "coins": [
+      {
+        "index": 0,
+        "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "endpoint": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "index": 1,
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "endpoint": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "index": 2,
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "endpoint": "https://ethereum-rpc.publicnode.com"
+      }
+    ],
+    "expected": [
+      "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "0xdac17f958d2ee523a2206206994597c13d831ec7"
+    ],
+    "status": "PASS"
+  },
+  "uniswap_pools": {
+    "usdc_usdt_001": {
+      "queried_address": "0x3416cf6c708da44db2624d63ea0aaef7113527c6",
+      "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token1": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "fee": 100,
+      "expected_pair": [
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      ],
+      "expected_fee": 100,
+      "status": "PASS",
+      "endpoints": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://ethereum-rpc.publicnode.com",
+        "https://ethereum-rpc.publicnode.com"
+      ]
+    },
+    "usdc_usdt_005": {
+      "queried_address": "0x7858e59e0c01ea06df3af3d20ac7b0003275d4bf",
+      "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token1": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "fee": 500,
+      "expected_pair": [
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      ],
+      "expected_fee": 500,
+      "status": "PASS",
+      "endpoints": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://ethereum-rpc.publicnode.com",
+        "https://ethereum-rpc.publicnode.com"
+      ]
+    },
+    "dai_usdc_001": {
+      "queried_address": "0x5777d92f208679db4b9778590fa3cab3ac9e2168",
+      "token0": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "token1": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "fee": 100,
+      "expected_pair": [
+        "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+      ],
+      "expected_fee": 100,
+      "status": "PASS",
+      "endpoints": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://ethereum-rpc.publicnode.com",
+        "https://ethereum-rpc.publicnode.com"
+      ]
+    }
+  },
+  "substitutions": []
+}

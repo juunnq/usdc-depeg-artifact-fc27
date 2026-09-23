@@ -1,0 +1,32 @@
+{
+  "status": "GAPPED",
+  "reason": "D10 probe verdict was NOT_SUPPORTED at block 16804701 (archival state unavailable on public keyless endpoints) -- hourly historical pool state (2023-03) cannot be fetched.",
+  "d10_attempts_summary": {
+    "https://ethereum-rpc.publicnode.com": "HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}",
+    "https://eth.llamarpc.com": "HTTP 525: <!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n\n<title>llamarpc.com | 525: SSL handshake failed</title>\n<meta charset=\"UTF-8\"",
+    "https://cloudflare-eth.com": "rpc_error: {\"code\": -32603, \"message\": \"Internal error\"}",
+    "https://rpc.ankr.com/eth": "rpc_error: {\"code\": -32000, \"message\": \"Unauthorized: You must authenticate your request with an API key. Create an account on https://www.ankr.com/rpc/ and generate your personal API key for free.\"}"
+  },
+  "single_latest_balance_anchor": {
+    "block_number": 25938760,
+    "block_endpoint": "https://ethereum-rpc.publicnode.com",
+    "retrieval_utc": "2026-09-09T08:56:36Z",
+    "curve_3pool_balances_latest": [
+      {
+        "index": 0,
+        "balance": 45640888998988522755649496,
+        "endpoint": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "index": 1,
+        "balance": 50450710984331,
+        "endpoint": "https://ethereum-rpc.publicnode.com"
+      },
+      {
+        "index": 2,
+        "balance": 64238219936896,
+        "endpoint": "https://ethereum-rpc.publicnode.com"
+      }
+    ]
+  }
+}

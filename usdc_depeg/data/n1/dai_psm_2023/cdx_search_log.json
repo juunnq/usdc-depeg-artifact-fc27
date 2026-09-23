@@ -1,0 +1,74 @@
+{
+  "lane": "Wayback CDX sweep for a contemporaneous DAI/PSM-USDC balance source",
+  "target": "a contemporaneous public source for the MakerDAO PSM's USDC balance on/about 11 March 2023 (window 2023-03-09..2023-03-13), to replace the Jan-2023 ~$2.4B figure currently cited as PSMSOURCE in paper/fc27/fc27.tex Appendix B",
+  "window_utc": [
+    "2023-03-09T00:00:00Z",
+    "2023-03-13T23:59:59Z"
+  ],
+  "queries": [
+    {
+      "target": "daistats.com (MakerDAO community stats dashboard)",
+      "query": "https://web.archive.org/cdx/search/cdx?url=daistats.com&matchType=domain&output=json&from=20230301&to=20230320&collapse=urlkey",
+      "retrieved_utc": "2026-09-10T13:31:00Z",
+      "result": "FAILED -- daistats.com is a client-side React SPA that fetches its numbers live (web3/JSON-RPC calls the Wayback crawler does not execute). Only the static HTML shell, favicon, robots.txt and two JS bundles were captured (nearest-in-window snapshot 20230313204526); the shell contains no numeric data, confirmed by fetching and inspecting it directly (id_ raw capture)."
+    },
+    {
+      "target": "makerburn.com (community Maker dashboard)",
+      "query": "https://web.archive.org/cdx/search/cdx?url=makerburn.com&matchType=domain&output=json&from=20230301&to=20230320&collapse=urlkey",
+      "retrieved_utc": "2026-09-10T13:31:05Z",
+      "result": "FAILED -- same SPA problem as daistats.com. A snapshot exists at 20230311135351 (11 March itself) but only captures the static HTML shell (root/favicon/robots.txt/JS/CSS bundles); no embedded data, confirmed by fetching and inspecting it directly (id_ raw capture)."
+    },
+    {
+      "target": "forum.makerdao.com (MakerDAO governance forum)",
+      "query": "https://web.archive.org/cdx/search/cdx?url=forum.makerdao.com&matchType=domain&output=json&from=20230308&to=20230314&collapse=urlkey&limit=3000",
+      "retrieved_utc": "2026-09-10T13:32:10Z",
+      "result": "125 URLs returned; filtered for usdc/psm/svb/circle/depeg/peg keywords -> 5 candidate threads. Fetched and read the two most relevant in full:",
+      "threads_fetched": [
+        {
+          "url": "https://forum.makerdao.com/t/out-of-schedule-executive-proposal-to-implement-psm-breaker/20162",
+          "wayback_timestamp": "20230313144912",
+          "result": "Governance thread proposing an emergency PSM debt-ceiling breaker; discusses the mechanism, not a USDC balance figure. No dollar amount for the PSM found."
+        },
+        {
+          "url": "https://forum.makerdao.com/t/ask-circle-to-freeze-50m-usdc-of-dai-reserve-to-protect-markerdao/20154",
+          "wayback_timestamp": "20230313092226",
+          "result": "Community-call thread asking Circle to freeze $50M; unrelated dollar figures only (a $558M Nomad bridge class-action mention). No PSM balance figure found."
+        }
+      ]
+    },
+    {
+      "target": "blog.makerdao.com",
+      "query": "https://web.archive.org/cdx/search/cdx?url=blog.makerdao.com&matchType=domain&output=json&from=20230301&to=20230320&collapse=urlkey&limit=300",
+      "retrieved_utc": "2026-09-10T13:33:30Z",
+      "result": "FAILED -- 14 URLs returned, all generic historical blog posts unrelated to the SVB/USDC episode (a background recrawl, not a crisis-specific post). No SVB/PSM/USDC crisis post exists on this domain in the window."
+    },
+    {
+      "target": "www.theblock.co (dated press report)",
+      "query": "https://web.archive.org/cdx/search/cdx?url=www.theblock.co&matchType=domain&output=json&from=20230308&to=20230315&collapse=urlkey&filter=urlkey:.*(makerdao|maker-|dai-).*&limit=500",
+      "retrieved_utc": "2026-09-10T13:32:40Z",
+      "result": "SUCCESS -- 45 URLs returned. Two MakerDAO/SVB-dated articles found: post/219039 'MakerDAO launches emergency proposal to limit USDC exposure' (11 Mar 2023 11:17AM EST; fetched and read in full -- discusses the emergency governance proposal and quotes a MakerDAO tweet on total collateralization ($8.26B collateral / 5.38B DAI, a different, non-PSM figure) but gives no PSM-USDC balance) and post/218993 'USDC remains at about $0.90 following Circle's disclosure of funds at SVB' (11 Mar 2023 05:10AM EST) -- THIS ONE contains the target figure, see psm_source_20230311.json."
+    },
+    {
+      "target": "blockworks.co",
+      "query": "https://web.archive.org/cdx/search/cdx?url=blockworks.co&matchType=domain&output=json&from=20230308&to=20230315&collapse=urlkey&filter=urlkey:.*(makerdao|maker-|dai-).*&limit=500",
+      "retrieved_utc": "2026-09-10T13:32:40Z",
+      "result": "20 URLs returned; most relevant by title, 'Coinbase Looking To Acquire $1.6B of MakerDAO's USDC', was fetched and read in full but its byline/datePublished is 2022-09-07 -- an old article merely re-crawled in the March 2023 window, not a contemporaneous SVB-period source. Discarded. No other MakerDAO/DAI article in this domain's March-2023 crawl mentions a PSM balance."
+    },
+    {
+      "target": "www.coindesk.com",
+      "query": "https://web.archive.org/cdx/search/cdx?url=www.coindesk.com&matchType=domain&output=json&from=20230308&to=20230315&collapse=urlkey&filter=urlkey:.*(makerdao|maker-|dai-).*&limit=500",
+      "retrieved_utc": "2026-09-10T13:32:40Z",
+      "result": "FAILED to return -- CDX query for this very large domain filter-regex over its full crawl exceeded server-side time budget (504 Gateway Time-out from web.archive.org). Not retried once the theblock.co source below was confirmed sufficient and on-target."
+    }
+  ],
+  "successful_source": {
+    "url": "https://www.theblock.co/post/218993/usdc-and-dai-remain-at-about-0-90-following-circles-disclosure-of-funds-at-svb",
+    "wayback_snapshot_url": "https://web.archive.org/web/20230311105427/https://www.theblock.co/post/218993/usdc-and-dai-remain-at-about-0-90-following-circles-disclosure-of-funds-at-svb",
+    "wayback_capture_timestamp": "20230311105427",
+    "wayback_capture_iso_utc": "2023-03-11T10:54:27Z",
+    "fetch_note": "Wayback served this with Content-Encoding: gzip; fetched with curl --compressed to decode it. Decoded HTML's <title>/og:title/datePublished match the target article (not a redirect/placeholder).",
+    "saved_to": "data/n1/dai_psm_2023/raw/theblock_218993_20230311105427.html",
+    "decoded_bytes": 1781816,
+    "sha256": "c570db25a6551ff40a1959b99361279ca3515bb4eb5da3e2c34f2484fa23f9c0"
+  }
+}

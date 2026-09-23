@@ -1,0 +1,49 @@
+# The frozen snapshot's SHA-256 hashes (data/MANIFEST.json) are computed against
+# exact bytes. Found via a clean-clone reproducibility proof: a pristine
+# `git clone` on a machine with core.autocrlf=true reproduced a red pytest suite
+# -- sha256 mismatches for data/n1/labels/dawsbot_eth-labels/accounts.csv and
+# data/n1/reserve2008/raw/*.html(m) -- even though nothing in the working tree
+# had touched those files.
+#
+# Root cause: these particular files were originally frozen with bare LF, so
+# checking them out under autocrlf=true converts LF -> CRLF, changing their
+# bytes. The REST of data/ (the original 13 MANIFEST files{} entries, and
+# every other N1 raw-fetch file, including the CRLF-native, MANIFEST-untracked
+# data/n1/reserve2008/figures.json one directory up from raw/) was originally
+# frozen with CRLF, so the SAME autocrlf=true LF(blob)->CRLF(disk) round-trip
+# on checkout is what currently RECONSTRUCTS their frozen hash correctly -- a
+# blanket `data/** -text` rule was tried and verified (against every file's
+# actual byte composition vs. its MANIFEST-recorded hash, not just the failing
+# test) to break exactly that reconstruction for the other 13+ files. So the
+# fix is scoped to precisely the two paths confirmed LF-original, not the
+# whole snapshot or even their whole parent directories -- rewriting the
+# other files' committed line endings (or their frozen hash) to make a
+# blanket rule safe would mean touching an already-frozen file/MANIFEST.json,
+# which the frozen-snapshot discipline this repository follows forbids.
+data/n1/labels/dawsbot_eth-labels/accounts.csv -text
+data/n1/reserve2008/raw/** -text
+#
+# EXTENDED after a later clean-clone proof reproduced the same red suite for two
+# raw captures frozen AFTER the rules above were written: a pristine clone on a
+# core.autocrlf=true machine mangled their line endings and broke their
+# MANIFEST-recorded SHA-256, while the never-cloned working tree stayed correct
+# (so the defect is invisible to anyone who does not actually re-clone).
+#
+# THE RECURRING TRAP: whichever change freezes a NEW LF-original raw capture must
+# extend this file in the SAME commit. This list has grown after the fact more than
+# once because that step was skipped. If you add data/n1/<topic>/raw/, add its rule
+# here before committing it.
+data/n1/circle2023/raw/** -text
+data/n1/dai_psm_2023/raw/** -text
+#
+# Added in the SAME commit that freezes them, which is the point of the warning above.
+# All three of these captures contain CRLF. That is the more dangerous of the two cases:
+# without a rule, git normalises CRLF -> LF on `git add`, so the BLOB is short by one byte
+# per line from the moment it is committed and the MANIFEST hash can never be
+# reconstructed from it -- not by any checkout setting, because the bytes are already gone.
+# (The earlier, milder case is an LF-original file, where only the checkout expands and a
+# rule alone repairs it.) Verified before committing: each of these three has CRLF on
+# essentially every line.
+data/n1/treasury2023/** -text
+data/n1/tusd2023/** -text
+data/n1/busd2023/raw/** -text

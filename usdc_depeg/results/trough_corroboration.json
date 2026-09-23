@@ -1,0 +1,2320 @@
+{
+  "phi": 0.08,
+  "floor_worstcase": 0.92,
+  "deflation_direction_check": {
+    "coinbase_leg": {
+      "leg": "coinbase",
+      "raw_min_low_usdt_terms": 0.882,
+      "deflated_low_at_same_hour": 0.882891,
+      "usdt_in_usd_at_that_hour": 1.00101,
+      "moved_up": true
+    },
+    "kraken_leg": {
+      "leg": "kraken",
+      "raw_min_low_usdt_terms": 0.882,
+      "deflated_low_at_same_hour": 0.885704,
+      "usdt_in_usd_at_that_hour": 1.0042,
+      "moved_up": true
+    }
+  },
+  "firing_report": {
+    "floor_worstcase": 0.92,
+    "phi": 0.08,
+    "series": {
+      "composite": {
+        "n_hours_observed": 212,
+        "firing_count": 9,
+        "min_print": 0.876675,
+        "min_print_utc": "2023-03-11T07:57:53+00:00",
+        "q_star_at_min": 1.5416,
+        "first_firing_utc": "2023-03-11T06:59:51+00:00",
+        "last_firing_utc": "2023-03-11T16:00:05+00:00"
+      },
+      "kraken_usdc_low": {
+        "n_hours_observed": 240,
+        "firing_count": 12,
+        "min_print": 0.874,
+        "min_print_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_at_min": 1.575,
+        "first_firing_utc": "2023-03-11T03:00:00+00:00",
+        "last_firing_utc": "2023-03-11T15:00:00+00:00"
+      },
+      "kraken_usdc_close": {
+        "n_hours_observed": 240,
+        "firing_count": 9,
+        "min_print": 0.901,
+        "min_print_utc": "2023-03-11T12:00:00+00:00",
+        "q_star_at_min": 1.2375,
+        "first_firing_utc": "2023-03-11T03:00:00+00:00",
+        "last_firing_utc": "2023-03-11T14:00:00+00:00"
+      },
+      "kraken_usdc_vwap": {
+        "n_hours_observed": 240,
+        "firing_count": 10,
+        "min_print": 0.89286,
+        "min_print_utc": "2023-03-11T07:00:00+00:00",
+        "q_star_at_min": 1.3393,
+        "first_firing_utc": "2023-03-11T06:00:00+00:00",
+        "last_firing_utc": "2023-03-11T15:00:00+00:00"
+      },
+      "binance_deflated_coinbase_low": {
+        "n_hours_observed": 131,
+        "firing_count": 3,
+        "min_print": 0.882891,
+        "min_print_utc": "2023-03-11T14:00:00+00:00",
+        "q_star_at_min": 1.4639,
+        "first_firing_utc": "2023-03-11T14:00:00+00:00",
+        "last_firing_utc": "2023-03-11T16:00:00+00:00"
+      },
+      "binance_deflated_coinbase_close": {
+        "n_hours_observed": 131,
+        "firing_count": 1,
+        "min_print": 0.919117,
+        "min_print_utc": "2023-03-11T14:00:00+00:00",
+        "q_star_at_min": 1.011,
+        "first_firing_utc": "2023-03-11T14:00:00+00:00",
+        "last_firing_utc": "2023-03-11T14:00:00+00:00"
+      },
+      "binance_deflated_kraken_low": {
+        "n_hours_observed": 131,
+        "firing_count": 3,
+        "min_print": 0.885704,
+        "min_print_utc": "2023-03-11T14:00:00+00:00",
+        "q_star_at_min": 1.4287,
+        "first_firing_utc": "2023-03-11T14:00:00+00:00",
+        "last_firing_utc": "2023-03-11T16:00:00+00:00"
+      },
+      "binance_deflated_kraken_close": {
+        "n_hours_observed": 131,
+        "firing_count": 1,
+        "min_print": 0.919108,
+        "min_print_utc": "2023-03-11T14:00:00+00:00",
+        "q_star_at_min": 1.0112,
+        "first_firing_utc": "2023-03-11T14:00:00+00:00",
+        "last_firing_utc": "2023-03-11T14:00:00+00:00"
+      }
+    },
+    "binance_coverage_note": "The frozen Binance snapshot's first row is 2023-03-11T14:00:00Z -- it does NOT cover the 06:00-13:00 UTC window containing the composite/Kraken trough. Binance firing counts above are computed over its own available window only (131 hours, 14:00 2023-03-11 through 2023-03-17), not the full 9-day panel.",
+    "kraken_low_convention_note": "kraken_usdc_low's firing_count is NOT the headline Kraken statistic -- it is inflated by wick hours where the intra-hour low diverges sharply from the close/vwap (739 bps at 03:00, 211 bps at 07:00). Quote kraken_usdc_close (9) and kraken_usdc_vwap (10)."
+  },
+  "below_floor_depth": {
+    "floor": 0.92,
+    "source_file": "data/n1/kraken_usdcusd/trades_raw.jsonl",
+    "n_trades_below_floor": 37303,
+    "volume_usdc_below_floor": 169898078.33,
+    "notional_usd_below_floor": 154007404.51,
+    "first_hour_utc": "2023-03-11T03:00:00Z",
+    "last_hour_utc": "2023-03-11T15:00:00Z",
+    "min_print": 0.874,
+    "min_print_trade_volume_usdc": 3373.51681752,
+    "kraken_low_trade_size_usdc": 3373.52,
+    "kraken_low_is_single_trade": true,
+    "per_hour": {
+      "2023-03-11T03:00:00Z": {
+        "n_trades": 238,
+        "volume_usdc": 786760.6,
+        "share_of_hour_trades": 0.0492
+      },
+      "2023-03-11T04:00:00Z": {
+        "n_trades": 192,
+        "volume_usdc": 1505120.14,
+        "share_of_hour_trades": 0.038
+      },
+      "2023-03-11T06:00:00Z": {
+        "n_trades": 2699,
+        "volume_usdc": 10516043.56,
+        "share_of_hour_trades": 0.472
+      },
+      "2023-03-11T07:00:00Z": {
+        "n_trades": 5119,
+        "volume_usdc": 32726956.66,
+        "share_of_hour_trades": 1.0
+      },
+      "2023-03-11T08:00:00Z": {
+        "n_trades": 4318,
+        "volume_usdc": 21941558.55,
+        "share_of_hour_trades": 0.855
+      },
+      "2023-03-11T09:00:00Z": {
+        "n_trades": 3433,
+        "volume_usdc": 26766735.7,
+        "share_of_hour_trades": 0.8767
+      },
+      "2023-03-11T10:00:00Z": {
+        "n_trades": 6318,
+        "volume_usdc": 31910873.22,
+        "share_of_hour_trades": 1.0
+      },
+      "2023-03-11T11:00:00Z": {
+        "n_trades": 3278,
+        "volume_usdc": 13288023.18,
+        "share_of_hour_trades": 0.8388
+      },
+      "2023-03-11T12:00:00Z": {
+        "n_trades": 2761,
+        "volume_usdc": 8006091.45,
+        "share_of_hour_trades": 0.8284
+      },
+      "2023-03-11T13:00:00Z": {
+        "n_trades": 3514,
+        "volume_usdc": 9893738.22,
+        "share_of_hour_trades": 1.0
+      },
+      "2023-03-11T14:00:00Z": {
+        "n_trades": 4327,
+        "volume_usdc": 8332251.33,
+        "share_of_hour_trades": 1.0
+      },
+      "2023-03-11T15:00:00Z": {
+        "n_trades": 1106,
+        "volume_usdc": 4223925.7,
+        "share_of_hour_trades": 0.3971
+      }
+    },
+    "note": "The minimum print is a single trade and must not be quoted as the headline; the executed sub-floor depth is the load-bearing number. In the 07:00 UTC hour every trade cleared below the floor (share_of_hour_trades = 1.0)."
+  },
+  "trough_hour_table": [
+    {
+      "hour_utc": "2023-03-11T07:00:00Z",
+      "feeds": {
+        "composite": {
+          "print": 0.876675,
+          "below_floor": true
+        },
+        "kraken_usdc": {
+          "low": 0.874,
+          "low_below_floor": true,
+          "close": 0.9059,
+          "close_below_floor": true,
+          "vwap": 0.89286,
+          "vwap_below_floor": true
+        },
+        "binance_deflated_coinbase": {
+          "low": null,
+          "close": null,
+          "note": "not available -- Binance snapshot starts 2023-03-11T14:00:00Z"
+        },
+        "binance_deflated_kraken": {
+          "low": null,
+          "close": null,
+          "note": "not available -- Binance snapshot starts 2023-03-11T14:00:00Z"
+        }
+      }
+    },
+    {
+      "hour_utc": "2023-03-11T08:00:00Z",
+      "feeds": {
+        "composite": {
+          "print": 0.921553,
+          "below_floor": false
+        },
+        "kraken_usdc": {
+          "low": 0.884,
+          "low_below_floor": true,
+          "close": 0.9216,
+          "close_below_floor": false,
+          "vwap": 0.906837,
+          "vwap_below_floor": true
+        },
+        "binance_deflated_coinbase": {
+          "low": null,
+          "close": null,
+          "note": "not available -- Binance snapshot starts 2023-03-11T14:00:00Z"
+        },
+        "binance_deflated_kraken": {
+          "low": null,
+          "close": null,
+          "note": "not available -- Binance snapshot starts 2023-03-11T14:00:00Z"
+        }
+      }
+    }
+  ],
+  "cross_feed_agreement": {
+    "floor_worstcase": 0.92,
+    "canonical_statistic": "close (composite has one price field; close used for Kraken USDC and for Binance's Coinbase-deflated leg)",
+    "feed_count_independent": 2,
+    "feed_count_independent_note": "composite + kraken_usdc (fiat-settled); Binance's deflated legs are excluded from this count -- the frozen snapshot doesn't cover the trough window.",
+    "hours": [
+      {
+        "hour_utc": "2023-03-08T00:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T01:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T02:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T03:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T04:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T05:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T06:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T07:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T08:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T09:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T10:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T11:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T13:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T14:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T15:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T16:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T17:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T18:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T19:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T20:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T21:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T22:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-08T23:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T00:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T01:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T02:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T03:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T04:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T05:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T06:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T07:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T08:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T09:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T10:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T11:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T13:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T14:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T15:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T16:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T17:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T18:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T19:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T20:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T21:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T22:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-09T23:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T00:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T01:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T02:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T03:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T04:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T05:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T06:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T07:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T08:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T09:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T10:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T11:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T13:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T14:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T15:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T16:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T17:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T18:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T19:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T20:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T21:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T22:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-10T23:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T00:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T01:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T02:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T03:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 1,
+        "below_floor_feeds": [
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T04:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T05:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T06:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 2,
+        "below_floor_feeds": [
+          "composite",
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T07:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 2,
+        "below_floor_feeds": [
+          "composite",
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T08:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T09:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 1,
+        "below_floor_feeds": [
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T10:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 2,
+        "below_floor_feeds": [
+          "composite",
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T11:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 2,
+        "below_floor_feeds": [
+          "composite",
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 2,
+        "below_floor_feeds": [
+          "composite",
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T13:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 1,
+        "below_floor_feeds": [
+          "kraken_usdc"
+        ],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-11T14:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 3,
+        "below_floor_feeds": [
+          "composite",
+          "kraken_usdc",
+          "binance_deflated_coinbase"
+        ],
+        "binance_deflated_kraken_close": 0.919108,
+        "binance_deflated_kraken_below_floor_robustness": true
+      },
+      {
+        "hour_utc": "2023-03-11T15:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 1,
+        "below_floor_feeds": [
+          "composite"
+        ],
+        "binance_deflated_kraken_close": 0.921654,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T16:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 1,
+        "below_floor_feeds": [
+          "composite"
+        ],
+        "binance_deflated_kraken_close": 0.930846,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T17:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.947979,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T18:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.953304,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T19:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.957453,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T20:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.984992,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T21:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.961372,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T22:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.956817,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-11T23:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.966586,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T00:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.968472,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T01:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.977233,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T02:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.975379,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T03:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.978888,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T04:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.971019,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T05:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.972955,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T06:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.955731,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T07:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.947868,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T08:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.953732,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T09:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.956805,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T10:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.959845,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T11:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.959284,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T12:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.95802,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T13:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.962692,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T14:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.96033,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T15:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.959307,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T16:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.959167,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T17:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.96502,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T18:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.969122,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T19:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.966044,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T20:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.970817,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T21:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.968711,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T22:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.991353,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-12T23:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.991989,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T00:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.995299,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T01:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.995207,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T02:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.995836,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T03:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.993551,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T04:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.992931,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T05:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.990848,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T06:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.992252,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T07:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.991348,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T08:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.99037,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T09:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.990338,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T10:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.989648,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T11:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.989073,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T12:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.991288,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T13:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998477,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T14:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999147,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T15:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998671,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T16:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998275,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T17:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998686,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T18:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999386,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T19:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999381,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T20:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998777,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T21:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999378,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T22:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999483,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-13T23:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998979,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T00:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999377,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T01:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998778,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T02:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998378,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T03:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998874,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T04:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998872,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T05:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999368,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T06:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999067,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T07:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998864,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T08:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999167,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T09:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998971,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T10:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999172,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T11:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999277,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999959,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T13:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.997283,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T14:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998379,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T15:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998881,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T16:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998686,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T17:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998789,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T18:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.99829,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T19:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998088,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T20:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998687,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T21:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998487,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T22:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998987,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-14T23:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999188,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T00:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998888,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T01:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.99809,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T02:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.997686,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T03:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998281,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T04:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.997876,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T05:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.997673,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T06:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998574,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T07:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998275,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T08:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998377,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T09:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998873,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T10:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.99878,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T11:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998779,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999175,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T13:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998387,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T14:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998791,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T15:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999193,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T16:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999296,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T17:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999195,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T18:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999194,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T19:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 1.000093,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T20:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999189,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T21:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999285,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T22:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999684,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-15T23:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999685,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T00:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999588,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T01:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999986,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T02:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999588,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T03:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999889,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T04:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999788,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T05:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999788,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T06:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.99979,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T07:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999291,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T08:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999891,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T09:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999691,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T10:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999691,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T11:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999742,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T12:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999781,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T13:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999602,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T14:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999464,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T15:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999896,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T16:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999708,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T17:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.998854,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T18:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999695,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T19:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 1.000182,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T20:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999318,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T21:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999286,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T22:00:00+00:00",
+        "feeds_available": 3,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999395,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-16T23:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999445,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-17T00:00:00+00:00",
+        "feeds_available": 2,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": 0.999765,
+        "binance_deflated_kraken_below_floor_robustness": false
+      },
+      {
+        "hour_utc": "2023-03-17T01:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T02:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T03:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T04:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T05:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T06:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T07:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T08:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T09:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T10:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T11:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T12:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T13:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T14:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T15:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T16:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T17:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T18:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T19:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T20:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T21:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T22:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      },
+      {
+        "hour_utc": "2023-03-17T23:00:00+00:00",
+        "feeds_available": 1,
+        "feeds_below_floor": 0,
+        "below_floor_feeds": [],
+        "binance_deflated_kraken_close": null,
+        "binance_deflated_kraken_below_floor_robustness": null
+      }
+    ],
+    "at_07_00_utc": {
+      "hour_utc": "2023-03-11T07:00:00+00:00",
+      "feeds_available": 2,
+      "feeds_below_floor": 2,
+      "below_floor_feeds": [
+        "composite",
+        "kraken_usdc"
+      ],
+      "binance_deflated_kraken_close": null,
+      "binance_deflated_kraken_below_floor_robustness": null
+    },
+    "at_08_00_utc": {
+      "hour_utc": "2023-03-11T08:00:00+00:00",
+      "feeds_available": 2,
+      "feeds_below_floor": 0,
+      "below_floor_feeds": [],
+      "binance_deflated_kraken_close": null,
+      "binance_deflated_kraken_below_floor_robustness": null
+    }
+  },
+  "independence": {
+    "note": "Hourly readings are near-unit-root within the crisis episode: consecutive hours are not independent observations. Firing counts and cross-feed agreement counts above must be read alongside these effective sample sizes, not as raw evidence density.",
+    "composite": {
+      "n_hours": 212,
+      "lag1_autocorr": 0.9631,
+      "effective_n": 4.0
+    },
+    "kraken_usdc_close": {
+      "n_hours": 240,
+      "lag1_autocorr": 0.9453,
+      "effective_n": 6.7
+    },
+    "kraken_usdc_close_method_note": "Same Kish n_eff = n*(1-r1)/(1+r1) estimator as impossibility_window.effective_n(), applied to Kraken's close series."
+  },
+  "dynamic_floor_check": {
+    "available": true,
+    "source": "results/phi_dynamic.json",
+    "raw": {
+      "disclosed_loss_usd": 3300000000.0,
+      "disclosure_ts_utc": "2023-03-11T03:11:00Z",
+      "variant_i": {
+        "description": "B(t) = usdc_supply_daily.csv circulating_usd, linearly interpolated to the frozen hourly USDC price timestamps.",
+        "trough_hour_utc": "2023-03-11T07:57:53+00:00",
+        "trough_price": 0.876675,
+        "phi_at_trough": 0.079,
+        "floor_at_trough": 0.921,
+        "q_at_trough": 1.558,
+        "s_nf0_at_trough": 0.358,
+        "max_phi": 0.09,
+        "max_phi_hour_utc": "2023-03-16T22:57:55+00:00",
+        "max_phi_window_edge_artifact": true,
+        "max_phi_window_edge_note": "phi is monotone in a monotone supply series and continues past the window; this is the window's last observed hour, where the coin trades above par and q* < 0 (bound vacuous), not a true maximum.",
+        "min_phi": 0.076,
+        "min_phi_hour_utc": "2023-03-07T23:57:49+00:00",
+        "min_phi_window_edge_artifact": true,
+        "min_phi_window_edge_note": "shares max_phi's defect at the window's other edge -- this is the window's first observed hour; the true minimum sits outside the observed window, not at this hour."
+      },
+      "interpolation_band": {
+        "description": "phi under the two daily supply snapshots bracketing the trough hour, held constant across the window (same construction as static_comparison's use of PHI_SVB) -- the firing set ranges from firing_count_hi to firing_count_lo and never falls below firing_count_hi.",
+        "phi_lo": 0.0782,
+        "phi_hi": 0.0812,
+        "firing_count_lo": 11,
+        "firing_count_hi": 9,
+        "extra_firing_hours_utc": [
+          "2023-03-11T08:57:55+00:00",
+          "2023-03-11T17:00:19+00:00"
+        ]
+      },
+      "variant_ii_gap": "no frozen per-block burn/mint timestamps exist; data/redemptions_by_wallet.csv is a wallet-aggregated (wallet, volume) table with no per-event timestamps or block numbers; redemptions.py computes burns/mints from live Etherscan logs held only in memory (fifo_attribute()) and writes no per-block/per-event file to disk anywhere under data/. Regenerating one requires ETHERSCAN_API_KEY, unavailable to this offline reproduction path.",
+      "third_line_alt_reserve_total": {
+        "description": "Circle's alternate ~$42.1B reserve-composition total (paper/fc27/fc27.tex lines 443-444, cite key circle2023pressrelease) -- a SINGLE POINT figure, not a daily series; a constant comparison line, NOT a time series.",
+        "is_time_varying": false,
+        "alt_reserve_total_usd": 42100000000.0,
+        "phi": 0.0784,
+        "floor": 0.9216,
+        "q_at_trough": 1.5733,
+        "s_nf0_at_trough": 0.3644
+      },
+      "static_comparison": {
+        "source": "usdc_depeg/results/impossibility_window.json (read, not recomputed)",
+        "phi_static": 0.08,
+        "floor_static": 0.92,
+        "firing_hours_count": 9,
+        "firing_hours_utc": [
+          "2023-03-11T06:59:51+00:00",
+          "2023-03-11T07:57:53+00:00",
+          "2023-03-11T10:00:11+00:00",
+          "2023-03-11T11:00:53+00:00",
+          "2023-03-11T12:00:48+00:00",
+          "2023-03-11T12:59:32+00:00",
+          "2023-03-11T14:00:00+00:00",
+          "2023-03-11T15:00:01+00:00",
+          "2023-03-11T16:00:05+00:00"
+        ]
+      },
+      "dynamic_firing": {
+        "firing_hours_count": 9,
+        "firing_hours_utc": [
+          "2023-03-11T06:59:51+00:00",
+          "2023-03-11T07:57:53+00:00",
+          "2023-03-11T10:00:11+00:00",
+          "2023-03-11T11:00:53+00:00",
+          "2023-03-11T12:00:48+00:00",
+          "2023-03-11T12:59:32+00:00",
+          "2023-03-11T14:00:00+00:00",
+          "2023-03-11T15:00:01+00:00",
+          "2023-03-11T16:00:05+00:00"
+        ]
+      },
+      "firing_set_identical": true,
+      "flip_hours_utc": [],
+      "firing_set": {
+        "composite_close_hours": 9,
+        "kraken_convention_range_hours": [
+          9,
+          11
+        ],
+        "statement_verbatim": "9 hours on the composite close; 9-11 across Kraken conventions"
+      }
+    }
+  },
+  "onchain": {
+    "available": false,
+    "note": "reserved for a future on-chain corroboration pass; not populated here",
+    "expected_keys": [
+      "series",
+      "firing_count",
+      "min_print",
+      "min_print_utc",
+      "q_star_at_min"
+    ]
+  }
+}

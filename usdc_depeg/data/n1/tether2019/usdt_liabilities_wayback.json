@@ -1,0 +1,171 @@
+{
+  "cdx_query": "http://web.archive.org/cdx/search/cdx?url=tether.to&matchType=domain&from=20190415&to=20190515&output=json&filter=urlkey:.*transparency.*",
+  "cdx_rows_returned": 234,
+  "sampling_note": "The Wayback CDX for url=tether.to matchType=domain from=20190415 to=20190515 filter=urlkey:.*transparency.* returned 234 rows, of which 55 were text/html 200 OK pages; ~52 of those were near-duplicate intraday captures of the same auto-generated wallet.tether.to/transparency balance page (multiple captures per day). To avoid fetching dozens of content-near-identical snapshots, ONE representative capture per UTC calendar day was fetched (22 days covered, 2019-04-15 through 2019-05-15) -- the full 234-row CDX result is not re-derivable from this file alone but the query above is exact and reproducible.",
+  "liabilities_by_capture": [
+    {
+      "capture_timestamp": "2019-04-15T03:17:50Z",
+      "wayback_url": "http://web.archive.org/web/20190415031750/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,449,934,310.76",
+      "context_sentence": "USD₮ | Total Assets | $2,472,535,048.02 | ... | Total Liabilities | $2,449,934,310.76 | Shareholder Equity | $22,600,737.25 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190415031750.html"
+    },
+    {
+      "capture_timestamp": "2019-04-16T01:50:36Z",
+      "wayback_url": "http://web.archive.org/web/20190416015036/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,489,531,061.02",
+      "context_sentence": "USD₮ | Total Assets | $2,512,162,105.59 | ... | Total Liabilities | $2,489,531,061.02 | Shareholder Equity | $22,631,044.56 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190416015036.html"
+    },
+    {
+      "capture_timestamp": "2019-04-17T16:57:00Z",
+      "wayback_url": "http://web.archive.org/web/20190417165700/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,506,818,129.17",
+      "context_sentence": "USD₮ | Total Assets | $2,529,595,173.74 | ... | Total Liabilities | $2,506,818,129.17 | Excess of Assets over Liabilities | $22,777,044.56 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190417165700.html"
+    },
+    {
+      "capture_timestamp": "2019-04-18T20:47:08Z",
+      "wayback_url": "http://web.archive.org/web/20190418204708/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,580,308,086.37",
+      "context_sentence": "USD₮ | Total Assets | $2,603,085,130.84 | ... | Total Liabilities | $2,580,308,086.37 | Excess of Assets over Liabilities | $22,777,044.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190418204708.html"
+    },
+    {
+      "capture_timestamp": "2019-04-20T01:16:00Z",
+      "wayback_url": "http://web.archive.org/web/20190420011600/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,598,637,565.99",
+      "context_sentence": "USD₮ | Total Assets | $2,610,561,194.74 | ... | Total Liabilities | $2,598,637,565.99 | Excess of Assets over Liabilities | $11,923,628.74 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190420011600.html"
+    },
+    {
+      "capture_timestamp": "2019-04-21T20:59:53Z",
+      "wayback_url": "http://web.archive.org/web/20190421205953/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,615,121,065.99",
+      "context_sentence": "USD₮ | Total Assets | $2,629,042,694.74 | ... | Total Liabilities | $2,615,121,065.99 | Excess of Assets over Liabilities | $13,921,628.74 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190421205953.html"
+    },
+    {
+      "capture_timestamp": "2019-04-22T15:06:32Z",
+      "wayback_url": "http://web.archive.org/web/20190422150632/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,627,109,065.99",
+      "context_sentence": "USD₮ | Total Assets | $2,649,886,110.46 | ... | Total Liabilities | $2,627,109,065.99 | Excess of Assets over Liabilities | $22,777,044.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190422150632.html"
+    },
+    {
+      "capture_timestamp": "2019-04-23T20:18:32Z",
+      "wayback_url": "http://web.archive.org/web/20190423201832/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,701,535,537.59",
+      "context_sentence": "USD₮ | Total Assets | $2,724,312,582.06 | ... | Total Liabilities | $2,701,535,537.59 | Excess of Assets over Liabilities | $22,777,044.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190423201832.html"
+    },
+    {
+      "capture_timestamp": "2019-04-24T18:52:08Z",
+      "wayback_url": "http://web.archive.org/web/20190424185208/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,707,970,602.50",
+      "context_sentence": "USD₮ | Total Assets | $2,730,747,646.97 | ... | Total Liabilities | $2,707,970,602.50 | Excess of Assets over Liabilities | $22,777,044.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190424185208.html"
+    },
+    {
+      "capture_timestamp": "2019-04-26T06:00:00Z",
+      "wayback_url": "http://web.archive.org/web/20190426060000/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,894,729,442.03",
+      "context_sentence": "USD₮ | Total Assets | $2,917,507,386.50 | ... | Total Liabilities | $2,894,729,442.03 | Excess of Assets over Liabilities | $22,777,944.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190426060000.html"
+    },
+    {
+      "capture_timestamp": "2019-04-27T07:25:49Z",
+      "wayback_url": "http://web.archive.org/web/20190427072549/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,878,135,945.58",
+      "context_sentence": "USD₮ | Total Assets | $2,900,913,890.05 | ... | Total Liabilities | $2,878,135,945.58 | Excess of Assets over Liabilities | $22,777,944.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190427072549.html"
+    },
+    {
+      "capture_timestamp": "2019-04-28T12:59:21Z",
+      "wayback_url": "http://web.archive.org/web/20190428125921/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,878,135,945.58",
+      "context_sentence": "USD₮ | Total Assets | $2,900,913,890.05 | ... | Total Liabilities | $2,878,135,945.58 | Excess of Assets over Liabilities | $22,777,944.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190428125921.html"
+    },
+    {
+      "capture_timestamp": "2019-04-30T00:32:16Z",
+      "wayback_url": "http://web.archive.org/web/20190430003216/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,866,019,160.58",
+      "context_sentence": "USD₮ | Total Assets | $2,888,797,105.05 | ... | Total Liabilities | $2,866,019,160.58 | Excess of Assets over Liabilities | $22,777,944.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190430003216.html"
+    },
+    {
+      "capture_timestamp": "2019-05-01T16:20:07Z",
+      "wayback_url": "http://web.archive.org/web/20190501162007/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,865,662,836.99",
+      "context_sentence": "USD₮ | Total Assets | $2,888,440,781.46 | ... | Total Liabilities | $2,865,662,836.99 | Excess of Assets over Liabilities | $22,777,944.46 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190501162007.html"
+    },
+    {
+      "capture_timestamp": "2019-05-04T01:16:31Z",
+      "wayback_url": "http://web.archive.org/web/20190504011631/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,811,634,036.93",
+      "context_sentence": "USD₮ | Total Assets | $2,834,411,981.39 | ... | Total Liabilities | $2,811,634,036.93 | Excess of Assets over Liabilities | $22,777,944.45 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190504011631.html"
+    },
+    {
+      "capture_timestamp": "2019-05-08T13:59:24Z",
+      "wayback_url": "http://web.archive.org/web/20190508135924/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,807,899,949.93",
+      "context_sentence": "USD₮ | Total Assets | $2,830,677,894.39 | ... | Total Liabilities | $2,807,899,949.93 | Excess of Assets over Liabilities | $22,777,944.45 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190508135924.html"
+    },
+    {
+      "capture_timestamp": "2019-05-09T08:23:22Z",
+      "wayback_url": "http://web.archive.org/web/20190509082322/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,807,899,949.93",
+      "context_sentence": "USD₮ | Total Assets | $2,830,677,894.39 | ... | Total Liabilities | $2,807,899,949.93 | Excess of Assets over Liabilities | $22,777,944.45 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190509082322.html"
+    },
+    {
+      "capture_timestamp": "2019-05-10T00:50:12Z",
+      "wayback_url": "http://web.archive.org/web/20190510005012/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,807,899,949.93",
+      "context_sentence": "USD₮ | Total Assets | $2,830,677,894.39 | ... | Total Liabilities | $2,807,899,949.93 | Excess of Assets over Liabilities | $22,777,944.45 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190510005012.html"
+    },
+    {
+      "capture_timestamp": "2019-05-11T00:48:15Z",
+      "wayback_url": "http://web.archive.org/web/20190511004815/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,807,899,949.93",
+      "context_sentence": "USD₮ | Total Assets | $2,830,677,894.39 | ... | Total Liabilities | $2,807,899,949.93 | Excess of Assets over Liabilities | $22,777,944.45 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190511004815.html"
+    },
+    {
+      "capture_timestamp": "2019-05-12T01:23:15Z",
+      "wayback_url": "http://web.archive.org/web/20190512012315/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,809,398,449.93",
+      "context_sentence": "USD₮ | Total Assets | $2,830,677,894.39 | ... | Total Liabilities | $2,809,398,449.93 | Excess of Assets over Liabilities | $21,279,444.45 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190512012315.html"
+    },
+    {
+      "capture_timestamp": "2019-05-14T01:13:34Z",
+      "wayback_url": "http://web.archive.org/web/20190514011334/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,831,580,249.93",
+      "context_sentence": "USD₮ | Total Assets | $2,830,677,894.39 | ... | Total Liabilities | $2,831,580,249.93 | Excess of Assets over Liabilities | -$902,355.54 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190514011334.html"
+    },
+    {
+      "capture_timestamp": "2019-05-15T23:42:56Z",
+      "wayback_url": "http://web.archive.org/web/20190515234256/https://wallet.tether.to/transparency",
+      "reported_figure_verbatim": "$2,855,176,469.10",
+      "context_sentence": "USD₮ | Total Assets | $2,877,754,667.91 | ... | Total Liabilities | $2,855,176,469.10 | Excess of Assets over Liabilities | $22,578,198.80 (verbatim labeled figures from the 'Current Balances' table on wallet.tether.to/transparency).",
+      "raw_file": "data/n1/tether2019/raw/wayback_transparency/wallet_transparency_20190515234256.html"
+    }
+  ],
+  "response_statements": [
+    {
+      "document": "Tether.to blog post \"Tether Respond to New York Attorney General’s Actions\" -- Tether's own public statement responding to the NYAG ex parte order, posted same-day per its own text (\"Earlier today, the New York Attorney General’s office released an order...\"); Wayback-captured 2019-04-26T02:57:29Z.",
+      "date": "2019-04-25",
+      "capture_timestamp": "2019-04-26T02:57:29Z",
+      "wayback_url": "http://web.archive.org/web/20190426025729/https://tether.to/tether-respond-to-new-york-attorney-generals-actions/",
+      "verbatim_passage": "The New York Attorney General’s court filings were written in bad faith and are riddled with false assertions, including as to a purported $850 million “loss” at Crypto Capital. On the contrary, we have been informed that these Crypto Capital amounts are not lost but have been, in fact, seized and safeguarded. We are and have been actively working to exercise our rights and remedies and get those funds released.",
+      "raw_file": "data/n1/tether2019/raw/2019.04.26_tether_respond_to_nyag_wayback.html"
+    }
+  ]
+}

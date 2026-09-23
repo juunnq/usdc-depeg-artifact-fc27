@@ -1,0 +1,29 @@
+%% ============================================================================
+\section{Cross-Coin Evidence}
+\label{sec:placebo}
+
+Reserve exposure orders the three coins ex ante: USDC held direct SVB exposure, DAI was
+pinned to USDC through the peg-stability module, and USDT held none. That gives
+the ex-ante fragility ordering USDC, DAI, USDT. Troughs are \$0.877, \$0.886, and
+\$0.992 in that order. The deviations from par are $1233$, $1141$, and $76$~bps.
+DAI's mechanical link to USDC leaves one free
+comparison, so the realized ordering has probability $1/2$ and illustrates the ex-ante
+ordering without testing it. USDC and DAI clear the $1\%$
+break threshold, a deviation of at least one cent from par, by factors of
+$12$ and $11$. USDT does not clear it, so the placebo criterion is satisfied: the
+exposed coins break and the unexposed coin does not.
+
+\noindent\textbf{USDT as the unexposed control.} USDT was bid to a premium while USDC and
+DAI fell. That pattern is consistent with the crypto safe-haven behavior documented for
+USDT~\cite{Baur_2021}. The premium is venue- and time-specific. On Coinbase
+\texttt{USDT-USD}~\cite{coinbase2026exchangeapi} it peaked at $+266$~bps at 02:00~UTC on
+11~March, 71 minutes before
+Circle's 03:11~UTC disclosure. Over the window \$1.24B of \$1.52B traded above par, and
+that peak is one hour of it. The composite feed peaks later and higher, at $+270$~bps at
+19:00~UTC on 13~March. That peak falls after the joint federal backstop of the previous
+evening, so it is post-backstop rather than intra-run. The
+Coinbase premium responds to the SVB failure itself, because Circle's
+USDC-specific disclosure had not yet been made. A
+common-factor repricing of stablecoin risk would move all three coins down
+together, so it cannot produce that premium. Rational substitution out of a gated
+claim can, and the two are not separated here.

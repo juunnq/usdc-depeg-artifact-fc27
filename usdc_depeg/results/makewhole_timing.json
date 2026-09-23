@@ -1,0 +1,49 @@
+{
+  "manuscript_claim": "fc27.tex -- \"the trough predates both Circle's make-whole pledge and the federal action by more than a day\"",
+  "circle_makewhole_pledge": {
+    "status": "COMPUTED",
+    "sub_claim": "trough predates Circle's make-whole pledge by more than a day",
+    "manuscript_location": "paper/fc27/fc27.tex:397-399 (the sentence itself carries no \\cite -- refs.bib's circle2023update is the only candidate source in the bibliography for a Circle make-whole statement in this vicinity)",
+    "bib_key": "circle2023update",
+    "bib_title": "An Update on USDC and Silicon Valley Bank",
+    "source": "data/MANIFEST.json sources[] series=circle2023_update_usdc_svb -- data/n1/circle2023/raw/circle_update_usdc_svb_20230311202753.html (Wayback capture 20230311202753, the FIRST capture of this URL across 111 total captures spanning 2023-03-11..2026-06-27, verified via a full-history CDX query and confirmed identical across http/https and www/non-www URL variants -- see data/n1/circle2023/cdx_search_log.json)",
+    "timestamp_basis": "no article:published_time/datePublished meta tag exists in the captured page HTML, so the Wayback first-capture timestamp (2023-03-11T20:27:53Z) stands in as an UPPER BOUND on the true publish time, not the publish time itself.",
+    "content_verification": "The saved HTML (data/n1/circle2023/raw/circle_update_usdc_svb_20230311202753.html, line 2002) contains the make-whole pledge sentence: \"Circle, as required by law under stored-value money transmission regulation, will stand behind USDC and cover any shortfall using corporate resources, involving external capital if necessary.\" This confirms circle2023update is the right source for fc27.tex:397-399's uncited claim -- resolving the content_caveat the prior (gap) version of this function flagged.",
+    "by_trough_reference": {
+      "composite_headline": {
+        "trough_ts_utc": "2023-03-11T07:57:53+00:00",
+        "circle_first_capture_ts_utc": "2023-03-11T20:27:53Z",
+        "hours_after_trough_upper_bound": 12.5,
+        "more_than_a_day": false
+      },
+      "kraken_usdc_low": {
+        "trough_ts_utc": "2023-03-11T07:00:00+00:00",
+        "circle_first_capture_ts_utc": "2023-03-11T20:27:53Z",
+        "hours_after_trough_upper_bound": 13.4647,
+        "more_than_a_day": false
+      }
+    },
+    "more_than_a_day": false,
+    "hours_after_trough_upper_bound": 12.5
+  },
+  "federal_backstop_action": {
+    "trough_source": "results/trough_corroboration.json:firing_report.series.{composite,kraken_usdc_low}",
+    "federal_action_source": "data/n1/paxos2023/joint_statement_treasury_fed_fdic.json:joint_statement_ts_utc",
+    "by_trough_reference": {
+      "composite_headline": {
+        "trough_ts_utc": "2023-03-11T07:57:53+00:00",
+        "federal_action_ts_utc": "2023-03-12T22:15:00Z",
+        "hours_after_trough": 38.2853,
+        "more_than_a_day": true
+      },
+      "kraken_usdc_low": {
+        "trough_ts_utc": "2023-03-11T07:00:00+00:00",
+        "federal_action_ts_utc": "2023-03-12T22:15:00Z",
+        "hours_after_trough": 39.25,
+        "more_than_a_day": true
+      }
+    },
+    "more_than_a_day": true,
+    "hours_after_trough": 38.2853
+  }
+}

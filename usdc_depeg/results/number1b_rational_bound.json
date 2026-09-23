@@ -1,0 +1,8 @@
+{
+  "p_obs": 0.876675,
+  "phi": 0.08,
+  "floor_worstcase": 0.92,
+  "implied_failure_prob_rho0": 1.5415625000000002,
+  "rationalizable_by_expected_loss": false,
+  "below_floor_nonfundamental_share": 0.3513075207784314
+}

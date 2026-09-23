@@ -1,0 +1,17 @@
+% Source: results/number3_placebo.json (USDC.{trough,max_premium_bps},
+%   DAI.{trough,max_premium_bps}, USDT.trough, break_threshold);
+%   results/usdt_premium_timing.json (peaks.composite_usdt.{premium_bps,
+%   timestamp_utc, relative_to.joint_statement_treasury_fed_fdic.delta_minutes},
+%   peaks.coinbase_usdt_usd.{premium_bps, timestamp_utc});
+%   results/usdt_premium.json (min_price, Coinbase feed).
+\begin{tabular}{@{}lllcccc@{}}
+\toprule
+Coin & Exposure & Feed & Trough & De-peg & Premium (peak, UTC) & Break? \\
+\midrule
+USDC & direct & composite & \$0.877 & 1233 bps & 70 bps & yes \\
+DAI & contagion & composite & \$0.886 & 1141 bps & 50 bps & yes \\
+USDT & none & Coinbase & \$0.999 & 10 bps & 266 bps (11 Mar 02:00 UTC) & no \\
+USDT & none & composite & \$0.992 & 76 bps & 270 bps (13 Mar 19:00 UTC) $\dagger$ & no \\
+\bottomrule
+\multicolumn{7}{p{0.93\linewidth}}{$\dagger$ post-backstop: 20.8~h after the 2023-03-12 22:15 UTC joint Treasury/Fed/FDIC statement.} \\
+\end{tabular}

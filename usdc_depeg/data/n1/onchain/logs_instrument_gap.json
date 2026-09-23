@@ -1,0 +1,62 @@
+{
+  "task": "Task 3: Curve 3pool TokenExchange + Uniswap v3 Swap event logs, block range 16779844-16843829 (2023-03 crisis window)",
+  "verdict": "INSTRUMENT_GAP -- all four endpoints refuse eth_getLogs for this historical range",
+  "retrieval_utc": "2026-09-09T08:23:15Z",
+  "direct_evidence_confirmed_chunks_within_target_range": {
+    "curve3pool": [
+      {
+        "from_block": 16779844,
+        "to_block": 16780343,
+        "error": "All endpoints failed for eth_getLogs: {\"https://ethereum-rpc.publicnode.com\": [\"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\"], \"https://eth.llamarpc.com\": [\"HTTP 525: <!DOCTYPE html>\\n<!--[if lt IE 7]> <html class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 7]>    <html class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 8]>    <html class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if gt IE 8]><!--> <html class=\\\"no-js\\\" lang=\\\"en-US\\\"> <!--<![endif]-->\\n<head>\\n\\n<title>llamarpc"
+      },
+      {
+        "from_block": 16780344,
+        "to_block": 16780843,
+        "error": "All endpoints failed for eth_getLogs: {\"https://ethereum-rpc.publicnode.com\": [\"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\"], \"https://eth.llamarpc.com\": [\"HTTP 525: <!DOCTYPE html>\\n<!--[if lt IE 7]> <html class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 7]>    <html class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 8]>    <html class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if gt IE 8]><!--> <html class=\\\"no-js\\\" lang=\\\"en-US\\\"> <!--<![endif]-->\\n<head>\\n\\n<title>llamarpc"
+      }
+    ],
+    "uniswap_swap": [
+      {
+        "from_block": 16779844,
+        "to_block": 16780343,
+        "error": "All endpoints failed for eth_getLogs: {\"https://ethereum-rpc.publicnode.com\": [\"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\"], \"https://eth.llamarpc.com\": [\"HTTP 525: <!DOCTYPE html>\\n<!--[if lt IE 7]> <html class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 7]>    <html class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 8]>    <html class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if gt IE 8]><!--> <html class=\\\"no-js\\\" lang=\\\"en-US\\\"> <!--<![endif]-->\\n<head>\\n\\n<title>llamarpc"
+      },
+      {
+        "from_block": 16780344,
+        "to_block": 16780843,
+        "error": "All endpoints failed for eth_getLogs: {\"https://ethereum-rpc.publicnode.com\": [\"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\", \"HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}\"], \"https://eth.llamarpc.com\": [\"HTTP 525: <!DOCTYPE html>\\n<!--[if lt IE 7]> <html class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 7]>    <html class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if IE 8]>    <html class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"> <![endif]-->\\n<!--[if gt IE 8]><!--> <html class=\\\"no-js\\\" lang=\\\"en-US\\\"> <!--<![endif]-->\\n<head>\\n\\n<title>llamarpc"
+      }
+    ],
+    "note": "These are the two 500-block sub-chunks actually attempted (16779844-16780843) after the chunker halved 2000 -> 1000 -> 500 on repeated range-too-large-style responses before confirming a hard per-endpoint refusal. Not extended chunk-by-chunk across the full 16779844-16843829 range because the follow-up diagnostic calls below establish the refusal is endpoint-side and block-age-based, not content- or chunk-size-dependent -- iterating the remaining ~63,000 blocks in 500-block windows would reproduce the identical four errors ~127 more times for no new information."
+  },
+  "diagnostic_calls_establishing_root_cause": [
+    {
+      "call": "eth_getLogs fromBlock=toBlock='latest' (tag, not a number), Curve 3pool, TokenExchange topic0",
+      "result": "SUCCESS via https://ethereum-rpc.publicnode.com (0 logs, as expected for a single block)"
+    },
+    {
+      "call": "eth_getLogs fromBlock=hex(head-5) toBlock=hex(head) (numeric, near head), same filter",
+      "result": "SUCCESS via https://ethereum-rpc.publicnode.com (0 logs)"
+    },
+    {
+      "call": "eth_getLogs fromBlock=0x1888B00 toBlock=0x1888B32 (numeric, ~9.1M blocks before head, far short of the actual 2023-03 target but still a fixed historical number), same filter",
+      "result": "FAILED on all 4 endpoints with the same errors as the in-range attempts below"
+    },
+    {
+      "call": "eth_getBlockByNumber(16780000, false) -- historical BLOCK HEADER (not logs/state)",
+      "result": "SUCCESS via https://ethereum-rpc.publicnode.com (timestamp=1678235519, number=16780000) -- headers are NOT gated the way logs/state are"
+    }
+  ],
+  "conclusion": "publicnode's free tier serves eth_getLogs only for the 'latest' tag or a small window of numeric blocks near the current head; ANY numeric block specification reaching back toward March 2023 (head - ~9.1M blocks) is rejected with the identical 'Archive requests require a personal token' error seen in the D10 archival eth_call probe (d10_probe.json). This is consistent, not chunk-size- or content-dependent. The other three endpoints fail eth_getLogs unconditionally in this environment (llamarpc: persistent TLS/525 handshake failure; cloudflare-eth.com: -32603 'Internal error' even for a trivial live 1-block query, i.e. it appears not to support eth_getLogs on its public gateway at all; rpc.ankr.com/eth: -32000 'Unauthorized', requires an account/API key even for basic calls -- its keyless/anonymous tier no longer covers eth_getLogs). eth_getBlockByNumber for the SAME historical blocks succeeds via publicnode (headers are cheap and not gated), which is why Task 4 (hourly block anchors) is NOT gated by this same restriction -- see hourly_block_anchors.csv.",
+  "per_endpoint_exact_errors": {
+    "https://ethereum-rpc.publicnode.com": "HTTP 403: {'jsonrpc': '2.0', 'error': {'code': -32602, 'message': 'Archive requests require a personal token. Get one at: https://www.allnodes.com/publicnode'}, 'id': 1}",
+    "https://eth.llamarpc.com": "HTTP 525: SSL handshake failed (Cloudflare edge, llamarpc.com) -- reproduced on every attempt, including trivial near-head queries, in this environment.",
+    "https://cloudflare-eth.com": "rpc_error: {\"code\": -32603, \"message\": \"Internal error\"} -- reproduced even for fromBlock=toBlock=near-head numeric blocks.",
+    "https://rpc.ankr.com/eth": "rpc_error: {\"code\": -32000, \"message\": \"Unauthorized: You must authenticate your request with an API key. Create an account on https://www.ankr.com/rpc/ and generate your personal API key for free.\"}"
+  },
+  "requested_block_range": [
+    16779844,
+    16843829
+  ],
+  "no_fabrication": "No log rows are reported; logs_curve3pool.csv / logs_uniswap_swaps.csv are NOT written by this lane -- zero events were retrieved and none are fabricated."
+}

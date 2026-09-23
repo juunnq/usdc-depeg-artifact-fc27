@@ -1,0 +1,80 @@
+{
+  "document": "In the Matter of the Inquiry by Letitia James, Attorney General of the State of New York, Pursuant to Article 23-A of the New York General Business Law, in regard to the acts and practices of iFinex Inc., BFXNA Inc., BFXWW Inc., Tether Holdings Limited, Tether Operations Limited, Tether Limited, Tether International Limited, Respondents -- [Proposed] Ex Parte Order Pursuant to General Business Law S 354 (Supreme Court of the State of New York, County of New York)",
+  "date": "2019-04-24",
+  "page": null,
+  "verbatim_passage": null,
+  "source_url_or_wayback_url": "https://ag.ny.gov/sites/default/files/2019.04.24_signed_order.pdf",
+  "retrieval_method": "direct",
+  "document_found": {
+    "identity": "The signed ex parte order (5 pages, stamped 'APR 24 2019', signed by a Supreme Court justice), obtained by the NY Attorney General's office against iFinex/Bitfinex and the Tether entities under GBL S354 (Martin Act). Orders Respondents to cease dissipating the USD reserves backing tether and to produce documents/records; references but does NOT itself contain 'the application in writing of Letitia James... and upon reading and filing the [affirmation] of Brian M. Whitehurst, Assistant Attorney General, dated April 24, 2019, with exhibits A through M thereto, and the accompanying memorandum of law, dated April 24, 2019' -- i.e. the underlying petition/affirmation papers are a separate document this PDF references but does not include.",
+    "linked_from": "https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company (NYAG press release 'Attorney General James Announces Court Order Against \"Crypto\" Currency Company Under Investigation For Fraud', dated April 25, 2019; fetched direct HTTP, 200 OK)",
+    "retrieved_utc": "2026-09-08T21:40:07Z",
+    "sha256": "574eb217d3313e4e5635a00a013f6b869a2ec19da0a9fc2cb2fe86512fcf02ba",
+    "bytes": 1160314,
+    "raw_file": "data/n1/tether2019/raw/2019.04.24_signed_order.pdf",
+    "contains_percentage_disclosure": false
+  },
+  "percentage_disclosure_passage": {
+    "status": "NOT LOCATED -- INSTRUMENT GAP",
+    "target_document": "Tether General Counsel (reported: Stuart Hoegner) affidavit/affirmation, on or about 2019-04-30, filed in response to/opposition to the NYAG's GBL S354 application above -- the document reported to first disclose the percentage of outstanding tethers backed by cash and cash equivalents (a figure of roughly 74% has been publicly reported elsewhere, but per task instructions this was NOT assumed and was not verified against primary-source text, so it is NOT recorded here).",
+    "why_not_on_ag_ny_gov": "This would be the respondent's (Tether's) own court filing, not the petitioner's (NYAG's) -- the AG's office would not be expected to host, and was not found to host, its opponent's filing on its own press site.",
+    "methods_tried": [
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/press-release/2019/attorney-general-james-announces-court-order-against-crypto-currency-company",
+        "result": "200 OK -- confirmed the case identity and yielded the signed-order PDF link above; page body contains no reference to, or link for, a Tether-side filing or affidavit."
+      },
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/sites/default/files/2019.04.30_tether_opposition.pdf (constructed guess, same filename convention as the located order)",
+        "result": "404"
+      },
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/sites/default/files/2019.04.30_hoegner_affidavit.pdf (constructed guess)",
+        "result": "404"
+      },
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/press-release/2019/attorney-general-james-secures-court-order-against-bitfinex (constructed guess)",
+        "result": "404"
+      },
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/press-release/2019/attorney-general-james-statement-bitfinex-tether-court-ruling (constructed guess)",
+        "result": "404"
+      },
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/press-release/2019/court-grants-attorney-general-james-continued-oversight-bitfinex-and-tether (constructed guess)",
+        "result": "404"
+      },
+      {
+        "method": "direct",
+        "request": "GET https://ag.ny.gov/press-releases/2019 (2019 press-release listing page, to enumerate any follow-up release)",
+        "result": "200 OK, 74044 bytes, but the page is a Drupal Views/search widget with no static <a href=\"/press-release/2019/...\"> links in the server-rendered HTML (results are populated client-side) -- headless GET could not enumerate the list; no browser/JS execution permitted under the headless-only constraint."
+      },
+      {
+        "method": "wayback_cdx",
+        "request": "GET http://web.archive.org/cdx/search/cdx?url=ag.ny.gov&matchType=domain&from=20190401&to=20190801&output=json&collapse=urlkey&limit=5000",
+        "result": "200 OK, 3252 rows. Exactly 1 row matches tether/bitfinex/ifinex: https://virtualmarkets.ag.ny.gov/img/bitfinex.svg (timestamp 20190409160437) -- an unrelated logo image on the AG's September-2018 Virtual Markets Integrity Initiative subdomain, dated BEFORE the case (2019-04-09) and not a legal filing of any kind."
+      },
+      {
+        "method": "wayback_cdx",
+        "request": "GET http://web.archive.org/cdx/search/cdx?url=courthousenews.com&matchType=domain&from=20190401&to=20190801&output=json&collapse=urlkey&filter=urlkey:.*tether.*&limit=500",
+        "result": "200 OK, 0 rows"
+      },
+      {
+        "method": "wayback_cdx",
+        "request": "GET http://web.archive.org/cdx/search/cdx?url=courthousenews.com&matchType=domain&from=20190401&to=20190801&output=json&collapse=urlkey&filter=urlkey:.*bitfinex.*&limit=500",
+        "result": "200 OK, 0 rows (this specific query took ~4 backoff cycles / several minutes to resolve but ultimately returned 200 with an empty body, not an error)"
+      },
+      {
+        "method": "wayback_cdx",
+        "request": "GET http://web.archive.org/cdx/search/cdx?url=courthousenews.com&matchType=domain&from=20190401&to=20190801&output=json&collapse=urlkey&filter=urlkey:.*ifinex.*&limit=500",
+        "result": "200 OK, 0 rows"
+      }
+    ],
+    "conclusion": "All three sanctioned headless methods (direct ag.ny.gov URL construction; Wayback CDX over ag.ny.gov; Wayback CDX over courthousenews.com, named as the example mirror domain) were exhausted without locating Tether counsel's affidavit or any document containing the cash/cash-equivalent backing percentage. Per the no-invented-source-domain constraint, no further domain (e.g. document-hosting sites like DocumentCloud/Scribd, or crypto-news outlets) was attempted, because none had been reached headlessly first to establish a specific, non-guessed URL to follow. The percentage figure is NOT recorded anywhere in this dataset and must not be taken from general knowledge; this is booked as an open instrument gap pending either (a) a human providing the correct document URL, or (b) a NYSCEF/court-record index number that would let a future headless session pull the filing directly from the court's e-filing system."
+  }
+}
